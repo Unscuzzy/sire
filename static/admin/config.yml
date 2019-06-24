@@ -10,12 +10,13 @@
 # General options
 backend:
   # local backend
-  name: test-repo
+  # WARN: Will not save data, it just for develop fields
+  # name: test-repo
 
   # Github.com as backend
-  # name: github
-  # repo: Junscuzzy/bengale.studio
-  # branch: master
+   name: github
+   repo: Unscuzzy/sire
+   branch: master
 
   # Netlify as backend (recommanded)
   # name: git-gateway
@@ -50,16 +51,16 @@ collections:
         label: "Page d'accueil"
         fields:
           - {
-            name: templateKey,
-            label: Template Key,
-            widget: hidden,
-            default: home-page,
+              name: templateKey,
+              label: Template Key,
+              widget: hidden,
+              default: home-page,
           }
           - {
-            name: title,
-            label: Titre,
-            widget: string,
-            hint: 'Utilisé pour le SEO',
+              name: title,
+              label: Titre,
+              widget: string,
+              hint: 'Utilisé pour le SEO',
           }
           - {
             name: excerpt,
@@ -67,3 +68,123 @@ collections:
             widget: text,
             hint: 'Utilisé pour le SEO',
           }
+          - {
+            name: headerSlider,
+            label: "Slider principal",
+            widget: list,
+            fields: [
+              {name: image, label: Image, widget: image},
+              {name: title, label: Titre, widget: string}
+            ]
+          }
+          - {
+            name: presentationTitle,
+            label: "Titre section présentation",
+            widget: string,
+          }
+          - {
+            name: presentationBody,
+            label: "Texte de présentation",
+            widget: markdown,
+          }
+          - {
+            name: presentationSlider,
+            label: "Slider de présentation",
+            widget: list,
+            fields: [
+              {name: image, label: Image, widget: image},
+              {name: title, label: Titre, widget: string}
+            ]
+
+          }
+          - {
+            name: processTitle,
+            label: "Titre section processus",
+            widget: string,
+          }
+          - {
+            name: process,
+              label: "Étapes du processus",
+              widget: list,
+              fields: [{name: step, label: Étapes, widget: string}]
+          }
+          - {
+            name: materialTitle,
+            label: "Titre section matériaux",
+            widget: string,
+          }
+          - {
+            name: materials,
+            label: "Matériaux",
+            widget: list,
+            fields: [
+              {name: title, label: Title, widget: string},
+              {name: content, label: Contenu, widget: markdown},
+              {name: image, label: Image, widget: image}
+            ]
+          }
+          - {
+            name: portfolioTitle,
+            label: "Titre section portfolio",
+            widget: string,
+          }
+          - {
+            name: portfolioBody,
+            label: "Texte de présentation",
+            widget: markdown,
+          }
+          - {
+            name: materials,
+            label: "Matériaux",
+            widget: relation,
+            collection: projects,
+            searchFields: ['title', 'business'],
+            valueField: 'title'
+          }
+
+  # Portfolio projects collection
+  - name: projects
+    label: Projets
+    folder: data/portfolio
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - {
+        name: templateKey,
+        label: Template Key,
+        widget: hidden,
+        default: projects,
+      }
+      - {
+        name: title,
+        label: Titre,
+        widget: string,
+        hint: 'Utilisé pour le SEO',
+      }
+      - {
+        name: excerpt,
+        label: Extrait,
+        widget: text,
+        hint: 'Utilisé pour le SEO',
+      }
+      - {
+        name: business,
+        label: "L'entreprise",
+        widget: string
+      }
+      - {
+        name: thumbnail,
+        label: "Image à la une",
+        widget: image
+      }
+      - {
+        name: images,
+        label: "Autres images",
+        widget: list,
+        field: {name: image, label: image, widget: image}
+      }
+      - {
+        name: body,
+        label: "Texte de présentation",
+        widget: markdown
+      }

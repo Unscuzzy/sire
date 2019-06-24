@@ -13,16 +13,11 @@ backend:
   # WARN: Will not save data, it just for develop fields
   # name: test-repo
 
-  # Github.com as backend
-   name: github
-   repo: Unscuzzy/sire
-   branch: master
-
   # Netlify as backend (recommanded)
-  # name: git-gateway
-  # accept_roles:
-  #   - admin
-  #   - editor
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
 
 media_folder: static/uploads
 public_folder: uploads

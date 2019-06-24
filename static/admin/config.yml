@@ -14,10 +14,10 @@ backend:
   # name: test-repo
 
   # Netlify as backend
-   name: git-gateway
-   accept_roles:
-     - admin
-     - editor
+  name: git-gateway
+  # accept_roles:
+  #   - admin
+  #   - editor
 
 media_folder: static/uploads
 public_folder: uploads

@@ -1,0 +1,69 @@
+#################################
+#
+# Netlify-cms config file
+#
+# Doc:
+# https://www.netlifycms.org/docs/configuration-options/
+#
+#################################
+
+# General options
+backend:
+  # local backend
+  name: test-repo
+
+  # Github.com as backend
+  # name: github
+  # repo: Junscuzzy/bengale.studio
+  # branch: master
+
+  # Netlify as backend (recommanded)
+  # name: git-gateway
+  # accept_roles:
+  #   - admin
+  #   - editor
+
+media_folder: static/uploads
+public_folder: uploads
+
+# Others Options
+# publish_mode: editorial_workflow
+# site_url: https://your-site.com
+# display_url: https://your-site.com
+# logo_url: https://your-site.com/images/logo.svg
+# show_preview_links: false
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
+# Collections are eq as CPTs in WordPress
+collections:
+  - name: pages
+    label: Pages
+    delete: false
+    files:
+      # Page: Home
+      - file: data/static-pages/index.md
+        name: index
+        label: "Page d'accueil"
+        fields:
+          - {
+            name: templateKey,
+            label: Template Key,
+            widget: hidden,
+            default: home-page,
+          }
+          - {
+            name: title,
+            label: Titre,
+            widget: string,
+            hint: 'Utilisé pour le SEO',
+          }
+          - {
+            name: excerpt,
+            label: Extrait,
+            widget: text,
+            hint: 'Utilisé pour le SEO',
+          }

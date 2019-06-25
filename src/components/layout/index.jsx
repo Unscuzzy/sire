@@ -8,8 +8,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
+import { ThemeProvider } from 'styled-components'
 
+import theme from '../theme'
+import GlobalStyle from '../GlobalStyle'
 import Header from './header'
+import SEO from '../seo'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,13 +29,17 @@ const Layout = ({ children }) => {
   const { title } = data.site.siteMetadata
 
   return (
-    <>
-      <Header siteTitle={title} />
-      <main>{children}</main>
-      <footer>
-        © Copyright {new Date().getFullYear()} - {title}
-      </footer>
-    </>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyle />
+        <SEO title={title} />
+        <Header siteTitle={title} />
+        <main>{children}</main>
+        <footer>
+          © Copyright {new Date().getFullYear()} - {title}
+        </footer>
+      </>
+    </ThemeProvider>
   )
 }
 

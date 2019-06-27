@@ -2,14 +2,16 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import Link from '../link'
-import Container from '../container'
+import { Container, Heading, Link as BaseLink } from '../../utils/rebass'
 
 const Header = ({ siteTitle }) => (
   <header>
     <Container>
-      <h1 style={{ margin: 0 }}>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
+      <Heading>
+        <BaseLink as={Link} to="/">
+          {siteTitle}
+        </BaseLink>
+      </Heading>
     </Container>
   </header>
 )

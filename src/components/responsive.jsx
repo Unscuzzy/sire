@@ -2,16 +2,10 @@ import * as React from 'react'
 import MediaQuery from 'react-responsive'
 import PropTypes from 'prop-types'
 
-import { numberBreakpoints as bp } from '../components/theme'
-import { childrenProps } from './propTypes'
+import { breakpoints as bp } from '../config/theme'
+import { childrenProps } from '../utils/propTypes'
 
-/*
-This file used as helper for responsive
-
-The problem is when the breakpoint is 500px for example
-The min-width is 500 and the max-width is 499
-The following components solve it
- */
+// if min-width is 500, the max-width is 499
 const decrement = val => val - 1
 
 export const desktop = { minWidth: bp[2] }

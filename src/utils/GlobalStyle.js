@@ -1,14 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
-import styledNormalize from 'styled-normalize'
 
-import tachyonsDebug from '../utils/tachyons-debug'
-import { colors, fonts, transitions } from './theme'
+import normalize from './normalize'
+import tachyonsDebug from './tachyons-debug'
+import { colors, fonts, transitions } from '../config/theme'
 
 export const isDev = process.env.NODE_ENV === 'development'
 
 const GlobalStyle = createGlobalStyle`
 
-  ${styledNormalize};
+  ${normalize};
   ${isDev && tachyonsDebug};
 
   html {
@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-size: 1.5em;
     line-height: 1.6;
-    font-family: ${fonts.opensans};
+    font-family: ${fonts.body};
     font-weight: 400;
     color: ${colors.black};
     background-color: ${colors.white};
@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     text-decoration: none;
     color: ${colors.black};
-    transition: all ${transitions.fast} ease-in-out;
+    transition: all ${transitions[0]} ease-in-out;
   
     &:hover,
     &:focus {

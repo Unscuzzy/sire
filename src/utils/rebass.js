@@ -1,4 +1,6 @@
-// import React from 'react'
+/**
+ * Primives components based on Rebass
+ */
 import styled from 'styled-components'
 import {
   space,
@@ -27,9 +29,13 @@ import {
   backgroundSize,
   backgroundPosition,
   backgroundRepeat,
+  position,
   opacity,
   variant
 } from 'styled-system'
+
+// Prefix theme variables with T as Theme
+import { colors as TColors } from '../config/theme'
 
 const themed = key => props => props.theme[key]
 
@@ -44,6 +50,7 @@ export const Box = styled('div')(
   flex,
   order,
   alignSelf,
+  position,
   themed('Box')
 )
 
@@ -54,7 +61,8 @@ Box.propTypes = {
   ...color.propTypes,
   ...flex.propTypes,
   ...order.propTypes,
-  ...alignSelf.propTypes
+  ...alignSelf.propTypes,
+  ...position.propTypes
 }
 
 export const Flex = styled(Box)(
@@ -73,6 +81,14 @@ Flex.propTypes = {
   ...flexDirection.propTypes,
   ...alignItems.propTypes,
   ...justifyContent.propTypes
+}
+
+export const Container = styled(Box)(themed('Container'))
+
+Container.defaultProps = {
+  mx: 'auto',
+  width: ['90%'],
+  maxWidth: [1024]
 }
 
 export const Text = styled(Box)(
@@ -98,15 +114,13 @@ Heading.defaultProps = {
   as: 'h2',
   m: 0,
   fontSize: 4,
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  color: TColors.black
 }
 
-export const Link = styled(Box)(themed('Link'))
+export const Link = styled(Text)(themed('Link'))
 
-Link.defaultProps = {
-  as: 'a',
-  color: 'blue'
-}
+Link.defaultProps = { as: 'a' }
 
 export const Button = styled(Box)(
   {
@@ -114,7 +128,8 @@ export const Button = styled(Box)(
     display: 'inline-block',
     textAlign: 'center',
     lineHeight: 'inherit',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    border: `2px solid`
   },
   fontWeight,
   borders,
@@ -139,10 +154,10 @@ Button.defaultProps = {
   m: 0,
   px: 3,
   py: 2,
-  color: 'white',
-  bg: 'blue',
-  border: 0,
-  borderRadius: 4
+  // border: 2,
+  // border: '5px solid',
+  borderRadius: 3,
+  variant: 'primary'
 }
 
 export const Image = styled(Box)(

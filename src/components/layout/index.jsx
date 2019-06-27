@@ -10,8 +10,8 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
 
-import theme from '../theme'
-import GlobalStyle from '../GlobalStyle'
+import theme from '../../config/theme'
+import GlobalStyle from '../../utils/GlobalStyle'
 import Header from './header'
 import SEO from '../seo'
 

@@ -1,8 +1,10 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: `SIRE`,
     description: `Sire website.`,
-    author: `@junscuzzy`,
+    author: `@junscuzzy`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,8 +12,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -39,8 +41,8 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -72,5 +74,5 @@ module.exports = {
         htmlTitle: `SIRE Administration`
       }
     }
-  ],
+  ]
 }

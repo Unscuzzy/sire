@@ -11,3 +11,6 @@ static
 
 # Ignore declarations
 *.d.ts
+
+# Normalize
+src/utils/normalize.js

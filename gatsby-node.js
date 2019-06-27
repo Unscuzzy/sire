@@ -3,18 +3,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-const path = require(`path`)
-const slash = require(`slash`)
-
-// Custom webpack config
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      // Enable absolute import ('components/foo.js' inteads '../../...')
-      modules: [path.resolve(__dirname, 'src'), 'node_modules']
-    }
-  })
-}
+// const path = require(`path`)
+// const slash = require(`slash`)
 
 /*
 // Create pages/posts etc templates

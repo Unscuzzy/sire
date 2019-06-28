@@ -37,7 +37,7 @@ import {
 // Prefix theme variables with T as Theme
 import { colors as TColors } from '../config/theme'
 
-const themed = key => props => props.theme[key]
+export const themed = key => props => props.theme[key]
 
 export const Box = styled('div')(
   {

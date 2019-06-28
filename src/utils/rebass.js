@@ -128,13 +128,12 @@ export const Button = styled(Box)(
     display: 'inline-block',
     textAlign: 'center',
     lineHeight: 'inherit',
-    textDecoration: 'none',
-    border: `2px solid`
+    textDecoration: 'none'
   },
   fontWeight,
   borders,
   borderColor,
-  borderRadius,
+  // borderRadius,
   buttonStyle,
   themed('Button')
 )
@@ -143,7 +142,7 @@ Button.propTypes = {
   ...fontWeight.propTypes,
   ...borders.propTypes,
   ...borderColor.propTypes,
-  ...borderRadius.propTypes,
+  // ...borderRadius.propTypes,
   ...buttonStyle.propTypes
 }
 
@@ -154,9 +153,7 @@ Button.defaultProps = {
   m: 0,
   px: 3,
   py: 2,
-  // border: 2,
-  // border: '5px solid',
-  borderRadius: 3,
+  border: '2px solid',
   variant: 'primary'
 }
 

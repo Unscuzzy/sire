@@ -45,7 +45,7 @@
 
 export const space = [0, 4, 8, 16, 32, 64, 128, 256]
 
-export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 90]
+export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 90, 120]
 
 export const colors = {
   black: `#000000`,
@@ -108,7 +108,7 @@ export const buttons = {
   }
 }
 
-// Push all styles global object
+// Push all styles in a global object
 const theme = {
   space,
   fontSizes,

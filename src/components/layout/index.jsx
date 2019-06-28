@@ -22,12 +22,13 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
   `)
 
-  const { title } = data.site.siteMetadata
+  const { title, description } = data.site.siteMetadata
 
   return (
     <ThemeProvider theme={theme}>
@@ -35,7 +36,7 @@ const Layout = ({ children }) => {
         <GlobalStyle />
         <SEO title={title} />
         <Wrapper flexDirection="column">
-          <Header siteTitle={title} />
+          <Header siteTitle={title} siteDescription={description} />
           <main>{children}</main>
           <Footer title={title} />
         </Wrapper>

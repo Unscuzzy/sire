@@ -131,14 +131,14 @@ collections:
             label: "Texte de présentation",
             widget: markdown,
           }
-    #      - {
-    #        name: materials,
-    #        label: "Matériaux",
-    #        widget: relation,
-    #        collection: projects,
-    #        searchFields: ['title', 'business'],
-    #        valueField: 'title'
-    #      }
+          - {
+            name: project,
+            label: "Projet en avant",
+            widget: relation,
+            collection: projects,
+            searchFields: ['title', 'business'],
+            valueField: 'title'
+          }
 
   # Portfolio projects collection
   - name: projects

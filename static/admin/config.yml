@@ -61,7 +61,7 @@ collections:
             name: excerpt,
             label: Extrait,
             widget: text,
-            hint: 'Utilisé pour le SEO',
+            hint: 'Utilisé pour le SEO'
           }
           - {
             name: headerSlider,
@@ -70,7 +70,8 @@ collections:
             fields: [
               {name: image, label: Image, widget: image},
               {name: title, label: Titre, widget: string}
-            ]
+            ],
+              required: false
           }
           - {
             name: presentationTitle,
@@ -89,7 +90,8 @@ collections:
             fields: [
               {name: image, label: Image, widget: image},
               {name: title, label: Titre, widget: string}
-            ]
+            ],
+            required: false
 
           }
           - {
@@ -116,7 +118,8 @@ collections:
               {name: title, label: Title, widget: string},
               {name: content, label: Contenu, widget: markdown},
               {name: image, label: Image, widget: image}
-            ]
+            ],
+            required: false
           }
           - {
             name: portfolioTitle,
@@ -170,13 +173,15 @@ collections:
       - {
         name: thumbnail,
         label: "Image à la une",
-        widget: image
+        widget: image,
+        required: false
       }
       - {
         name: images,
         label: "Autres images",
         widget: list,
-        field: {name: image, label: image, widget: image}
+        field: {name: image, label: image, widget: image},
+        required: false
       }
       - {
         name: body,

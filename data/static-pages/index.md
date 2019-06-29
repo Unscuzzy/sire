@@ -1,4 +1,5 @@
 ---
+templateKey: home-page
 title: Sire
 excerpt: Découvrez SIRE !
 headerSlider:
@@ -63,4 +64,3 @@ portfolioBody: >-
   ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore ma.
 ---
-

@@ -4,7 +4,13 @@ import uniqid from 'uniqid'
 import styled from 'styled-components'
 
 import Link from '../link'
-import { Box, Flex, Container, Text } from '../../utils/rebass'
+import {
+  Box,
+  Flex,
+  Container,
+  Text,
+  Link as BaseLink
+} from '../../utils/rebass'
 import { colors } from '../../config/theme'
 
 const FooterText = styled(Text).attrs({
@@ -30,8 +36,10 @@ const Footer = ({ title, links }) => (
 
         {links &&
           links.map(({ label, link }) => (
-            <FooterText as={Link} to={link} key={uniqid(link)}>
-              {label}
+            <FooterText key={uniqid(link)}>
+              <BaseLink as={Link} to={link}>
+                {label}
+              </BaseLink>
             </FooterText>
           ))}
       </Flex>

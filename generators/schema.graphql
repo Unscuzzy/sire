@@ -1,5 +1,5 @@
 # source: http://localhost:8000/___graphql
-# timestamp: Sun Jun 23 2019 19:31:22 GMT+0200 (GMT+02:00)
+# timestamp: Sun Jun 30 2019 05:53:22 GMT+0200 (GMT+02:00)
 
 """Provides default value for input field."""
 directive @default(value: JSON!) on INPUT_FIELD_DEFINITION
@@ -839,6 +839,10 @@ input FileFilterInput {
   publicURL: StringQueryOperatorInput
 }
 
+input FileFilterListInput {
+  elemMatch: FileFilterInput
+}
+
 type FileGroupConnection {
   totalCount: Int!
   edges: [FileEdge!]!
@@ -1467,6 +1471,230 @@ enum MarkdownRemarkFieldsEnum {
   internal___owner
   internal___type
   frontmatter___title
+  frontmatter___templateKey
+  frontmatter___excerpt
+  frontmatter___business
+  frontmatter___thumbnail___id
+  frontmatter___thumbnail___parent___id
+  frontmatter___thumbnail___parent___children
+  frontmatter___thumbnail___children
+  frontmatter___thumbnail___children___id
+  frontmatter___thumbnail___children___children
+  frontmatter___thumbnail___internal___content
+  frontmatter___thumbnail___internal___contentDigest
+  frontmatter___thumbnail___internal___description
+  frontmatter___thumbnail___internal___fieldOwners
+  frontmatter___thumbnail___internal___ignoreType
+  frontmatter___thumbnail___internal___mediaType
+  frontmatter___thumbnail___internal___owner
+  frontmatter___thumbnail___internal___type
+  frontmatter___thumbnail___sourceInstanceName
+  frontmatter___thumbnail___absolutePath
+  frontmatter___thumbnail___relativePath
+  frontmatter___thumbnail___extension
+  frontmatter___thumbnail___size
+  frontmatter___thumbnail___prettySize
+  frontmatter___thumbnail___modifiedTime
+  frontmatter___thumbnail___accessTime
+  frontmatter___thumbnail___changeTime
+  frontmatter___thumbnail___birthTime
+  frontmatter___thumbnail___root
+  frontmatter___thumbnail___dir
+  frontmatter___thumbnail___base
+  frontmatter___thumbnail___ext
+  frontmatter___thumbnail___name
+  frontmatter___thumbnail___relativeDirectory
+  frontmatter___thumbnail___dev
+  frontmatter___thumbnail___mode
+  frontmatter___thumbnail___nlink
+  frontmatter___thumbnail___uid
+  frontmatter___thumbnail___gid
+  frontmatter___thumbnail___rdev
+  frontmatter___thumbnail___blksize
+  frontmatter___thumbnail___ino
+  frontmatter___thumbnail___blocks
+  frontmatter___thumbnail___atimeMs
+  frontmatter___thumbnail___mtimeMs
+  frontmatter___thumbnail___ctimeMs
+  frontmatter___thumbnail___birthtimeMs
+  frontmatter___thumbnail___atime
+  frontmatter___thumbnail___mtime
+  frontmatter___thumbnail___ctime
+  frontmatter___thumbnail___birthtime
+  frontmatter___thumbnail___publicURL
+  frontmatter___images
+  frontmatter___images___id
+  frontmatter___images___parent___id
+  frontmatter___images___parent___children
+  frontmatter___images___children
+  frontmatter___images___children___id
+  frontmatter___images___children___children
+  frontmatter___images___internal___content
+  frontmatter___images___internal___contentDigest
+  frontmatter___images___internal___description
+  frontmatter___images___internal___fieldOwners
+  frontmatter___images___internal___ignoreType
+  frontmatter___images___internal___mediaType
+  frontmatter___images___internal___owner
+  frontmatter___images___internal___type
+  frontmatter___images___sourceInstanceName
+  frontmatter___images___absolutePath
+  frontmatter___images___relativePath
+  frontmatter___images___extension
+  frontmatter___images___size
+  frontmatter___images___prettySize
+  frontmatter___images___modifiedTime
+  frontmatter___images___accessTime
+  frontmatter___images___changeTime
+  frontmatter___images___birthTime
+  frontmatter___images___root
+  frontmatter___images___dir
+  frontmatter___images___base
+  frontmatter___images___ext
+  frontmatter___images___name
+  frontmatter___images___relativeDirectory
+  frontmatter___images___dev
+  frontmatter___images___mode
+  frontmatter___images___nlink
+  frontmatter___images___uid
+  frontmatter___images___gid
+  frontmatter___images___rdev
+  frontmatter___images___blksize
+  frontmatter___images___ino
+  frontmatter___images___blocks
+  frontmatter___images___atimeMs
+  frontmatter___images___mtimeMs
+  frontmatter___images___ctimeMs
+  frontmatter___images___birthtimeMs
+  frontmatter___images___atime
+  frontmatter___images___mtime
+  frontmatter___images___ctime
+  frontmatter___images___birthtime
+  frontmatter___images___publicURL
+  frontmatter___headerSlider
+  frontmatter___headerSlider___image___id
+  frontmatter___headerSlider___image___children
+  frontmatter___headerSlider___image___sourceInstanceName
+  frontmatter___headerSlider___image___absolutePath
+  frontmatter___headerSlider___image___relativePath
+  frontmatter___headerSlider___image___extension
+  frontmatter___headerSlider___image___size
+  frontmatter___headerSlider___image___prettySize
+  frontmatter___headerSlider___image___modifiedTime
+  frontmatter___headerSlider___image___accessTime
+  frontmatter___headerSlider___image___changeTime
+  frontmatter___headerSlider___image___birthTime
+  frontmatter___headerSlider___image___root
+  frontmatter___headerSlider___image___dir
+  frontmatter___headerSlider___image___base
+  frontmatter___headerSlider___image___ext
+  frontmatter___headerSlider___image___name
+  frontmatter___headerSlider___image___relativeDirectory
+  frontmatter___headerSlider___image___dev
+  frontmatter___headerSlider___image___mode
+  frontmatter___headerSlider___image___nlink
+  frontmatter___headerSlider___image___uid
+  frontmatter___headerSlider___image___gid
+  frontmatter___headerSlider___image___rdev
+  frontmatter___headerSlider___image___blksize
+  frontmatter___headerSlider___image___ino
+  frontmatter___headerSlider___image___blocks
+  frontmatter___headerSlider___image___atimeMs
+  frontmatter___headerSlider___image___mtimeMs
+  frontmatter___headerSlider___image___ctimeMs
+  frontmatter___headerSlider___image___birthtimeMs
+  frontmatter___headerSlider___image___atime
+  frontmatter___headerSlider___image___mtime
+  frontmatter___headerSlider___image___ctime
+  frontmatter___headerSlider___image___birthtime
+  frontmatter___headerSlider___image___publicURL
+  frontmatter___headerSlider___title
+  frontmatter___presentationTitle
+  frontmatter___presentationBody
+  frontmatter___presentationSlider
+  frontmatter___presentationSlider___image___id
+  frontmatter___presentationSlider___image___children
+  frontmatter___presentationSlider___image___sourceInstanceName
+  frontmatter___presentationSlider___image___absolutePath
+  frontmatter___presentationSlider___image___relativePath
+  frontmatter___presentationSlider___image___extension
+  frontmatter___presentationSlider___image___size
+  frontmatter___presentationSlider___image___prettySize
+  frontmatter___presentationSlider___image___modifiedTime
+  frontmatter___presentationSlider___image___accessTime
+  frontmatter___presentationSlider___image___changeTime
+  frontmatter___presentationSlider___image___birthTime
+  frontmatter___presentationSlider___image___root
+  frontmatter___presentationSlider___image___dir
+  frontmatter___presentationSlider___image___base
+  frontmatter___presentationSlider___image___ext
+  frontmatter___presentationSlider___image___name
+  frontmatter___presentationSlider___image___relativeDirectory
+  frontmatter___presentationSlider___image___dev
+  frontmatter___presentationSlider___image___mode
+  frontmatter___presentationSlider___image___nlink
+  frontmatter___presentationSlider___image___uid
+  frontmatter___presentationSlider___image___gid
+  frontmatter___presentationSlider___image___rdev
+  frontmatter___presentationSlider___image___blksize
+  frontmatter___presentationSlider___image___ino
+  frontmatter___presentationSlider___image___blocks
+  frontmatter___presentationSlider___image___atimeMs
+  frontmatter___presentationSlider___image___mtimeMs
+  frontmatter___presentationSlider___image___ctimeMs
+  frontmatter___presentationSlider___image___birthtimeMs
+  frontmatter___presentationSlider___image___atime
+  frontmatter___presentationSlider___image___mtime
+  frontmatter___presentationSlider___image___ctime
+  frontmatter___presentationSlider___image___birthtime
+  frontmatter___presentationSlider___image___publicURL
+  frontmatter___presentationSlider___title
+  frontmatter___processTitle
+  frontmatter___process
+  frontmatter___process___step
+  frontmatter___materialTitle
+  frontmatter___materials
+  frontmatter___materials___content
+  frontmatter___materials___image___id
+  frontmatter___materials___image___children
+  frontmatter___materials___image___sourceInstanceName
+  frontmatter___materials___image___absolutePath
+  frontmatter___materials___image___relativePath
+  frontmatter___materials___image___extension
+  frontmatter___materials___image___size
+  frontmatter___materials___image___prettySize
+  frontmatter___materials___image___modifiedTime
+  frontmatter___materials___image___accessTime
+  frontmatter___materials___image___changeTime
+  frontmatter___materials___image___birthTime
+  frontmatter___materials___image___root
+  frontmatter___materials___image___dir
+  frontmatter___materials___image___base
+  frontmatter___materials___image___ext
+  frontmatter___materials___image___name
+  frontmatter___materials___image___relativeDirectory
+  frontmatter___materials___image___dev
+  frontmatter___materials___image___mode
+  frontmatter___materials___image___nlink
+  frontmatter___materials___image___uid
+  frontmatter___materials___image___gid
+  frontmatter___materials___image___rdev
+  frontmatter___materials___image___blksize
+  frontmatter___materials___image___ino
+  frontmatter___materials___image___blocks
+  frontmatter___materials___image___atimeMs
+  frontmatter___materials___image___mtimeMs
+  frontmatter___materials___image___ctimeMs
+  frontmatter___materials___image___birthtimeMs
+  frontmatter___materials___image___atime
+  frontmatter___materials___image___mtime
+  frontmatter___materials___image___ctime
+  frontmatter___materials___image___birthtime
+  frontmatter___materials___image___publicURL
+  frontmatter___materials___title
+  frontmatter___portfolioTitle
+  frontmatter___portfolioBody
+  frontmatter___portfolioProject
   excerpt
   rawMarkdownBody
   fileAbsolutePath
@@ -1503,10 +1731,98 @@ input MarkdownRemarkFilterInput {
 
 type MarkdownRemarkFrontmatter {
   title: String
+  templateKey: String
+  excerpt: String
+  business: String
+  thumbnail: File
+  images: [File]
+  headerSlider: [MarkdownRemarkFrontmatterHeaderSlider]
+  presentationTitle: String
+  presentationBody: String
+  presentationSlider: [MarkdownRemarkFrontmatterPresentationSlider]
+  processTitle: String
+  process: [MarkdownRemarkFrontmatterProcess]
+  materialTitle: String
+  materials: [MarkdownRemarkFrontmatterMaterials]
+  portfolioTitle: String
+  portfolioBody: String
+  portfolioProject: String
 }
 
 input MarkdownRemarkFrontmatterFilterInput {
   title: StringQueryOperatorInput
+  templateKey: StringQueryOperatorInput
+  excerpt: StringQueryOperatorInput
+  business: StringQueryOperatorInput
+  thumbnail: FileFilterInput
+  images: FileFilterListInput
+  headerSlider: MarkdownRemarkFrontmatterHeaderSliderFilterListInput
+  presentationTitle: StringQueryOperatorInput
+  presentationBody: StringQueryOperatorInput
+  presentationSlider: MarkdownRemarkFrontmatterPresentationSliderFilterListInput
+  processTitle: StringQueryOperatorInput
+  process: MarkdownRemarkFrontmatterProcessFilterListInput
+  materialTitle: StringQueryOperatorInput
+  materials: MarkdownRemarkFrontmatterMaterialsFilterListInput
+  portfolioTitle: StringQueryOperatorInput
+  portfolioBody: StringQueryOperatorInput
+  portfolioProject: StringQueryOperatorInput
+}
+
+type MarkdownRemarkFrontmatterHeaderSlider {
+  image: File
+  title: String
+}
+
+input MarkdownRemarkFrontmatterHeaderSliderFilterInput {
+  image: FileFilterInput
+  title: StringQueryOperatorInput
+}
+
+input MarkdownRemarkFrontmatterHeaderSliderFilterListInput {
+  elemMatch: MarkdownRemarkFrontmatterHeaderSliderFilterInput
+}
+
+type MarkdownRemarkFrontmatterMaterials {
+  content: String
+  image: File
+  title: String
+}
+
+input MarkdownRemarkFrontmatterMaterialsFilterInput {
+  content: StringQueryOperatorInput
+  image: FileFilterInput
+  title: StringQueryOperatorInput
+}
+
+input MarkdownRemarkFrontmatterMaterialsFilterListInput {
+  elemMatch: MarkdownRemarkFrontmatterMaterialsFilterInput
+}
+
+type MarkdownRemarkFrontmatterPresentationSlider {
+  image: File
+  title: String
+}
+
+input MarkdownRemarkFrontmatterPresentationSliderFilterInput {
+  image: FileFilterInput
+  title: StringQueryOperatorInput
+}
+
+input MarkdownRemarkFrontmatterPresentationSliderFilterListInput {
+  elemMatch: MarkdownRemarkFrontmatterPresentationSliderFilterInput
+}
+
+type MarkdownRemarkFrontmatterProcess {
+  step: String
+}
+
+input MarkdownRemarkFrontmatterProcessFilterInput {
+  step: StringQueryOperatorInput
+}
+
+input MarkdownRemarkFrontmatterProcessFilterListInput {
+  elemMatch: MarkdownRemarkFrontmatterProcessFilterInput
 }
 
 type MarkdownRemarkGroupConnection {
@@ -1922,6 +2238,9 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___name
   pluginCreator___pluginOptions___path
   pluginCreator___pluginOptions___ignore
+  pluginCreator___pluginOptions___cmsConfig
+  pluginCreator___pluginOptions___maxWidth
+  pluginCreator___pluginOptions___backgroundColor
   pluginCreator___pluginOptions___defaultQuality
   pluginCreator___pluginOptions___short_name
   pluginCreator___pluginOptions___start_url
@@ -2115,6 +2434,9 @@ enum SitePluginFieldsEnum {
   pluginOptions___name
   pluginOptions___path
   pluginOptions___ignore
+  pluginOptions___cmsConfig
+  pluginOptions___maxWidth
+  pluginOptions___backgroundColor
   pluginOptions___defaultQuality
   pluginOptions___short_name
   pluginOptions___start_url
@@ -2250,6 +2572,9 @@ type SitePluginPluginOptions {
   name: String
   path: String
   ignore: [String]
+  cmsConfig: String
+  maxWidth: Int
+  backgroundColor: String
   defaultQuality: Int
   short_name: String
   start_url: String
@@ -2272,6 +2597,9 @@ input SitePluginPluginOptionsFilterInput {
   name: StringQueryOperatorInput
   path: StringQueryOperatorInput
   ignore: StringQueryOperatorInput
+  cmsConfig: StringQueryOperatorInput
+  maxWidth: IntQueryOperatorInput
+  backgroundColor: StringQueryOperatorInput
   defaultQuality: IntQueryOperatorInput
   short_name: StringQueryOperatorInput
   start_url: StringQueryOperatorInput

@@ -7,8 +7,7 @@ headerSlider:
     title: Société Innovante en Recyclage Éco-responsable
   - image: /uploads/spacex-71873-unsplash.png
     title: >-
-      Société Innovante en Recyclage Éco-responsableSociété Innovante en
-      Recyclage Éco-responsable
+      Société Innovante en Recyclage Éco-responsable
   - image: /uploads/spacex-71873-unsplash.png
     title: Société Innovante en Recyclage Éco-responsable
 presentationTitle: Le Luxe éco-responsable
@@ -63,4 +62,5 @@ portfolioBody: >-
   gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem
   ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore ma.
+portfolioProject: Euler hermes
 ---

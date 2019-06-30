@@ -205,3 +205,10 @@ Card.propTypes = {
   ...opacity.propTypes,
   ...cards.propTypes
 }
+
+Card.defaultProps = {
+  width: 1,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat'
+}

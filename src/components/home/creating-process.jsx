@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Flex, Container, Heading, Text } from '../../utils/rebass'
 
 const CreatingProcess = ({ title, process }) => (
-  <Container>
+  <Container as="section">
     <Heading textAlign="center">{title}</Heading>
     <Flex flexWrap="wrap">
       {process &&

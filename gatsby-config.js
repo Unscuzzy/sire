@@ -1,5 +1,3 @@
-const path = require(`path`)
-
 module.exports = {
   siteMetadata: {
     title: `SIRE`,
@@ -8,6 +6,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `uploads`,
+        path: `${__dirname}/static/uploads`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -22,6 +27,25 @@ module.exports = {
         path: `${__dirname}/data/`,
         // eslint-disable-next-line
         ignore: [`**/\.*`] // ignore files starting with a dot
+      }
+    },
+    {
+      resolve: `gatsby-plugin-netlify-cms-paths`,
+      options: {
+        cmsConfig: `/static/admin/config.yml`
+      }
+    },
+    {
+      resolve: `gatsby-remark-relative-images`,
+      options: {
+        name: 'uploads'
+      }
+    },
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 1400,
+        backgroundColor: 'transparent'
       }
     },
     `gatsby-transformer-sharp`,

@@ -5,6 +5,19 @@
  */
 // const path = require(`path`)
 // const slash = require(`slash`)
+const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+
+exports.onCreateNode = ({ node }) => {
+  // Relative image Sharp in Markdown
+  fmImagesToRelative(node)
+}
+
+exports.onClientEntry = () => {
+  // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
+  if (typeof window.IntersectionObserver === `undefined`) {
+    import(`intersection-observer`)
+  }
+}
 
 /*
 // Create pages/posts etc templates

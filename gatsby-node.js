@@ -12,13 +12,6 @@ exports.onCreateNode = ({ node }) => {
   fmImagesToRelative(node)
 }
 
-exports.onClientEntry = () => {
-  // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
-  if (typeof window.IntersectionObserver === `undefined`) {
-    import(`intersection-observer`)
-  }
-}
-
 /*
 // Create pages/posts etc templates
 exports.createPages = async ({ graphql, actions }) => {

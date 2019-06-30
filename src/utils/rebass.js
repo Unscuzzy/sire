@@ -17,6 +17,7 @@ import {
   fontSize,
   fontFamily,
   fontWeight,
+  fontStyle,
   textAlign,
   lineHeight,
   letterSpacing,
@@ -94,6 +95,7 @@ Container.defaultProps = {
 export const Text = styled(Box)(
   fontFamily,
   fontWeight,
+  fontStyle,
   textAlign,
   lineHeight,
   letterSpacing,
@@ -103,9 +105,19 @@ export const Text = styled(Box)(
 Text.propTypes = {
   ...fontFamily.propTypes,
   ...fontWeight.propTypes,
+  ...fontStyle.propTypes,
   ...textAlign.propTypes,
   ...lineHeight.propTypes,
   ...letterSpacing.propTypes
+}
+
+Text.defaultProps = {
+  as: 'p',
+  fontFamily: 'open',
+  fontSize: [2],
+  fontWeight: 4,
+  letterSpacing: '1.6px',
+  lineHeight: 1
 }
 
 export const Heading = styled(Text)(themed('Heading'))
@@ -113,9 +125,12 @@ export const Heading = styled(Text)(themed('Heading'))
 Heading.defaultProps = {
   as: 'h2',
   m: 0,
-  fontSize: 4,
-  fontWeight: 'bold',
-  color: TColors.black
+  fontSize: [4, 5],
+  fontFamily: 'lato',
+  fontWeight: 4,
+  color: TColors.ocreLight,
+  letterSpacing: '3.6px',
+  lineHeight: 'title'
 }
 
 export const Link = styled(Text)(themed('Link'))

@@ -9,6 +9,7 @@ import Presentation from '../components/home/presentation'
 import CreatingProcess from '../components/home/creating-process'
 import Materials from '../components/home/materials'
 import Portfolio from '../components/home/portfolio'
+import { ImageFuildProps } from '../utils/propTypes'
 
 // Gatsby Page query (inject data to frontend template)
 const IndexPage = ({ data }) => {
@@ -55,13 +56,13 @@ IndexPage.propTypes = {
         excerpt: PropTypes.string.isRequired,
         headerSlider: PropTypes.arrayOf({
           title: PropTypes.string.isRequired,
-          image: PropTypes.any
+          image: ImageFuildProps
         }),
         presentationTitle: PropTypes.string.isRequired,
         presentationBody: PropTypes.string.isRequired,
         presentationSlider: PropTypes.arrayOf({
           title: PropTypes.string.isRequired,
-          image: PropTypes.any
+          image: ImageFuildProps
         }),
         processTitle: PropTypes.string.isRequired,
         process: PropTypes.arrayOf({
@@ -70,7 +71,7 @@ IndexPage.propTypes = {
         materialTitle: PropTypes.string.isRequired,
         materials: PropTypes.arrayOf({
           title: PropTypes.string.isRequired,
-          image: PropTypes.any,
+          image: ImageFuildProps,
           content: PropTypes.string
         }),
         portfolioTitle: PropTypes.string.isRequired,

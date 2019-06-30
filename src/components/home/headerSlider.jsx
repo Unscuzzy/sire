@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import Slider from 'react-slick'
 import uniqid from 'uniqid'
 
 import { Card, Flex, Container, Heading } from '../../utils/rebass'
 import { ImageFuildProps } from '../../utils/propTypes'
+import SlickHelper from '../../utils/slick-helper'
 
 const HeaderSlider = ({ slides }) => {
   const settings = {
     dots: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -18,18 +19,7 @@ const HeaderSlider = ({ slides }) => {
 
   return (
     <Container>
-      <Helmet>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
-      </Helmet>
+      <SlickHelper />
       <Slider {...settings}>
         {slides.map(({ image, title }) => {
           const { src } = image.childImageSharp.fluid

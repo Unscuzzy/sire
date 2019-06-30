@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-size: 1.5em;
     line-height: 1.6;
-    font-family: ${fonts.body};
+    font-family: ${fonts.open};
     font-weight: 400;
     color: ${colors.black};
     background-color: ${colors.white};

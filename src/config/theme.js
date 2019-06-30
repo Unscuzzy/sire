@@ -60,8 +60,8 @@ export const colors = {
 }
 
 export const fonts = {
-  body: `'Open Sans', sans-serif`,
-  heading: `'Lato', sans-serif`
+  open: `'Open Sans', sans-serif`,
+  lato: `'Lato', sans-serif`
 }
 
 export const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900]

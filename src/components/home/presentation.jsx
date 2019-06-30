@@ -7,7 +7,8 @@ import styled from 'styled-components'
 
 import MediaQ from '../responsive'
 import { Flex, Box, Heading, Text, Container, Card } from '../../utils/rebass'
-import {colors} from '../../config/theme'
+import { colors } from '../../config/theme'
+import { ImageFuildProps } from '../../utils/propTypes'
 
 const MySlider = styled(Slider)`
   .slick-arrow {
@@ -61,7 +62,12 @@ const Presentation = ({ title, html, slides }) => {
 }
 
 Presentation.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  html: PropTypes.string.isRequired,
+  slides: PropTypes.arrayOf({
+    title: PropTypes.string.isRequired,
+    image: ImageFuildProps
+  })
 }
 
 export default Presentation

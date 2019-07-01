@@ -2,6 +2,7 @@
 templateKey: about-page
 title: À propos
 excerpt: À propos
+cover: /uploads/spacex-71873-unsplash.png
 ecoTitle: Le Luxe éco-responsable
 ecoBody: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

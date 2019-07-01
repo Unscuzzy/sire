@@ -2,6 +2,7 @@
 templateKey: mentions-legales-page
 title: Mentions légales
 excerpt: Mentions légales
+cover: /uploads/spacex-71873-unsplash.png
 ---
 ## 1. Lorem ipsum dolor sit amet.
 

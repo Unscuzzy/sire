@@ -1,23 +1,27 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import { Box, Heading } from '../utils/rebass'
+import { Container, Card, Heading } from '../utils/rebass'
 
-const BackgroundImage = styled(Box).attrs({})``
-
-const Title = styled(Heading).attrs({
-  color: 'white'
-})``
-
-const Hero = ({ title }) => (
-  <BackgroundImage>
-    <Title>{title}</Title>
-  </BackgroundImage>
+const Hero = ({ title, src }) => (
+  <Container>
+    <Card py={5} backgroundImage={`url(${src})`}>
+      <Heading
+        textAlign="center"
+        fontFamily="lato"
+        fontSize={[4, 5, 5, 6]}
+        fontWeight={4}
+        color="white"
+      >
+        {title}
+      </Heading>
+    </Card>
+  </Container>
 )
 
 Hero.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired
 }
 
 export default Hero

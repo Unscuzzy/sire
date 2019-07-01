@@ -25,7 +25,6 @@ import {
 const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
-
     <Box bg="brown" py={5} my={4}>
       <Container>
         <Heading as="h1" color="white" fontSize={[5, 6, 7]}>

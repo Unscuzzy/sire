@@ -1,5 +1,5 @@
 # source: http://localhost:8000/___graphql
-# timestamp: Mon Jul 01 2019 21:30:35 GMT+0200 (GMT+02:00)
+# timestamp: Tue Jul 02 2019 00:40:11 GMT+0200 (GMT+02:00)
 
 """Provides default value for input field."""
 directive @default(value: JSON!) on INPUT_FIELD_DEFINITION
@@ -1571,6 +1571,140 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___images___ctime
   frontmatter___images___birthtime
   frontmatter___images___publicURL
+  frontmatter___date
+  frontmatter___cover___id
+  frontmatter___cover___parent___id
+  frontmatter___cover___parent___children
+  frontmatter___cover___children
+  frontmatter___cover___children___id
+  frontmatter___cover___children___children
+  frontmatter___cover___internal___content
+  frontmatter___cover___internal___contentDigest
+  frontmatter___cover___internal___description
+  frontmatter___cover___internal___fieldOwners
+  frontmatter___cover___internal___ignoreType
+  frontmatter___cover___internal___mediaType
+  frontmatter___cover___internal___owner
+  frontmatter___cover___internal___type
+  frontmatter___cover___sourceInstanceName
+  frontmatter___cover___absolutePath
+  frontmatter___cover___relativePath
+  frontmatter___cover___extension
+  frontmatter___cover___size
+  frontmatter___cover___prettySize
+  frontmatter___cover___modifiedTime
+  frontmatter___cover___accessTime
+  frontmatter___cover___changeTime
+  frontmatter___cover___birthTime
+  frontmatter___cover___root
+  frontmatter___cover___dir
+  frontmatter___cover___base
+  frontmatter___cover___ext
+  frontmatter___cover___name
+  frontmatter___cover___relativeDirectory
+  frontmatter___cover___dev
+  frontmatter___cover___mode
+  frontmatter___cover___nlink
+  frontmatter___cover___uid
+  frontmatter___cover___gid
+  frontmatter___cover___rdev
+  frontmatter___cover___blksize
+  frontmatter___cover___ino
+  frontmatter___cover___blocks
+  frontmatter___cover___atimeMs
+  frontmatter___cover___mtimeMs
+  frontmatter___cover___ctimeMs
+  frontmatter___cover___birthtimeMs
+  frontmatter___cover___atime
+  frontmatter___cover___mtime
+  frontmatter___cover___ctime
+  frontmatter___cover___birthtime
+  frontmatter___cover___publicURL
+  frontmatter___ecoTitle
+  frontmatter___ecoBody
+  frontmatter___ecoItems
+  frontmatter___ecoItems___content
+  frontmatter___ecoItems___name
+  frontmatter___partnerTitle
+  frontmatter___partners
+  frontmatter___partners___logo___id
+  frontmatter___partners___logo___children
+  frontmatter___partners___logo___sourceInstanceName
+  frontmatter___partners___logo___absolutePath
+  frontmatter___partners___logo___relativePath
+  frontmatter___partners___logo___extension
+  frontmatter___partners___logo___size
+  frontmatter___partners___logo___prettySize
+  frontmatter___partners___logo___modifiedTime
+  frontmatter___partners___logo___accessTime
+  frontmatter___partners___logo___changeTime
+  frontmatter___partners___logo___birthTime
+  frontmatter___partners___logo___root
+  frontmatter___partners___logo___dir
+  frontmatter___partners___logo___base
+  frontmatter___partners___logo___ext
+  frontmatter___partners___logo___name
+  frontmatter___partners___logo___relativeDirectory
+  frontmatter___partners___logo___dev
+  frontmatter___partners___logo___mode
+  frontmatter___partners___logo___nlink
+  frontmatter___partners___logo___uid
+  frontmatter___partners___logo___gid
+  frontmatter___partners___logo___rdev
+  frontmatter___partners___logo___blksize
+  frontmatter___partners___logo___ino
+  frontmatter___partners___logo___blocks
+  frontmatter___partners___logo___atimeMs
+  frontmatter___partners___logo___mtimeMs
+  frontmatter___partners___logo___ctimeMs
+  frontmatter___partners___logo___birthtimeMs
+  frontmatter___partners___logo___atime
+  frontmatter___partners___logo___mtime
+  frontmatter___partners___logo___ctime
+  frontmatter___partners___logo___birthtime
+  frontmatter___partners___logo___publicURL
+  frontmatter___partners___url
+  frontmatter___teamTitle
+  frontmatter___team
+  frontmatter___team___content
+  frontmatter___team___name
+  frontmatter___team___photo___id
+  frontmatter___team___photo___children
+  frontmatter___team___photo___sourceInstanceName
+  frontmatter___team___photo___absolutePath
+  frontmatter___team___photo___relativePath
+  frontmatter___team___photo___extension
+  frontmatter___team___photo___size
+  frontmatter___team___photo___prettySize
+  frontmatter___team___photo___modifiedTime
+  frontmatter___team___photo___accessTime
+  frontmatter___team___photo___changeTime
+  frontmatter___team___photo___birthTime
+  frontmatter___team___photo___root
+  frontmatter___team___photo___dir
+  frontmatter___team___photo___base
+  frontmatter___team___photo___ext
+  frontmatter___team___photo___name
+  frontmatter___team___photo___relativeDirectory
+  frontmatter___team___photo___dev
+  frontmatter___team___photo___mode
+  frontmatter___team___photo___nlink
+  frontmatter___team___photo___uid
+  frontmatter___team___photo___gid
+  frontmatter___team___photo___rdev
+  frontmatter___team___photo___blksize
+  frontmatter___team___photo___ino
+  frontmatter___team___photo___blocks
+  frontmatter___team___photo___atimeMs
+  frontmatter___team___photo___mtimeMs
+  frontmatter___team___photo___ctimeMs
+  frontmatter___team___photo___birthtimeMs
+  frontmatter___team___photo___atime
+  frontmatter___team___photo___mtime
+  frontmatter___team___photo___ctime
+  frontmatter___team___photo___birthtime
+  frontmatter___team___photo___publicURL
+  frontmatter___content
   frontmatter___headerSlider
   frontmatter___headerSlider___image___id
   frontmatter___headerSlider___image___children
@@ -1695,91 +1829,6 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___portfolioTitle
   frontmatter___portfolioBody
   frontmatter___portfolioProject
-  frontmatter___content
-  frontmatter___ecoTitle
-  frontmatter___ecoBody
-  frontmatter___ecoItems
-  frontmatter___ecoItems___content
-  frontmatter___ecoItems___name
-  frontmatter___partnerTitle
-  frontmatter___partners
-  frontmatter___partners___logo___id
-  frontmatter___partners___logo___children
-  frontmatter___partners___logo___sourceInstanceName
-  frontmatter___partners___logo___absolutePath
-  frontmatter___partners___logo___relativePath
-  frontmatter___partners___logo___extension
-  frontmatter___partners___logo___size
-  frontmatter___partners___logo___prettySize
-  frontmatter___partners___logo___modifiedTime
-  frontmatter___partners___logo___accessTime
-  frontmatter___partners___logo___changeTime
-  frontmatter___partners___logo___birthTime
-  frontmatter___partners___logo___root
-  frontmatter___partners___logo___dir
-  frontmatter___partners___logo___base
-  frontmatter___partners___logo___ext
-  frontmatter___partners___logo___name
-  frontmatter___partners___logo___relativeDirectory
-  frontmatter___partners___logo___dev
-  frontmatter___partners___logo___mode
-  frontmatter___partners___logo___nlink
-  frontmatter___partners___logo___uid
-  frontmatter___partners___logo___gid
-  frontmatter___partners___logo___rdev
-  frontmatter___partners___logo___blksize
-  frontmatter___partners___logo___ino
-  frontmatter___partners___logo___blocks
-  frontmatter___partners___logo___atimeMs
-  frontmatter___partners___logo___mtimeMs
-  frontmatter___partners___logo___ctimeMs
-  frontmatter___partners___logo___birthtimeMs
-  frontmatter___partners___logo___atime
-  frontmatter___partners___logo___mtime
-  frontmatter___partners___logo___ctime
-  frontmatter___partners___logo___birthtime
-  frontmatter___partners___logo___publicURL
-  frontmatter___partners___url
-  frontmatter___teamTitle
-  frontmatter___team
-  frontmatter___team___content
-  frontmatter___team___name
-  frontmatter___team___photo___id
-  frontmatter___team___photo___children
-  frontmatter___team___photo___sourceInstanceName
-  frontmatter___team___photo___absolutePath
-  frontmatter___team___photo___relativePath
-  frontmatter___team___photo___extension
-  frontmatter___team___photo___size
-  frontmatter___team___photo___prettySize
-  frontmatter___team___photo___modifiedTime
-  frontmatter___team___photo___accessTime
-  frontmatter___team___photo___changeTime
-  frontmatter___team___photo___birthTime
-  frontmatter___team___photo___root
-  frontmatter___team___photo___dir
-  frontmatter___team___photo___base
-  frontmatter___team___photo___ext
-  frontmatter___team___photo___name
-  frontmatter___team___photo___relativeDirectory
-  frontmatter___team___photo___dev
-  frontmatter___team___photo___mode
-  frontmatter___team___photo___nlink
-  frontmatter___team___photo___uid
-  frontmatter___team___photo___gid
-  frontmatter___team___photo___rdev
-  frontmatter___team___photo___blksize
-  frontmatter___team___photo___ino
-  frontmatter___team___photo___blocks
-  frontmatter___team___photo___atimeMs
-  frontmatter___team___photo___mtimeMs
-  frontmatter___team___photo___ctimeMs
-  frontmatter___team___photo___birthtimeMs
-  frontmatter___team___photo___atime
-  frontmatter___team___photo___mtime
-  frontmatter___team___photo___ctime
-  frontmatter___team___photo___birthtime
-  frontmatter___team___photo___publicURL
   frontmatter___subTitle
   frontmatter___presentation
   frontmatter___portfolioProjects
@@ -1824,6 +1873,36 @@ type MarkdownRemarkFrontmatter {
   business: String
   thumbnail: File
   images: [File]
+  date(
+    """
+    Format the date using Moment.js' date tokens, e.g. `date(formatString: "YYYY
+    MMMM DD")`. See https://momentjs.com/docs/#/displaying/format/ for
+    documentation for different tokens.
+    """
+    formatString: String
+
+    """Returns a string generated with Moment.js' `fromNow` function"""
+    fromNow: Boolean
+
+    """
+    Returns the difference between this date and the current time. Defaults to
+    "milliseconds" but you can also pass in as the measurement "years",
+    "months", "weeks", "days", "hours", "minutes", and "seconds".
+    """
+    difference: String
+
+    """Configures the locale Moment.js will use to format the date."""
+    locale: String
+  ): Date
+  cover: File
+  ecoTitle: String
+  ecoBody: String
+  ecoItems: [MarkdownRemarkFrontmatterEcoItems]
+  partnerTitle: String
+  partners: [MarkdownRemarkFrontmatterPartners]
+  teamTitle: String
+  team: [MarkdownRemarkFrontmatterTeam]
+  content: String
   headerSlider: [MarkdownRemarkFrontmatterHeaderSlider]
   presentationTitle: String
   presentationBody: String
@@ -1835,14 +1914,6 @@ type MarkdownRemarkFrontmatter {
   portfolioTitle: String
   portfolioBody: String
   portfolioProject: String
-  content: String
-  ecoTitle: String
-  ecoBody: String
-  ecoItems: [MarkdownRemarkFrontmatterEcoItems]
-  partnerTitle: String
-  partners: [MarkdownRemarkFrontmatterPartners]
-  teamTitle: String
-  team: [MarkdownRemarkFrontmatterTeam]
   subTitle: String
   presentation: String
   portfolioProjects: [String]
@@ -1869,6 +1940,16 @@ input MarkdownRemarkFrontmatterFilterInput {
   business: StringQueryOperatorInput
   thumbnail: FileFilterInput
   images: FileFilterListInput
+  date: DateQueryOperatorInput
+  cover: FileFilterInput
+  ecoTitle: StringQueryOperatorInput
+  ecoBody: StringQueryOperatorInput
+  ecoItems: MarkdownRemarkFrontmatterEcoItemsFilterListInput
+  partnerTitle: StringQueryOperatorInput
+  partners: MarkdownRemarkFrontmatterPartnersFilterListInput
+  teamTitle: StringQueryOperatorInput
+  team: MarkdownRemarkFrontmatterTeamFilterListInput
+  content: StringQueryOperatorInput
   headerSlider: MarkdownRemarkFrontmatterHeaderSliderFilterListInput
   presentationTitle: StringQueryOperatorInput
   presentationBody: StringQueryOperatorInput
@@ -1880,14 +1961,6 @@ input MarkdownRemarkFrontmatterFilterInput {
   portfolioTitle: StringQueryOperatorInput
   portfolioBody: StringQueryOperatorInput
   portfolioProject: StringQueryOperatorInput
-  content: StringQueryOperatorInput
-  ecoTitle: StringQueryOperatorInput
-  ecoBody: StringQueryOperatorInput
-  ecoItems: MarkdownRemarkFrontmatterEcoItemsFilterListInput
-  partnerTitle: StringQueryOperatorInput
-  partners: MarkdownRemarkFrontmatterPartnersFilterListInput
-  teamTitle: StringQueryOperatorInput
-  team: MarkdownRemarkFrontmatterTeamFilterListInput
   subTitle: StringQueryOperatorInput
   presentation: StringQueryOperatorInput
   portfolioProjects: StringQueryOperatorInput

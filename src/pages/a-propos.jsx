@@ -12,6 +12,7 @@ const AboutPage = ({ data }) => {
   const {
     title,
     excerpt,
+    cover,
     ecoTitle,
     ecoBody,
     ecoItems,
@@ -21,10 +22,12 @@ const AboutPage = ({ data }) => {
     team
   } = data.markdownRemark.frontmatter
 
+  const { src } = cover.childImageSharp.fluid
+
   return (
     <Layout>
       <SEO title={title} description={excerpt} />
-      <Hero title={title} />
+      <Hero title={title} src={src} />
       {console.log({
         title,
         excerpt,
@@ -46,6 +49,7 @@ AboutPage.propTypes = {
       frontmatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
         excerpt: PropTypes.string.isRequired,
+        cover: ImageFuildProps.isRequired,
         ecoTitle: PropTypes.string.isRequired,
         ecoBody: PropTypes.string.isRequired,
         ecoItems: PropTypes.arrayOf(
@@ -82,6 +86,13 @@ export const pageQuery = graphql`
       frontmatter {
         title
         excerpt
+        cover {
+          childImageSharp {
+            fluid(maxWidth: 2000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         ecoTitle
         ecoBody
         ecoItems {

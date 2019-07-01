@@ -2,6 +2,7 @@
 templateKey: portfolio-page
 title: Portfolio
 excerpt: Découvrez le portfolio de SIRE
+cover: /uploads/spacex-71873-unsplash.png
 subTitle: Ils nous font confiance
 presentation: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

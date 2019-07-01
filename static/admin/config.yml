@@ -11,13 +11,13 @@
 backend:
   # local backend
   # WARN: Will not save data, it just for develop fields
-  name: test-repo
+  # name: test-repo
 
   # Netlify as backend (recommanded)
-  # name: git-gateway
-  # accept_roles:
-  #   - admin
-  #   - editor
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
 
 media_folder: static/uploads
 public_folder: uploads
@@ -190,7 +190,7 @@ collections:
       }
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
-    folder: "src/pages/blog/posts" # The path to the folder where the documents are stored
+    folder: "data/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -202,7 +202,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "authors"
     label: "Authors"
-    folder: "src/authors"
+    folder: "data/authors"
     create: true
     slug: "{{slug}}"
     fields:

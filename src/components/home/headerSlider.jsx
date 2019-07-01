@@ -18,7 +18,7 @@ const HeaderSlider = ({ slides }) => {
   }
 
   return (
-    <Container>
+    <Container as="section">
       <SlickHelper />
       <Slider {...settings}>
         {slides.map(({ image, title }) => {

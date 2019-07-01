@@ -6,8 +6,7 @@ headerSlider:
   - image: /uploads/spacex-71873-unsplash.png
     title: Société Innovante en Recyclage Éco-responsable
   - image: /uploads/spacex-71873-unsplash.png
-    title: >-
-      Société Innovante en Recyclage Éco-responsable
+    title: Société Innovante en Recyclage Éco-responsable
   - image: /uploads/spacex-71873-unsplash.png
     title: Société Innovante en Recyclage Éco-responsable
 presentationTitle: Le Luxe éco-responsable

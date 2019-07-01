@@ -14,7 +14,7 @@ backend:
   # name: test-repo
 
   # Netlify as backend (recommanded)
-#  name: git-gateway
+  name: git-gateway
   accept_roles:
     - admin
     - editor

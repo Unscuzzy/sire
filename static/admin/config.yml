@@ -137,7 +137,8 @@ collections:
             widget: relation,
             collection: projects,
             searchFields: ['title', 'business'],
-            valueField: 'title'
+            valueField: 'slug',
+            displayFields: 'title'
           }
 
   # Portfolio projects collection

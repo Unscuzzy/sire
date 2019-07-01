@@ -140,7 +140,98 @@ collections:
             valueField: 'slug',
             displayFields: 'title'
           }
-
+      # Page: About ( à propos )
+      - file: data/static-pages/about.md
+        name: about
+        label: "À propos"
+        fields:
+          - {
+            name: templateKey,
+            label: Template Key,
+            widget: hidden,
+            default: about-page,
+          }
+          - {
+            name: title,
+            label: Titre,
+            widget: string,
+            hint: 'Utilisé pour le SEO',
+          }
+          - {
+            name: excerpt,
+            label: Extrait,
+            widget: text,
+            hint: 'Utilisé pour le SEO'
+          }
+      # Page: Portfolio
+      - file: data/static-pages/portfolio.md
+        name: portfolio
+        label: "Portfolio"
+        fields:
+          - {
+            name: templateKey,
+            label: Template Key,
+            widget: hidden,
+            default: portfolio-page,
+          }
+          - {
+            name: title,
+            label: Titre,
+            widget: string,
+            hint: 'Utilisé pour le SEO',
+          }
+          - {
+            name: excerpt,
+            label: Extrait,
+            widget: text,
+            hint: 'Utilisé pour le SEO'
+          }
+      # Page: Contact
+      - file: data/static-pages/contact.md
+        name: contact
+        label: "Contact"
+        fields:
+          - {
+            name: templateKey,
+            label: Template Key,
+            widget: hidden,
+            default: contact-page,
+          }
+          - {
+            name: title,
+            label: Titre,
+            widget: string,
+            hint: 'Utilisé pour le SEO',
+          }
+          - {
+            name: excerpt,
+            label: Extrait,
+            widget: text,
+            hint: 'Utilisé pour le SEO'
+          }
+      # Page: Mentions legals
+      - file: data/static-pages/mentions-legals.md
+        name: mentions-legals
+        label: "Mentions légales"
+        fields:
+          - {
+            name: templateKey,
+            label: Template Key,
+            widget: hidden,
+            default: mentions-legales-page,
+          }
+          - {
+            name: title,
+            label: Titre,
+            widget: string,
+            hint: 'Utilisé pour le SEO',
+          }
+          - {
+            name: excerpt,
+            label: Extrait,
+            widget: text,
+            hint: 'Utilisé pour le SEO'
+          }
   # Portfolio projects collection
   - name: projects
     label: Projets

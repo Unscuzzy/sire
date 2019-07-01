@@ -1,0 +1,3 @@
+---
+templateKey: mentions-legales-page
+---

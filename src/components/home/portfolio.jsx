@@ -2,8 +2,10 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 // import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
 
-import { Box, Container, Flex, Heading, Text } from '../../utils/rebass'
+import { Box, Container, Flex, Heading, Text, Button } from '../../utils/rebass'
+import Link from '../link'
 
 const Portfolio = ({ title, html, portfolio }) => {
   const data = useStaticQuery(graphql`
@@ -18,6 +20,13 @@ const Portfolio = ({ title, html, portfolio }) => {
               templateKey
               excerpt
               business
+              thumbnail {
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }
@@ -28,6 +37,7 @@ const Portfolio = ({ title, html, portfolio }) => {
     ({ node }) => node.frontmatter.title === portfolio
   )
   const project = projects[0].node.frontmatter
+  const { fluid } = project.thumbnail.childImageSharp
 
   return (
     <Container as="section" maxWidth={940}>
@@ -35,24 +45,33 @@ const Portfolio = ({ title, html, portfolio }) => {
       <Text fontStyle="italic" textAlign="center">
         {html}
       </Text>
-      <Flex flexWrap="wrap">{console.log(project)}</Flex>
+      <Flex>
+        <Box width={1 / 3}>
+          <Box bg="fadeOcre" pt={5} pb={4} px={4}>
+            <Heading color="white" style={{ textTransform: 'uppercase' }}>
+              {project.title}
+            </Heading>
+          </Box>
+          <Button
+            as={Link}
+            to="/portfolio"
+            style={{ textTransform: 'uppercase' }}
+          >
+            Le portfolio
+          </Button>
+        </Box>
+        <Box width={2 / 3}>
+          <Img fluid={fluid} />
+        </Box>
+      </Flex>
     </Container>
   )
 }
 
-/*
-{portfolio &&
-      portfolio.map(({ step }, i) => (
-        <Flex width={[1, 1 / 2, 1 / 4]} ph={[3, 3, 5]}>
-          <Heading>{i + 1}.</Heading>
-          <Text fontStyle="italic">{step}</Text>
-        </Flex>
-      ))}
- */
-
 Portfolio.propTypes = {
   title: PropTypes.string.isRequired,
-  html: PropTypes.string.isRequired
+  html: PropTypes.string.isRequired,
+  portfolio: PropTypes.string.isRequired
 }
 
 export default Portfolio

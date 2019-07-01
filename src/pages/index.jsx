@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
         html={presentationBody}
         slides={presentationSlider}
       />
-      <CreatingProcess title={processTitle} process={process} />
+      <CreatingProcess title={processTitle} html={process} />
       <Materials title={materialTitle} materials={materials} />
       <Portfolio
         title={portfolioTitle}

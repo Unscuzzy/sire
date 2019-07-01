@@ -1,28 +1,23 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import { Flex, Container, Heading, Text } from '../../utils/rebass'
+import { Box, Heading } from '../../utils/rebass'
 
-const CreatingProcess = ({ title, process }) => (
-  <Container as="section">
-    <Heading textAlign="center">{title}</Heading>
-    <Flex flexWrap="wrap">
-      {process &&
-        process.map(({ step }, i) => (
-          <Flex width={[1, 1 / 2, 1 / 4]} ph={[3, 3, 5]}>
-            <Heading>{i + 1}.</Heading>
-            <Text fontStyle="italic">{step}</Text>
-          </Flex>
-        ))}
-    </Flex>
-  </Container>
+const BackgroundImage = styled(Box).attrs({})``
+
+const Title = styled(Heading).attrs({
+  color: 'white'
+})``
+
+const CreatingProcess = ({ title }) => (
+  <BackgroundImage>
+    <Title>{title}</Title>
+  </BackgroundImage>
 )
 
 CreatingProcess.propTypes = {
-  title: PropTypes.string.isRequired,
-  process: PropTypes.arrayOf({
-    step: PropTypes.string.isRequired
-  }).isRequired
+  title: PropTypes.string.isRequired
 }
 
 export default CreatingProcess

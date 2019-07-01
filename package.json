@@ -59,7 +59,6 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "debug:build": "node --inspect-brk --no-lazy node_modules/gatsby/dist/bin/gatsby develop",
     "lint:css": "stylelint src/**/*.{js,jsx}",
     "lint:js": "eslint src/**/*.{js,jsx}",
     "format": "prettier --write src/**/*.{js,jsx}",

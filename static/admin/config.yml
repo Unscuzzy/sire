@@ -254,7 +254,7 @@ collections:
             widget: text
           }
           - {
-            name: portfolioProject,
+            name: portfolioProjects,
             label: "Projets à afficher",
             widget: relation,
             collection: projects,

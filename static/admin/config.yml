@@ -11,13 +11,13 @@
 backend:
   # local backend
   # WARN: Will not save data, it just for develop fields
-  # name: test-repo
+   name: test-repo
 
   # Netlify as backend (recommanded)
-  name: git-gateway
-  accept_roles:
-    - admin
-    - editor
+#  name: git-gateway
+#  accept_roles:
+#    - admin
+#    - editor
 
 media_folder: static/uploads
 public_folder: uploads
@@ -81,7 +81,7 @@ collections:
           - {
             name: presentationBody,
             label: "Texte de présentation",
-            widget: markdown,
+            widget: text,
           }
           - {
             name: presentationSlider,
@@ -116,7 +116,7 @@ collections:
             widget: list,
             fields: [
               {name: title, label: Title, widget: string},
-              {name: content, label: Contenu, widget: markdown},
+              {name: content, label: Contenu, widget: text},
               {name: image, label: Image, widget: image}
             ],
             required: false
@@ -129,7 +129,7 @@ collections:
           - {
             name: portfolioBody,
             label: "Texte de présentation",
-            widget: markdown,
+            widget: text,
           }
           - {
             name: portfolioProject,
@@ -137,8 +137,7 @@ collections:
             widget: relation,
             collection: projects,
             searchFields: ['title', 'business'],
-            valueField: 'slug',
-            displayFields: 'title'
+            valueField: 'title'
           }
       # Page: About ( à propos )
       - file: data/static-pages/about.md
@@ -149,19 +148,67 @@ collections:
             name: templateKey,
             label: Template Key,
             widget: hidden,
-            default: about-page,
+            default: about-page
           }
           - {
             name: title,
             label: Titre,
             widget: string,
-            hint: 'Utilisé pour le SEO',
+            hint: 'Utilisé pour le SEO'
           }
           - {
             name: excerpt,
             label: Extrait,
             widget: text,
             hint: 'Utilisé pour le SEO'
+          }
+          - {
+            name: ecoTitle,
+            label: "Titre de la section éco.",
+            widget: string
+          }
+          - {
+            name: ecoBody,
+            label: "Description de la section éco.",
+            widget: text
+          }
+          - {
+            name: ecoItems,
+            label: "Points de la section éco.",
+            widget: list,
+            fields: [
+              {name: name, label: Titre, widget: string},
+              {name: content, label: Texte, widget: text}
+            ]
+          }
+          - {
+            name: partnerTitle,
+            label: "Titre de la section partenaires.",
+            widget: string
+          }
+          - {
+            name: partners,
+            label: "Points de la section partenaires.",
+            widget: list,
+            fields: [
+              {name: logo, label: Logo, widget: image, hint: "Considérez le format .png pour la transparence."},
+              {name: url, label: url, widget: string}
+            ]
+          }
+          - {
+            name: teamTitle,
+            label: "Titre de la section Team.",
+            widget: string
+          }
+          - {
+            name: team,
+            label: "Membres de la Team.",
+            widget: list,
+            fields: [
+              {name: photo, label: Photo, widget: image},
+              {name: name, label: Nom, widget: string},
+              {name: content, label: Description, widget: text}
+            ]
           }
       # Page: Portfolio
       - file: data/static-pages/portfolio.md
@@ -172,19 +219,38 @@ collections:
             name: templateKey,
             label: Template Key,
             widget: hidden,
-            default: portfolio-page,
+            default: portfolio-page
           }
           - {
             name: title,
             label: Titre,
             widget: string,
-            hint: 'Utilisé pour le SEO',
+            hint: 'Utilisé pour le SEO'
           }
           - {
             name: excerpt,
             label: Extrait,
             widget: text,
             hint: 'Utilisé pour le SEO'
+          }
+          - {
+            name: subTitle,
+            label: "Sous titre",
+            widget: string
+          }
+          - {
+            name: presentation,
+            label: "Présentation du portfolio",
+            widget: text
+          }
+          - {
+            name: portfolioProject,
+            label: "Projets à afficher",
+            widget: relation,
+            collection: projects,
+            searchFields: ['title', 'business'],
+            valueField: 'title',
+            multiple: true
           }
       # Page: Contact
       - file: data/static-pages/contact.md
@@ -195,19 +261,24 @@ collections:
             name: templateKey,
             label: Template Key,
             widget: hidden,
-            default: contact-page,
+            default: contact-page
           }
           - {
             name: title,
             label: Titre,
             widget: string,
-            hint: 'Utilisé pour le SEO',
+            hint: 'Utilisé pour le SEO'
           }
           - {
             name: excerpt,
             label: Extrait,
             widget: text,
             hint: 'Utilisé pour le SEO'
+          }
+          - {
+              name: content,
+              label: "Message avant le formulaire",
+              widget: text
           }
       # Page: Mentions legals
       - file: data/static-pages/mentions-legals.md
@@ -218,19 +289,24 @@ collections:
             name: templateKey,
             label: Template Key,
             widget: hidden,
-            default: mentions-legales-page,
+            default: mentions-legales-page
           }
           - {
             name: title,
             label: Titre,
             widget: string,
-            hint: 'Utilisé pour le SEO',
+            hint: 'Utilisé pour le SEO'
           }
           - {
             name: excerpt,
             label: Extrait,
             widget: text,
             hint: 'Utilisé pour le SEO'
+          }
+          - {
+              name: body,
+              label: "Contenu",
+              widget: markdown
           }
   # Portfolio projects collection
   - name: projects
@@ -243,24 +319,29 @@ collections:
         name: templateKey,
         label: Template Key,
         widget: hidden,
-        default: projects,
+        default: projects
       }
       - {
         name: title,
         label: Titre,
         widget: string,
-        hint: 'Utilisé pour le SEO',
+        hint: 'Utilisé pour le SEO'
       }
       - {
         name: excerpt,
         label: Extrait,
         widget: text,
-        hint: 'Utilisé pour le SEO',
+        hint: 'Utilisé pour le SEO'
       }
       - {
         name: business,
         label: "L'entreprise",
         widget: string
+      }
+      - {
+        name: date,
+        label: "Date du projet",
+        widget: date
       }
       - {
         name: thumbnail,
@@ -278,5 +359,5 @@ collections:
       - {
         name: body,
         label: "Texte de présentation",
-        widget: markdown
+        widget: text
       }

@@ -11,13 +11,13 @@
 backend:
   # local backend
   # WARN: Will not save data, it just for develop fields
-   name: test-repo
+  # name: test-repo
 
   # Netlify as backend (recommanded)
 #  name: git-gateway
-#  accept_roles:
-#    - admin
-#    - editor
+  accept_roles:
+    - admin
+    - editor
 
 media_folder: static/uploads
 public_folder: uploads

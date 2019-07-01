@@ -69,7 +69,7 @@ Header.propTypes = {
 Header.defaultProps = {
   links: [
     { label: 'Accueil', link: '/' },
-    // { label: 'à propos', link: '/a-propos' },
+    { label: 'à propos', link: '/a-propos' },
     // { label: 'Portfolio', link: '/portfolio' },
     // { label: 'Contact', link: '/contact' },
     { label: 'Demo', link: '/demo' }

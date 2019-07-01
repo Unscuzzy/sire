@@ -12,5 +12,7 @@ presentation: >-
   incididunt ut labore et dolore ma.
 portfolioProjects:
   - Euler hermes
+  - Channel
+  - Dior
 ---
 

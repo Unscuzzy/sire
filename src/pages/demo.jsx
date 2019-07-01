@@ -16,10 +16,13 @@ import {
 import MediaQ from '../components/responsive'
 import Link from '../components/link'
 import {
+  fade,
   fadeFromBottom,
   fadeFromRight,
   fadeFromLeft,
-  fadeFromTop
+  fadeFromTop,
+  growFromBottom,
+  discover
 } from '../utils/animations'
 
 const SecondPage = () => (
@@ -76,6 +79,18 @@ const SecondPage = () => (
         <MediaQ type="notSmall">
           <Heading>notSmall</Heading>
         </MediaQ>
+
+        <MediaQ min="tablet">
+          <Heading>notSmall2</Heading>
+        </MediaQ>
+
+        <MediaQ min="tablet" max="desktop">
+          <Heading>Tablet and phablet</Heading>
+        </MediaQ>
+
+        <MediaQ max="tablet">
+          <Heading>Mobile & Tablet</Heading>
+        </MediaQ>
       </Box>
 
       <Box mb={4}>
@@ -92,6 +107,40 @@ const SecondPage = () => (
           <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} />
           <Tween to={{ x: '50px' }} />
         </Timeline>
+      </Box>
+
+      <Box mb={4}>
+        <Heading fontSize={[4, 5, 6]} as="h2">
+          Grid
+        </Heading>
+        <Flex flexWrap="wrap">
+          <Box p={2} width={[1, 1 / 2, 1 / 3]}>
+            <Box bg="brown">Box</Box>
+          </Box>
+          <Box p={2} width={[1, 1 / 2, 1 / 3]}>
+            <Box bg="brown">Box</Box>
+          </Box>
+          <Box p={2} width={[1, 1 / 2, 1 / 3]}>
+            <Box bg="brown">Box</Box>
+          </Box>
+          <Box p={2} width={[1, 1 / 2, 1 / 3]}>
+            <Box bg="brown">Box</Box>
+          </Box>
+          <Box p={2} width={[1, 1 / 2, 1 / 3]}>
+            <Box bg="brown">Box</Box>
+          </Box>
+          <Box p={2} width={[1, 1 / 2, 1 / 3]}>
+            <Box bg="brown">Box</Box>
+          </Box>
+        </Flex>
+        <Flex flexWrap="wrap">
+          <Box p={2} width={1 / 2}>
+            <Box bg="brown">Box</Box>
+          </Box>
+          <Box p={2} width={1 / 2}>
+            <Box bg="brown">Box</Box>
+          </Box>
+        </Flex>
       </Box>
 
       <Box pb={4}>
@@ -114,56 +163,57 @@ const SecondPage = () => (
             )}
           </VisibilitySensor>
         </Box>
-        <VisibilitySensor>
-          {({ isVisible }) => (
-            <Tween to={fadeFromRight(isVisible)}>
-              <Heading py={6} textAlign="center">
-                Hello
-              </Heading>
-            </Tween>
-          )}
-        </VisibilitySensor>
-
-        <VisibilitySensor>
-          {({ isVisible }) => (
-            <Tween to={fadeFromLeft(isVisible)}>
-              <Heading py={6} textAlign="center">
-                Hello
-              </Heading>
-            </Tween>
-          )}
-        </VisibilitySensor>
-      </Box>
-
-      <Box mb={4}>
-        <Flex flexWrap="wrap">
-          <Box p={2} width={[1, 1 / 2, 1 / 3]}>
-            <Box bg="brown">Box</Box>
-          </Box>
-          <Box p={2} width={[1, 1 / 2, 1 / 3]}>
-            <Box bg="brown">Box</Box>
-          </Box>
-          <Box p={2} width={[1, 1 / 2, 1 / 3]}>
-            <Box bg="brown">Box</Box>
-          </Box>
-          <Box p={2} width={[1, 1 / 2, 1 / 3]}>
-            <Box bg="brown">Box</Box>
-          </Box>
-          <Box p={2} width={[1, 1 / 2, 1 / 3]}>
-            <Box bg="brown">Box</Box>
-          </Box>
-          <Box p={2} width={[1, 1 / 2, 1 / 3]}>
-            <Box bg="brown">Box</Box>
-          </Box>
-        </Flex>
-        <Flex flexWrap="wrap">
-          <Box p={2} width={1 / 2}>
-            <Box bg="brown">Box</Box>
-          </Box>
-          <Box p={2} width={1 / 2}>
-            <Box bg="brown">Box</Box>
-          </Box>
-        </Flex>
+        <Box py={6}>
+          <VisibilitySensor>
+            {({ isVisible }) => (
+              <Tween to={discover(isVisible)}>
+                <Heading textAlign="center">Hello</Heading>
+              </Tween>
+            )}
+          </VisibilitySensor>
+        </Box>
+        <Box py={6}>
+          <VisibilitySensor>
+            {({ isVisible }) => (
+              <Tween to={fadeFromBottom(isVisible)}>
+                <Heading textAlign="center">Hello</Heading>
+              </Tween>
+            )}
+          </VisibilitySensor>
+        </Box>
+        <Box py={6}>
+          <VisibilitySensor>
+            {({ isVisible }) => (
+              <Tween to={fadeFromRight(isVisible)}>
+                <Heading py={6} textAlign="center">
+                  Hello
+                </Heading>
+              </Tween>
+            )}
+          </VisibilitySensor>
+        </Box>
+        <Box py={6}>
+          <VisibilitySensor>
+            {({ isVisible }) => (
+              <Tween to={growFromBottom(isVisible)}>
+                <Heading py={6} textAlign="center">
+                  Hello
+                </Heading>
+              </Tween>
+            )}
+          </VisibilitySensor>
+        </Box>
+        <Box py={6}>
+          <VisibilitySensor>
+            {({ isVisible }) => (
+              <Tween to={fadeFromLeft(isVisible)}>
+                <Heading py={6} textAlign="center">
+                  Hello
+                </Heading>
+              </Tween>
+            )}
+          </VisibilitySensor>
+        </Box>
       </Box>
     </Container>
   </Layout>

@@ -89,7 +89,7 @@ export const Container = styled(Box)(themed('Container'))
 Container.defaultProps = {
   mx: 'auto',
   width: ['90%'],
-  maxWidth: [1024]
+  maxWidth: [1200]
 }
 
 export const Text = styled(Box)(

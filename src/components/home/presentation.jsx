@@ -67,7 +67,7 @@ Presentation.propTypes = {
   slides: PropTypes.arrayOf({
     title: PropTypes.string.isRequired,
     image: ImageFuildProps
-  })
+  }).isRequired
 }
 
 export default Presentation

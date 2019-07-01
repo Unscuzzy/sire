@@ -1,6 +1,5 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-// import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
@@ -40,7 +39,7 @@ const Portfolio = ({ title, html, portfolio }) => {
   const { fluid } = project.thumbnail.childImageSharp
 
   return (
-    <Container as="section" maxWidth={940}>
+    <Container as="section" maxWidth={940} py={[4, 5]}>
       <Heading textAlign="center">{title}</Heading>
       <Text fontStyle="italic" textAlign="center">
         {html}

@@ -19,7 +19,7 @@ import {
   fontWeight,
   fontStyle,
   textAlign,
-  lineHeight,
+  // lineHeight,
   letterSpacing,
   borders,
   borderColor,
@@ -97,7 +97,7 @@ export const Text = styled(Box)(
   fontWeight,
   fontStyle,
   textAlign,
-  lineHeight,
+  // lineHeight,
   letterSpacing,
   themed('Text')
 )
@@ -107,7 +107,7 @@ Text.propTypes = {
   ...fontWeight.propTypes,
   ...fontStyle.propTypes,
   ...textAlign.propTypes,
-  ...lineHeight.propTypes,
+  // ...lineHeight.propTypes,
   ...letterSpacing.propTypes
 }
 
@@ -117,7 +117,7 @@ Text.defaultProps = {
   fontSize: [2],
   fontWeight: 4,
   letterSpacing: '1.6px',
-  lineHeight: 1
+  // lineHeight: 1
 }
 
 export const Heading = styled(Text)(themed('Heading'))
@@ -130,7 +130,7 @@ Heading.defaultProps = {
   fontWeight: 4,
   color: TColors.ocreLight,
   letterSpacing: '3.6px',
-  lineHeight: 'title'
+  // lineHeight: 'title'
 }
 
 export const Link = styled(Text)(themed('Link'))
@@ -142,7 +142,7 @@ export const Button = styled(Box)(
     appearance: 'none',
     display: 'inline-block',
     textAlign: 'center',
-    lineHeight: 'inherit',
+    // lineHeight: 'inherit',
     textDecoration: 'none'
   },
   fontWeight,

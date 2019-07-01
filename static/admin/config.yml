@@ -71,7 +71,7 @@ collections:
               {name: image, label: Image, widget: image},
               {name: title, label: Titre, widget: string}
             ],
-              required: false
+            required: false
           }
           - {
             name: presentationTitle,
@@ -101,9 +101,9 @@ collections:
           }
           - {
             name: process,
-              label: "Étapes du processus",
-              widget: list,
-              fields: [{name: step, label: Étapes, widget: string}]
+            label: "Étapes du processus",
+            widget: list,
+            fields: [{name: step, label: Étapes, widget: string}]
           }
           - {
             name: materialTitle,
@@ -366,8 +366,7 @@ collections:
       - {
         name: thumbnail,
         label: "Image à la une",
-        widget: image,
-        required: false
+        widget: image
       }
       - {
         name: images,

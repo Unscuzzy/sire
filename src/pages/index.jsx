@@ -54,26 +54,34 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
         excerpt: PropTypes.string.isRequired,
-        headerSlider: PropTypes.arrayOf({
-          title: PropTypes.string.isRequired,
-          image: ImageFuildProps
-        }),
+        headerSlider: PropTypes.arrayOf(
+          PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            image: ImageFuildProps.isRequired
+          })
+        ),
         presentationTitle: PropTypes.string.isRequired,
         presentationBody: PropTypes.string.isRequired,
-        presentationSlider: PropTypes.arrayOf({
-          title: PropTypes.string.isRequired,
-          image: ImageFuildProps
-        }),
+        presentationSlider: PropTypes.arrayOf(
+          PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            image: ImageFuildProps.isRequired
+          })
+        ),
         processTitle: PropTypes.string.isRequired,
-        process: PropTypes.arrayOf({
-          step: PropTypes.string.isRequired
-        }),
+        process: PropTypes.arrayOf(
+          PropTypes.shape({
+            step: PropTypes.string.isRequired
+          })
+        ),
         materialTitle: PropTypes.string.isRequired,
-        materials: PropTypes.arrayOf({
-          title: PropTypes.string.isRequired,
-          image: ImageFuildProps,
-          content: PropTypes.string
-        }),
+        materials: PropTypes.arrayOf(
+          PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            image: ImageFuildProps.isRequired,
+            content: PropTypes.string.isRequired
+          })
+        ),
         portfolioTitle: PropTypes.string.isRequired,
         portfolioBody: PropTypes.string.isRequired,
         portfolioProject: PropTypes.string.isRequired

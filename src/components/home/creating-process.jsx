@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import uniqid from 'uniqid'
 
 import { Flex, Container, Heading, Text } from '../../utils/rebass'
 
@@ -9,7 +10,7 @@ const CreatingProcess = ({ title, process }) => (
     <Flex flexWrap="wrap">
       {process &&
         process.map(({ step }, i) => (
-          <Flex width={[1, 1 / 2, 1 / 4]} ph={[3, 3, 5]}>
+          <Flex key={uniqid(i)} width={[1, 1 / 2, 1 / 4]} ph={[3, 3, 5]}>
             <Heading>{i + 1}.</Heading>
             <Text fontStyle="italic">{step}</Text>
           </Flex>
@@ -20,9 +21,11 @@ const CreatingProcess = ({ title, process }) => (
 
 CreatingProcess.propTypes = {
   title: PropTypes.string.isRequired,
-  process: PropTypes.arrayOf({
-    step: PropTypes.string.isRequired
-  }).isRequired
+  process: PropTypes.arrayOf(
+    PropTypes.shape({
+      step: PropTypes.string.isRequired
+    })
+  ).isRequired
 }
 
 export default CreatingProcess

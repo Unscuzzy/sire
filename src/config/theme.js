@@ -17,7 +17,7 @@
  colors	        color, background-color, border-color
  fonts	        font-family
  fontWeights	  font-weight
- lineHeights	  line-height
+
  radii	        border-radius
  shadows	      box-shadow, text-shadow
  *
@@ -25,6 +25,7 @@
  * Available in styled-system but not used here:
  *
  letterSpacings	letter-spacing
+ lineHeights	  line-height
  sizes	        width, height, min-width, max-width, min-height, max-height
  borders	      border, border-top, border-right, border-bottom, border-left
  borderWidths	  border-width
@@ -65,12 +66,6 @@ export const fonts = {
 }
 
 export const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900]
-
-export const lineHeights = {
-  solid: 1,
-  title: 1.25,
-  copy: 1.5
-}
 
 export const radii = [0, 1, 2, 4, 8, '100%', 9999]
 
@@ -115,7 +110,6 @@ const theme = {
   colors,
   fonts,
   fontWeights,
-  lineHeights,
   radii,
   shadows,
   transitions,

@@ -9,7 +9,7 @@ presentation: >-
   gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem
   ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore ma.
-portfolioProject:
+portfolioProjects:
   - Euler hermes
 ---
 

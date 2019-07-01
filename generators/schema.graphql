@@ -1,5 +1,5 @@
 # source: http://localhost:8000/___graphql
-# timestamp: Sun Jun 30 2019 05:53:22 GMT+0200 (GMT+02:00)
+# timestamp: Mon Jul 01 2019 21:30:35 GMT+0200 (GMT+02:00)
 
 """Provides default value for input field."""
 directive @default(value: JSON!) on INPUT_FIELD_DEFINITION
@@ -1695,6 +1695,94 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___portfolioTitle
   frontmatter___portfolioBody
   frontmatter___portfolioProject
+  frontmatter___content
+  frontmatter___ecoTitle
+  frontmatter___ecoBody
+  frontmatter___ecoItems
+  frontmatter___ecoItems___content
+  frontmatter___ecoItems___name
+  frontmatter___partnerTitle
+  frontmatter___partners
+  frontmatter___partners___logo___id
+  frontmatter___partners___logo___children
+  frontmatter___partners___logo___sourceInstanceName
+  frontmatter___partners___logo___absolutePath
+  frontmatter___partners___logo___relativePath
+  frontmatter___partners___logo___extension
+  frontmatter___partners___logo___size
+  frontmatter___partners___logo___prettySize
+  frontmatter___partners___logo___modifiedTime
+  frontmatter___partners___logo___accessTime
+  frontmatter___partners___logo___changeTime
+  frontmatter___partners___logo___birthTime
+  frontmatter___partners___logo___root
+  frontmatter___partners___logo___dir
+  frontmatter___partners___logo___base
+  frontmatter___partners___logo___ext
+  frontmatter___partners___logo___name
+  frontmatter___partners___logo___relativeDirectory
+  frontmatter___partners___logo___dev
+  frontmatter___partners___logo___mode
+  frontmatter___partners___logo___nlink
+  frontmatter___partners___logo___uid
+  frontmatter___partners___logo___gid
+  frontmatter___partners___logo___rdev
+  frontmatter___partners___logo___blksize
+  frontmatter___partners___logo___ino
+  frontmatter___partners___logo___blocks
+  frontmatter___partners___logo___atimeMs
+  frontmatter___partners___logo___mtimeMs
+  frontmatter___partners___logo___ctimeMs
+  frontmatter___partners___logo___birthtimeMs
+  frontmatter___partners___logo___atime
+  frontmatter___partners___logo___mtime
+  frontmatter___partners___logo___ctime
+  frontmatter___partners___logo___birthtime
+  frontmatter___partners___logo___publicURL
+  frontmatter___partners___url
+  frontmatter___teamTitle
+  frontmatter___team
+  frontmatter___team___content
+  frontmatter___team___name
+  frontmatter___team___photo___id
+  frontmatter___team___photo___children
+  frontmatter___team___photo___sourceInstanceName
+  frontmatter___team___photo___absolutePath
+  frontmatter___team___photo___relativePath
+  frontmatter___team___photo___extension
+  frontmatter___team___photo___size
+  frontmatter___team___photo___prettySize
+  frontmatter___team___photo___modifiedTime
+  frontmatter___team___photo___accessTime
+  frontmatter___team___photo___changeTime
+  frontmatter___team___photo___birthTime
+  frontmatter___team___photo___root
+  frontmatter___team___photo___dir
+  frontmatter___team___photo___base
+  frontmatter___team___photo___ext
+  frontmatter___team___photo___name
+  frontmatter___team___photo___relativeDirectory
+  frontmatter___team___photo___dev
+  frontmatter___team___photo___mode
+  frontmatter___team___photo___nlink
+  frontmatter___team___photo___uid
+  frontmatter___team___photo___gid
+  frontmatter___team___photo___rdev
+  frontmatter___team___photo___blksize
+  frontmatter___team___photo___ino
+  frontmatter___team___photo___blocks
+  frontmatter___team___photo___atimeMs
+  frontmatter___team___photo___mtimeMs
+  frontmatter___team___photo___ctimeMs
+  frontmatter___team___photo___birthtimeMs
+  frontmatter___team___photo___atime
+  frontmatter___team___photo___mtime
+  frontmatter___team___photo___ctime
+  frontmatter___team___photo___birthtime
+  frontmatter___team___photo___publicURL
+  frontmatter___subTitle
+  frontmatter___presentation
+  frontmatter___portfolioProjects
   excerpt
   rawMarkdownBody
   fileAbsolutePath
@@ -1747,6 +1835,31 @@ type MarkdownRemarkFrontmatter {
   portfolioTitle: String
   portfolioBody: String
   portfolioProject: String
+  content: String
+  ecoTitle: String
+  ecoBody: String
+  ecoItems: [MarkdownRemarkFrontmatterEcoItems]
+  partnerTitle: String
+  partners: [MarkdownRemarkFrontmatterPartners]
+  teamTitle: String
+  team: [MarkdownRemarkFrontmatterTeam]
+  subTitle: String
+  presentation: String
+  portfolioProjects: [String]
+}
+
+type MarkdownRemarkFrontmatterEcoItems {
+  content: String
+  name: String
+}
+
+input MarkdownRemarkFrontmatterEcoItemsFilterInput {
+  content: StringQueryOperatorInput
+  name: StringQueryOperatorInput
+}
+
+input MarkdownRemarkFrontmatterEcoItemsFilterListInput {
+  elemMatch: MarkdownRemarkFrontmatterEcoItemsFilterInput
 }
 
 input MarkdownRemarkFrontmatterFilterInput {
@@ -1767,6 +1880,17 @@ input MarkdownRemarkFrontmatterFilterInput {
   portfolioTitle: StringQueryOperatorInput
   portfolioBody: StringQueryOperatorInput
   portfolioProject: StringQueryOperatorInput
+  content: StringQueryOperatorInput
+  ecoTitle: StringQueryOperatorInput
+  ecoBody: StringQueryOperatorInput
+  ecoItems: MarkdownRemarkFrontmatterEcoItemsFilterListInput
+  partnerTitle: StringQueryOperatorInput
+  partners: MarkdownRemarkFrontmatterPartnersFilterListInput
+  teamTitle: StringQueryOperatorInput
+  team: MarkdownRemarkFrontmatterTeamFilterListInput
+  subTitle: StringQueryOperatorInput
+  presentation: StringQueryOperatorInput
+  portfolioProjects: StringQueryOperatorInput
 }
 
 type MarkdownRemarkFrontmatterHeaderSlider {
@@ -1799,6 +1923,20 @@ input MarkdownRemarkFrontmatterMaterialsFilterListInput {
   elemMatch: MarkdownRemarkFrontmatterMaterialsFilterInput
 }
 
+type MarkdownRemarkFrontmatterPartners {
+  logo: File
+  url: String
+}
+
+input MarkdownRemarkFrontmatterPartnersFilterInput {
+  logo: FileFilterInput
+  url: StringQueryOperatorInput
+}
+
+input MarkdownRemarkFrontmatterPartnersFilterListInput {
+  elemMatch: MarkdownRemarkFrontmatterPartnersFilterInput
+}
+
 type MarkdownRemarkFrontmatterPresentationSlider {
   image: File
   title: String
@@ -1823,6 +1961,22 @@ input MarkdownRemarkFrontmatterProcessFilterInput {
 
 input MarkdownRemarkFrontmatterProcessFilterListInput {
   elemMatch: MarkdownRemarkFrontmatterProcessFilterInput
+}
+
+type MarkdownRemarkFrontmatterTeam {
+  content: String
+  name: String
+  photo: File
+}
+
+input MarkdownRemarkFrontmatterTeamFilterInput {
+  content: StringQueryOperatorInput
+  name: StringQueryOperatorInput
+  photo: FileFilterInput
+}
+
+input MarkdownRemarkFrontmatterTeamFilterListInput {
+  elemMatch: MarkdownRemarkFrontmatterTeamFilterInput
 }
 
 type MarkdownRemarkGroupConnection {

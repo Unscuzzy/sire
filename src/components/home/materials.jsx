@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
+import uniqid from 'uniqid'
 import styled from 'styled-components'
 
 import { Flex, Container, Heading, Text, Card, Box } from '../../utils/rebass'
@@ -30,7 +31,7 @@ const Materials = ({ title, materials }) => (
           const { fluid } = image.childImageSharp
           const direction = i % 2 === 0 ? 'column' : 'column-reverse'
           return (
-            <Card width={[1, 1 / 3]} px={[3, 3, 4]} py={4}>
+            <Card key={uniqid(i)} width={[1, 1 / 3]} px={[3, 3, 4]} py={4}>
               <Flex flexDirection={direction}>
                 <Square position="relative">
                   <Box
@@ -64,11 +65,13 @@ const Materials = ({ title, materials }) => (
 
 Materials.propTypes = {
   title: PropTypes.string.isRequired,
-  materials: PropTypes.arrayOf({
-    title: PropTypes.string.isRequired,
-    image: ImageFuildProps,
-    content: PropTypes.string
-  }).isRequired
+  materials: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      image: ImageFuildProps,
+      content: PropTypes.string
+    })
+  ).isRequired
 }
 
 export default Materials

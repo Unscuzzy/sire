@@ -52,10 +52,12 @@ const HeaderSlider = ({ slides }) => {
 }
 
 HeaderSlider.propTypes = {
-  slides: PropTypes.arrayOf({
-    title: PropTypes.string.isRequired,
-    image: ImageFuildProps
-  }).isRequired
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      image: ImageFuildProps
+    })
+  ).isRequired
 }
 
 export default HeaderSlider

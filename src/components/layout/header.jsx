@@ -15,10 +15,11 @@ import { colors } from '../../config/theme'
 
 const Titles = styled(Heading).attrs({
   color: 'white',
-  lineHeight: 'solid',
   fontWeight: 4,
   fontFamily: 'lato'
-})``
+})`
+  line-height: 1;
+`
 
 const MenuItem = styled(BaseLink).attrs({
   py: 3,
@@ -57,10 +58,12 @@ const Header = ({ siteTitle, siteDescription, links }) => (
 Header.propTypes = {
   siteTitle: PropTypes.string.isRequired,
   siteDescription: PropTypes.string.isRequired,
-  links: PropTypes.arrayOf({
-    label: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired
-  })
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired
+    })
+  )
 }
 
 Header.defaultProps = {

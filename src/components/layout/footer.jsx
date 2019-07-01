@@ -49,10 +49,12 @@ const Footer = ({ title, links }) => (
 
 Footer.propTypes = {
   title: PropTypes.string.isRequired,
-  links: PropTypes.arrayOf({
-    label: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired
-  })
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired
+    })
+  )
 }
 
 Footer.defaultProps = {

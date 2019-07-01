@@ -64,10 +64,12 @@ const Presentation = ({ title, html, slides }) => {
 Presentation.propTypes = {
   title: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
-  slides: PropTypes.arrayOf({
-    title: PropTypes.string.isRequired,
-    image: ImageFuildProps
-  }).isRequired
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      image: ImageFuildProps
+    })
+  ).isRequired
 }
 
 export default Presentation

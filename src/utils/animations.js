@@ -5,7 +5,7 @@
  */
 
 /*
- * 1. Primitives styles
+ * 1. Primitives animations styles functions
  */
 // From [direction]
 export const fromRight = isVisible => ({ x: isVisible ? 0 : 50 })
@@ -15,6 +15,11 @@ export const fromBottom = isVisible => ({ y: isVisible ? 0 : 50 })
 
 // Fade
 export const fade = isVisible => ({ opacity: isVisible ? 1 : 0 })
+
+// Grow (Don't tested yet)
+export const growUp = isVisible => ({
+  transform: isVisible ? `scale(1)` : `scale(0)`
+})
 
 /*
  * 2. Compositions

@@ -163,6 +163,11 @@ collections:
             hint: 'Utilisé pour le SEO'
           }
           - {
+            name: cover,
+            label: Cover,
+            widget: image
+          }
+          - {
             name: ecoTitle,
             label: "Titre de la section éco.",
             widget: string
@@ -234,6 +239,11 @@ collections:
             hint: 'Utilisé pour le SEO'
           }
           - {
+            name: cover,
+            label: Cover,
+            widget: image
+          }
+          - {
             name: subTitle,
             label: "Sous titre",
             widget: string
@@ -276,6 +286,11 @@ collections:
             hint: 'Utilisé pour le SEO'
           }
           - {
+            name: cover,
+            label: Cover,
+            widget: image
+          }
+          - {
               name: content,
               label: "Message avant le formulaire",
               widget: text
@@ -302,6 +317,11 @@ collections:
             label: Extrait,
             widget: text,
             hint: 'Utilisé pour le SEO'
+          }
+          - {
+            name: cover,
+            label: Cover,
+            widget: image
           }
           - {
               name: body,

@@ -11,13 +11,13 @@
 backend:
   # local backend
   # WARN: Will not save data, it just for develop fields
-  # name: test-repo
+  name: test-repo
 
   # Netlify as backend (recommanded)
-  name: git-gateway
-  accept_roles:
-    - admin
-    - editor
+  # name: git-gateway
+  # accept_roles:
+  #   - admin
+  #   - editor
 
 media_folder: static/uploads
 public_folder: uploads
@@ -188,3 +188,28 @@ collections:
         label: "Texte de présentation",
         widget: markdown
       }
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/pages/blog/posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Author", name: "author", widget: "relation", collection: "authors", searchFields: ["title", "firstName", "lastName"], valueField: "title"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "authors"
+    label: "Authors"
+    folder: "src/authors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "author"}
+      - {label: "Full Name", name: "title", widget: "string"}
+      - {label: "First Name", name: "firstName", widget: "string"}
+      - {label: "Last Name", name: "lastName", widget: "string"}
+      - {label: "Position", name: "position", widget: "string"}
+      - {label: "Profile Picture", name: "profilePicture", widget: "image"}
+      - {label: "Email", name: "email", widget: "string"}

@@ -98,5 +98,8 @@ module.exports = {
         htmlTitle: `SIRE Administration`
       }
     }
-  ]
+  ],
+  mapping: {
+    'MarkdownRemark.frontmatter.projects': 'MarkdownRemark'
+  }
 }

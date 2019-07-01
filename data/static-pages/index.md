@@ -55,7 +55,7 @@ materials:
       ultrices gravida. Risus commodo viverra maecena.
     image: /uploads/teak.3c6e6d_2x.jpg
     title: Bois
-portfolioTitle: Des matériaux issus de l’industrie aérospatiale
+portfolioTitle: Ils nous font confiance
 portfolioBody: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices

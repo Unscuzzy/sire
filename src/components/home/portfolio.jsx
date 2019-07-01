@@ -1,18 +1,44 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 // import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import { Box, Container, Flex, Heading, Text } from '../../utils/rebass'
 
-const Portfolio = ({ title, html, portfolio }) => (
-  <Container as="section" maxWidth={940}>
-    <Heading textAlign="center">{title}</Heading>
-    <Text fontStyle="italic" textAlign="center">
-      {html}
-    </Text>
-    <Flex flexWrap="wrap">{console.log(portfolio)}</Flex>
-  </Container>
-)
+const Portfolio = ({ title, html, portfolio }) => {
+  const data = useStaticQuery(graphql`
+    query PortfolioData {
+      allMarkdownRemark(
+        filter: { frontmatter: { templateKey: { eq: "projects" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              templateKey
+              excerpt
+              business
+            }
+          }
+        }
+      }
+    }
+  `)
+  const projects = data.allMarkdownRemark.edges.filter(
+    ({ node }) => node.frontmatter.title === portfolio
+  )
+  const project = projects[0].node.frontmatter
+
+  return (
+    <Container as="section" maxWidth={940}>
+      <Heading textAlign="center">{title}</Heading>
+      <Text fontStyle="italic" textAlign="center">
+        {html}
+      </Text>
+      <Flex flexWrap="wrap">{console.log(project)}</Flex>
+    </Container>
+  )
+}
 
 /*
 {portfolio &&

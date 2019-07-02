@@ -10,6 +10,8 @@ import CreatingProcess from '../components/home/creating-process'
 import Materials from '../components/home/materials'
 import Portfolio from '../components/home/portfolio'
 import { ImageFuildProps } from '../utils/propTypes'
+import Link from '../components/link'
+import { Button, Container } from '../utils/rebass'
 
 const IndexPage = ({ data }) => {
   const {
@@ -43,6 +45,15 @@ const IndexPage = ({ data }) => {
         html={portfolioBody}
         portfolio={portfolioProject}
       />
+      <Container position="relative">
+        <Button
+          as={Link}
+          to="/portfolio"
+          style={{ textTransform: 'uppercase' }}
+        >
+          Le portfolio
+        </Button>
+      </Container>
     </Layout>
   )
 }

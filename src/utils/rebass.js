@@ -116,7 +116,7 @@ Text.defaultProps = {
   fontFamily: 'open',
   fontSize: [2],
   fontWeight: 4,
-  letterSpacing: '1.6px',
+  letterSpacing: '1.6px'
   // lineHeight: 1
 }
 
@@ -129,7 +129,7 @@ Heading.defaultProps = {
   fontFamily: 'lato',
   fontWeight: 4,
   color: TColors.ocreLight,
-  letterSpacing: '3.6px',
+  letterSpacing: '3.6px'
   // lineHeight: 'title'
 }
 

@@ -4,13 +4,7 @@ import uniqid from 'uniqid'
 import styled from 'styled-components'
 
 import Link from '../link'
-import {
-  Box,
-  Flex,
-  Container,
-  Text,
-  Link as BaseLink
-} from '../../utils/rebass'
+import { Box, Flex, Container, Text } from '../../utils/rebass'
 import { colors } from '../../config/theme'
 
 const FooterText = styled(Text).attrs({

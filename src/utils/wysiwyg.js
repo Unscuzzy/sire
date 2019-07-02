@@ -13,11 +13,11 @@ const wysiwyg = css`
     color: ${colors.black};
   }
 
-  h1 {
+  .wysiwyg h1 {
     font-size: ${fontSizes[5]};
   }
 
-  h2 {
+  .wysiwyg h2 {
     font-size: ${fontSizes[4]};
   }
 `

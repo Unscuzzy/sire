@@ -16,7 +16,6 @@ import {
 import MediaQ from '../components/responsive'
 import Link from '../components/link'
 import {
-  fade,
   fadeFromBottom,
   fadeFromRight,
   fadeFromLeft,

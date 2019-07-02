@@ -7,7 +7,6 @@ import SEO from '../components/seo'
 import Hero from '../components/hero'
 import { ImageFuildProps } from '../utils/propTypes'
 
-// Gatsby Page query (inject data to frontend template)
 const AboutPage = ({ data }) => {
   const {
     title,

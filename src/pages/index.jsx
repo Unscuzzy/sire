@@ -11,7 +11,6 @@ import Materials from '../components/home/materials'
 import Portfolio from '../components/home/portfolio'
 import { ImageFuildProps } from '../utils/propTypes'
 
-// Gatsby Page query (inject data to frontend template)
 const IndexPage = ({ data }) => {
   const {
     title,

@@ -20,33 +20,35 @@ const HeaderSlider = ({ slides }) => {
   return (
     <Container as="section">
       <SlickHelper />
-      <Slider {...settings}>
-        {slides.map(({ image, title }) => {
-          const { src } = image.childImageSharp.fluid
-          return (
-            <Card backgroundImage={`url(${src})`} key={uniqid(title)}>
-              <Flex
-                pl={[5, 6]}
-                pr={[5, 0]}
-                width={[1, 3 / 4, 2 / 3]}
-                flexDirection="column"
-                justifyContent="center"
-                height={['300px', '518px']}
-                zIndex="2"
-              >
-                <Heading
-                  fontFamily="lato"
-                  fontSize={[4, 5, 5, 6]}
-                  fontWeight={4}
-                  color="white"
+      <Card boxShadow={2}>
+        <Slider {...settings}>
+          {slides.map(({ image, title }) => {
+            const { src } = image.childImageSharp.fluid
+            return (
+              <Card backgroundImage={`url(${src})`} key={uniqid(title)}>
+                <Flex
+                  pl={[5, 6]}
+                  pr={[5, 0]}
+                  width={[1, 3 / 4, 2 / 3]}
+                  flexDirection="column"
+                  justifyContent="center"
+                  height={['300px', '518px']}
+                  zIndex="2"
                 >
-                  {title}
-                </Heading>
-              </Flex>
-            </Card>
-          )
-        })}
-      </Slider>
+                  <Heading
+                    fontFamily="lato"
+                    fontSize={[4, 5, 5, 6]}
+                    fontWeight={4}
+                    color="white"
+                  >
+                    {title}
+                  </Heading>
+                </Flex>
+              </Card>
+            )
+          })}
+        </Slider>
+      </Card>
     </Container>
   )
 }

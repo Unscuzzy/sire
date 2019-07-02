@@ -16,8 +16,10 @@ import { colors } from '../../config/theme'
 const FooterText = styled(Text).attrs({
   color: 'white',
   fontWeight: 400,
-  fontSizes: [3],
-  fontStyle: 'italic'
+  fontSize: [1, 2],
+  fontStyle: 'italic',
+  my: 0,
+  py: 1
 })`
   text-transform: uppercase;
   * {
@@ -28,7 +30,7 @@ const FooterText = styled(Text).attrs({
 const Footer = ({ title, links }) => (
   <Box as="footer" bg="fadeOcre">
     <Container>
-      <Flex flexWrap="wrap" justifyContent="space-between" py={2}>
+      <Flex flexWrap="wrap" justifyContent="space-between" py={1}>
         <FooterText textAlign="left">
           {`© Copyright ${new Date().getFullYear()} - `}
           <Link to="/">{title}</Link>
@@ -37,9 +39,7 @@ const Footer = ({ title, links }) => (
         {links &&
           links.map(({ label, link }) => (
             <FooterText key={uniqid(link)}>
-              <BaseLink as={Link} to={link}>
-                {label}
-              </BaseLink>
+              <Link to={link}>{label}</Link>
             </FooterText>
           ))}
       </Flex>

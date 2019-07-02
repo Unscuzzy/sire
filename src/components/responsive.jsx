@@ -25,13 +25,15 @@ export const mobile = { maxWidth: decrement(bp[0]) }
 // Group all query props into one parent object
 export const screen = { desktop, notSmall, phablet, tablet, mobile }
 
+// If you want shoot special media queries => use type
+// Else there are "max" and/or "min" to be more flexible
 const MediaQ = ({ children, min, max, type }) => {
   let props = {}
   if (min) props.minWidth = breakpoint[min]
   if (max) props.maxWidth = decrement(breakpoint[max])
   if (type) props = { ...props, ...screen[type] }
 
-  console.log(props)
+  // console.log(props) // debug
   return <MediaQuery {...props}>{matches => matches && children}</MediaQuery>
 }
 
@@ -39,7 +41,7 @@ MediaQ.propTypes = {
   children: childrenProps.isRequired,
   type: PropTypes.oneOf(['mobile', 'tablet', 'phablet', 'desktop', 'notSmall']),
   min: PropTypes.oneOf(['tablet', 'phablet', 'desktop']),
-  max: PropTypes.oneOf(['mobile', 'tablet', 'phablet'])
+  max: PropTypes.oneOf(['tablet', 'phablet', 'desktop'])
 }
 
 MediaQ.defaultProps = {

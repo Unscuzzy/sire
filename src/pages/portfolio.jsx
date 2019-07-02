@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { Tween } from 'react-gsap'
+import VisibilitySensor from 'react-visibility-sensor'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -8,6 +10,7 @@ import Hero from '../components/hero'
 import ProjectsList from '../components/projects-list'
 import { ImageFuildProps } from '../utils/propTypes'
 import { Container, Heading, Text } from '../utils/rebass'
+import { fadeFromBottom } from '../utils/animations'
 
 const PortfolioPage = ({ data }) => {
   const {
@@ -26,10 +29,16 @@ const PortfolioPage = ({ data }) => {
       <SEO title={title} description={excerpt} />
       <Hero title={title} src={src} />
       <Container py={[4, 5]}>
-        <Heading textAlign="center">{subTitle}</Heading>
-        <Text fontStyle="italic" textAlign="center">
-          {presentation}
-        </Text>
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <Tween to={fadeFromBottom(isVisible)}>
+              <Heading textAlign="center">{subTitle}</Heading>
+              <Text fontStyle="italic" textAlign="center">
+                {presentation}
+              </Text>
+            </Tween>
+          )}
+        </VisibilitySensor>
         <ProjectsList projectsList={portfolioProjects} />
       </Container>
     </Layout>

@@ -36,6 +36,7 @@ const ProjectsList = ({ projectsList }) => {
   const projects = data.allMarkdownRemark.edges.filter(({ node }) =>
     projectsList.includes(node.frontmatter.title)
   )
+  const total = projects.length
 
   return (
     <>
@@ -48,6 +49,7 @@ const ProjectsList = ({ projectsList }) => {
             title={title}
             fluid={fluid}
             index={i}
+            total={total}
           />
         )
       })}

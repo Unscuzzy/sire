@@ -145,7 +145,7 @@ const SecondPage = () => (
       <Box pb={4}>
         {/* All the next components are animated on screen enter ;) */}
         <Box py={6}>
-          <VisibilitySensor>
+          <VisibilitySensor partialVisibility>
             {({ isVisible }) => (
               <Tween to={fadeFromTop(isVisible)}>
                 <Heading textAlign="center">Hello</Heading>
@@ -154,7 +154,7 @@ const SecondPage = () => (
           </VisibilitySensor>
         </Box>
         <Box py={6}>
-          <VisibilitySensor>
+          <VisibilitySensor partialVisibility>
             {({ isVisible }) => (
               <Tween to={fadeFromBottom(isVisible)}>
                 <Heading textAlign="center">Hello</Heading>
@@ -163,7 +163,7 @@ const SecondPage = () => (
           </VisibilitySensor>
         </Box>
         <Box py={6}>
-          <VisibilitySensor>
+          <VisibilitySensor partialVisibility>
             {({ isVisible }) => (
               <Tween to={discover(isVisible)}>
                 <Heading textAlign="center">Hello</Heading>
@@ -172,7 +172,7 @@ const SecondPage = () => (
           </VisibilitySensor>
         </Box>
         <Box py={6}>
-          <VisibilitySensor>
+          <VisibilitySensor partialVisibility>
             {({ isVisible }) => (
               <Tween to={fadeFromBottom(isVisible)}>
                 <Heading textAlign="center">Hello</Heading>
@@ -181,7 +181,7 @@ const SecondPage = () => (
           </VisibilitySensor>
         </Box>
         <Box py={6}>
-          <VisibilitySensor>
+          <VisibilitySensor partialVisibility>
             {({ isVisible }) => (
               <Tween to={fadeFromRight(isVisible)}>
                 <Heading py={6} textAlign="center">
@@ -192,7 +192,7 @@ const SecondPage = () => (
           </VisibilitySensor>
         </Box>
         <Box py={6}>
-          <VisibilitySensor>
+          <VisibilitySensor partialVisibility>
             {({ isVisible }) => (
               <Tween to={growFromBottom(isVisible)}>
                 <Heading py={6} textAlign="center">
@@ -203,7 +203,7 @@ const SecondPage = () => (
           </VisibilitySensor>
         </Box>
         <Box py={6}>
-          <VisibilitySensor>
+          <VisibilitySensor partialVisibility>
             {({ isVisible }) => (
               <Tween to={fadeFromLeft(isVisible)}>
                 <Heading py={6} textAlign="center">

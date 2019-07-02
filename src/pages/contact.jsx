@@ -1,12 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { Tween } from 'react-gsap'
+import VisibilitySensor from 'react-visibility-sensor'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Hero from '../components/hero'
 import { ImageFuildProps } from '../utils/propTypes'
 import { Container, Heading, Text } from '../utils/rebass'
+import { fadeFromBottom } from '../utils/animations'
 
 const ContactPage = ({ data }) => {
   const { title, excerpt, cover, content } = data.markdownRemark.frontmatter
@@ -18,18 +21,30 @@ const ContactPage = ({ data }) => {
       <SEO title={title} description={excerpt} />
       <Hero title={title} src={src} />
       <Container py={[4, 5]}>
-        <Text fontStyle="italic" textAlign="center">
-          {content}
-        </Text>
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <Tween to={fadeFromBottom(isVisible)}>
+              <Text fontStyle="italic" textAlign="center">
+                {content}
+              </Text>
+            </Tween>
+          )}
+        </VisibilitySensor>
       </Container>
       <Container maxWidth={600} pb={[4, 5]}>
-        <Heading
-          style={{ border: `2px dashed #666` }}
-          py={6}
-          textAlign="center"
-        >
-          Form
-        </Heading>
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <Tween to={fadeFromBottom(isVisible)}>
+              <Heading
+                style={{ border: `2px dashed #666` }}
+                py={6}
+                textAlign="center"
+              >
+                Form
+              </Heading>
+            </Tween>
+          )}
+        </VisibilitySensor>
       </Container>
     </Layout>
   )

@@ -1,5 +1,5 @@
 # source: http://localhost:8000/___graphql
-# timestamp: Tue Jul 02 2019 00:40:11 GMT+0200 (GMT+02:00)
+# timestamp: Wed Jul 03 2019 03:10:53 GMT+0200 (GMT+02:00)
 
 """Provides default value for input field."""
 directive @default(value: JSON!) on INPUT_FIELD_DEFINITION
@@ -2118,7 +2118,7 @@ enum PotraceTurnPolicy {
 type Query {
   file(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, sourceInstanceName: StringQueryOperatorInput, absolutePath: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, extension: StringQueryOperatorInput, size: IntQueryOperatorInput, prettySize: StringQueryOperatorInput, modifiedTime: DateQueryOperatorInput, accessTime: DateQueryOperatorInput, changeTime: DateQueryOperatorInput, birthTime: DateQueryOperatorInput, root: StringQueryOperatorInput, dir: StringQueryOperatorInput, base: StringQueryOperatorInput, ext: StringQueryOperatorInput, name: StringQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, dev: IntQueryOperatorInput, mode: IntQueryOperatorInput, nlink: IntQueryOperatorInput, uid: IntQueryOperatorInput, gid: IntQueryOperatorInput, rdev: IntQueryOperatorInput, blksize: IntQueryOperatorInput, ino: IntQueryOperatorInput, blocks: IntQueryOperatorInput, atimeMs: FloatQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, atime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, ctime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, publicURL: StringQueryOperatorInput): File
   allFile(filter: FileFilterInput, sort: FileSortInput, skip: Int, limit: Int): FileConnection
-  sitePage(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, path: StringQueryOperatorInput, internalComponentName: StringQueryOperatorInput, component: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, isCreatedByStatefulCreatePages: BooleanQueryOperatorInput, pluginCreator: SitePluginFilterInput, pluginCreatorId: StringQueryOperatorInput, componentPath: StringQueryOperatorInput): SitePage
+  sitePage(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, path: StringQueryOperatorInput, internalComponentName: StringQueryOperatorInput, component: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, isCreatedByStatefulCreatePages: BooleanQueryOperatorInput, context: SitePageContextFilterInput, pluginCreator: SitePluginFilterInput, pluginCreatorId: StringQueryOperatorInput, componentPath: StringQueryOperatorInput): SitePage
   allSitePage(filter: SitePageFilterInput, sort: SitePageSortInput, skip: Int, limit: Int): SitePageConnection
   sitePlugin(id: StringQueryOperatorInput, parent: NodeFilterInput, children: NodeFilterListInput, internal: InternalFilterInput, resolve: StringQueryOperatorInput, name: StringQueryOperatorInput, version: StringQueryOperatorInput, pluginOptions: SitePluginPluginOptionsFilterInput, nodeAPIs: StringQueryOperatorInput, browserAPIs: StringQueryOperatorInput, ssrAPIs: StringQueryOperatorInput, pluginFilepath: StringQueryOperatorInput, packageJson: SitePluginPackageJsonFilterInput): SitePlugin
   allSitePlugin(filter: SitePluginFilterInput, sort: SitePluginSortInput, skip: Int, limit: Int): SitePluginConnection
@@ -2309,6 +2309,7 @@ type SitePage implements Node {
   component: String
   componentChunkName: String
   isCreatedByStatefulCreatePages: Boolean
+  context: SitePageContext
   pluginCreator: SitePlugin
   pluginCreatorId: String
   componentPath: String
@@ -2321,6 +2322,14 @@ type SitePageConnection {
   pageInfo: PageInfo!
   distinct(field: SitePageFieldsEnum!): [String!]!
   group(skip: Int, limit: Int, field: SitePageFieldsEnum!): [SitePageGroupConnection!]!
+}
+
+type SitePageContext {
+  id: String
+}
+
+input SitePageContextFilterInput {
+  id: StringQueryOperatorInput
 }
 
 type SitePageEdge {
@@ -2421,6 +2430,7 @@ enum SitePageFieldsEnum {
   component
   componentChunkName
   isCreatedByStatefulCreatePages
+  context___id
   pluginCreator___id
   pluginCreator___parent___id
   pluginCreator___parent___parent___id
@@ -2518,6 +2528,7 @@ input SitePageFilterInput {
   component: StringQueryOperatorInput
   componentChunkName: StringQueryOperatorInput
   isCreatedByStatefulCreatePages: BooleanQueryOperatorInput
+  context: SitePageContextFilterInput
   pluginCreator: SitePluginFilterInput
   pluginCreatorId: StringQueryOperatorInput
   componentPath: StringQueryOperatorInput

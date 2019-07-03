@@ -83,6 +83,12 @@ export const transitions = [0.25, 0.5, 1, 2.5]
 
 export const breakpoints = [640, 832, 960]
 
+export const maxWidths = {
+  small: 750,
+  medium: 1000,
+  large: 1250
+}
+
 export const mediaQueries = {
   onlySmall: `@media screen and (max-width: ${breakpoints[0] - 1}px)`,
   small: `@media screen and (min-width: ${breakpoints[0]}px)`,
@@ -113,6 +119,7 @@ const theme = {
   radii,
   shadows,
   transitions,
+  maxWidths,
   mediaQueries,
   buttons
 }

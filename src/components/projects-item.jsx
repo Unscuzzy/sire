@@ -5,6 +5,7 @@ import VisibilitySensor from 'react-visibility-sensor'
 import { Tween } from 'react-gsap'
 
 import { Box, Container, Flex, Heading } from '../utils/rebass'
+import { maxWidths } from '../config/theme'
 import {
   fadeFromRight,
   fadeFromLeft,
@@ -20,7 +21,7 @@ const ProjectItem = ({ title, fluid, index, total, slug }) => {
     total === 1 ? fadeFromBottom(isVisible) : animationDirection(isVisible)
   return (
     <Link to={`/portfolio/${slug}`}>
-      <Container as="section" maxWidth={940} py={[4, 5]}>
+      <Container as="section" maxWidth={maxWidths.medium} py={[4, 5]}>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
             <Tween to={animation(isVisible)}>

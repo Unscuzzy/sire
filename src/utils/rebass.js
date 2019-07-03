@@ -35,8 +35,7 @@ import {
   variant
 } from 'styled-system'
 
-// Prefix theme variables with T as Theme
-import { colors as TColors } from '../config/theme'
+import theme from '../config/theme'
 
 export const themed = key => props => props.theme[key]
 
@@ -89,7 +88,8 @@ export const Container = styled(Box)(themed('Container'))
 Container.defaultProps = {
   mx: 'auto',
   width: ['90%'],
-  maxWidth: [1200]
+  // eslint-disable-next-line import/no-named-as-default-member
+  maxWidth: theme.maxWidths.large
 }
 
 export const Text = styled(Box)(
@@ -128,7 +128,8 @@ Heading.defaultProps = {
   fontSize: [4, 5],
   fontFamily: 'lato',
   fontWeight: 4,
-  color: TColors.ocreLight,
+  // eslint-disable-next-line import/no-named-as-default-member
+  color: theme.colors.ocreLight,
   letterSpacing: '3.6px'
   // lineHeight: 'title'
 }

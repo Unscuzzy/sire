@@ -9,7 +9,7 @@ import { Tween } from 'react-gsap'
 
 import MediaQ from '../responsive'
 import { Flex, Box, Heading, Text, Container, Card } from '../../utils/rebass'
-import { colors } from '../../config/theme'
+import { colors, maxWidths } from '../../config/theme'
 import { ImageFuildProps } from '../../utils/propTypes'
 import { fadeFromLeft, fadeFromRight } from '../../utils/animations'
 
@@ -30,8 +30,8 @@ const Presentation = ({ title, html, slides }) => {
     slidesToScroll: 1
   }
   return (
-    <Container as="section" maxWidth={940} py={5}>
-      <Flex flexWrap="wrap">
+    <Container as="section" maxWidth={maxWidths.medium} py={5}>
+      <Flex flexWrap="wrap" mx={[-3, -4]}>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
             <Tween to={fadeFromLeft(isVisible)}>
@@ -46,7 +46,7 @@ const Presentation = ({ title, html, slides }) => {
           <VisibilitySensor partialVisibility>
             {({ isVisible }) => (
               <Tween to={fadeFromRight(isVisible)}>
-                <Box width={[1, 1 / 2]}>
+                <Box px={[3, 4]} width={[1, 1 / 2]}>
                   <MySlider {...settings}>
                     {slides.map(({ title: name, image }) => {
                       const { fluid } = image.childImageSharp

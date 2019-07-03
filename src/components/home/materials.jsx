@@ -34,13 +34,13 @@ const Materials = ({ title, materials }) => (
         </Tween>
       )}
     </VisibilitySensor>
-    <Flex flexWrap="wrap">
+    <Flex flexWrap="wrap" mx={[null, -3, -4]}>
       {materials &&
         materials.map(({ title: subTitle, content, image }, i) => {
           const { fluid } = image.childImageSharp
           const direction = i % 2 === 0 ? 'column' : 'column-reverse'
           return (
-            <Card key={uniqid(i)} width={[1, 1 / 3]} px={[3, 3, 4]} py={4}>
+            <Card key={uniqid(i)} width={[1, 1 / 3]} px={[null, 3, 4]} py={4}>
               <VisibilitySensor partialVisibility>
                 {({ isVisible }) => (
                   <Tween to={fadeFromBottom(isVisible)}>

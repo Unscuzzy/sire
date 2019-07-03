@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Hero from '../components/hero'
 import { ImageFuildProps } from '../utils/propTypes'
-import { Heading, Text } from '../utils/rebass'
+import { Heading, Text, Container } from '../utils/rebass'
 
 const AboutPage = ({ data }) => {
   const {
@@ -28,11 +28,15 @@ const AboutPage = ({ data }) => {
     <Layout>
       <SEO title={title} description={excerpt} />
       <Hero title={title} src={src} />
-      <Heading pt={5} textAlign="center">
-        {`Cette page c'est cadeau :)`}
-      </Heading>
-      <Text textAlign="center">(Regarde dans la console)</Text>
-      {console.log({
+      <Container>
+        <Heading pt={5} textAlign="center">
+          {`Cette page c'est cadeau :)`}
+        </Heading>
+        <Text textAlign="center">(Regarde dans la console)</Text>
+      </Container>
+
+      {// eslint-disable-next-line no-console
+      console.log({
         title,
         excerpt,
         ecoTitle,

@@ -15,6 +15,7 @@ import { Container, Heading, Box, Text, Flex } from '../utils/rebass'
 import { ImageFuildProps } from '../utils/propTypes'
 import SlickHelper from '../utils/slick-helper'
 import { fadeFromBottom } from '../utils/animations'
+import { maxWidths } from '../config/theme'
 
 const Title = styled(Heading).attrs({
   color: 'black'
@@ -60,7 +61,7 @@ const ProjectTemplate = ({ data }) => {
     <Layout>
       <SEO title={title} description={excerpt} />
       <Hero title={title} src={src} />
-      <Container maxWidth={940} py={[4, 5]}>
+      <Container maxWidth={maxWidths.medium} py={[4, 5]}>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
             <Tween to={fadeFromBottom(isVisible)}>

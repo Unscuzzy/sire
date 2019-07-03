@@ -13,6 +13,7 @@ import {
   Flex,
   Container
 } from '../utils/rebass'
+import { maxWidths } from '../config/theme'
 import MediaQ from '../components/responsive'
 import Link from '../components/link'
 import {
@@ -141,7 +142,40 @@ const SecondPage = () => (
           </Box>
         </Flex>
       </Box>
+    </Container>
 
+    <Box pb={4}>
+      <Container>
+        <Heading fontSize={[4, 5, 6]} as="h2">
+          Container(s)
+        </Heading>
+      </Container>
+
+      <Container bg="grey" maxWidth={maxWidths.small}>
+        <Heading fontSize={[3, 3, 4]} color="white" textAlign="center" p={4}>
+          Small
+        </Heading>
+      </Container>
+
+      <Container bg="grey" maxWidth={maxWidths.medium}>
+        <Heading fontSize={[3, 3, 4]} color="white" textAlign="center" p={4}>
+          medium
+        </Heading>
+      </Container>
+
+      <Container bg="grey" maxWidth={maxWidths.large}>
+        <Heading fontSize={[3, 3, 4]} color="white" textAlign="center" p={4}>
+          large
+        </Heading>
+      </Container>
+
+      <Box bg="grey" mx={[null, null, 3]}>
+        <Heading fontSize={[3, 3, 4]} color="white" textAlign="center" p={4}>
+          Full on mobile and fluid on desktop
+        </Heading>
+      </Box>
+    </Box>
+    <Container>
       <Box pb={4}>
         {/* All the next components are animated on screen enter ;) */}
         <Box py={6}>

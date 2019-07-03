@@ -10,6 +10,7 @@ import Hero from '../components/hero'
 import { ImageFuildProps } from '../utils/propTypes'
 import { Container, Heading, Text } from '../utils/rebass'
 import { fadeFromBottom } from '../utils/animations'
+import { maxWidths } from '../config/theme'
 
 const ContactPage = ({ data }) => {
   const { title, excerpt, cover, content } = data.markdownRemark.frontmatter
@@ -31,7 +32,7 @@ const ContactPage = ({ data }) => {
           )}
         </VisibilitySensor>
       </Container>
-      <Container maxWidth={600} pb={[4, 5]}>
+      <Container maxWidth={maxWidths.medium} pb={[4, 5]}>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
             <Tween to={fadeFromBottom(isVisible)}>

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import uniqid from 'uniqid'
 import { useStaticQuery, graphql } from 'gatsby'
+import path from 'path'
 
 import ProjectItem from './projects-item'
 
@@ -13,9 +14,9 @@ const ProjectsList = ({ projectsList }) => {
       ) {
         edges {
           node {
+            fileAbsolutePath
             frontmatter {
               title
-              templateKey
               excerpt
               business
               thumbnail {
@@ -41,8 +42,12 @@ const ProjectsList = ({ projectsList }) => {
   return (
     <>
       {projects.map(({ node }, i) => {
-        const { title, thumbnail } = node.frontmatter
+        const { fileAbsolutePath, frontmatter } = node
+        const { title, thumbnail } = frontmatter
         const { fluid } = thumbnail.childImageSharp
+        // Build slug from file name and rm date & .extension
+        // This slugify  function is duplicate in gatsby-node.js
+        const slug = path.basename(String(fileAbsolutePath)).slice(11, -3)
         return (
           <ProjectItem
             key={uniqid(title)}
@@ -50,6 +55,7 @@ const ProjectsList = ({ projectsList }) => {
             fluid={fluid}
             index={i}
             total={total}
+            slug={slug}
           />
         )
       })}

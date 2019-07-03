@@ -3,8 +3,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-// const path = require(`path`)
-// const slash = require(`slash`)
+const path = require(`path`)
+const slash = require(`slash`)
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
 exports.onCreateNode = ({ node }) => {
@@ -12,8 +12,7 @@ exports.onCreateNode = ({ node }) => {
   fmImagesToRelative(node)
 }
 
-/*
-// Create pages/posts etc templates
+// Create projects templates
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
@@ -41,21 +40,20 @@ exports.createPages = async ({ graphql, actions }) => {
   // Filter data as Collections
   const data = result.data.allMarkdownRemark.edges
   const posts = data.filter(
-    ({ node }) => node.frontmatter.templateKey === 'posts'
+    ({ node }) => node.frontmatter.templateKey === 'projects'
   )
-  // For each Post
-  const postTemplate = path.resolve(`./src/templates/post.tsx`)
+  // For each projects
+  const projectsTemplate = path.resolve(`./src/templates/project.jsx`)
   posts.forEach(({ node: { id, fileAbsolutePath } }) => {
     // Build slug from file name and rm date & .extension
+    // This slugify  function is duplicate in the frontend
     const slug = path.basename(String(fileAbsolutePath)).slice(11, -3)
     createPage({
-      path: `/blog/${slug}/`,
-      component: slash(postTemplate),
+      path: `/portfolio/${slug}/`,
+      component: slash(projectsTemplate),
       context: {
         id
       }
     })
   })
-
 }
-*/

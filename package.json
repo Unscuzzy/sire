@@ -65,6 +65,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "graphql-types": "graphql get-schema",
     "clean": "rm -rf node_modules .cache public",
+    "refresh": "yarn clean && yarn",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""

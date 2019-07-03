@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import VisibilitySensor from 'react-visibility-sensor'
 import { Tween } from 'react-gsap'
 
-import { Container, Card, Heading } from '../utils/rebass'
+import { Box, Card, Heading } from '../utils/rebass'
 import { fadeFromBottom } from '../utils/animations'
 
 const Hero = ({ title, src }) => (
-  <Container>
+  <Box mx={[null, null, 3]}>
     <VisibilitySensor partialVisibility>
       {({ isVisible }) => (
         <Tween to={fadeFromBottom(isVisible)}>
@@ -25,7 +25,7 @@ const Hero = ({ title, src }) => (
         </Tween>
       )}
     </VisibilitySensor>
-  </Container>
+  </Box>
 )
 
 Hero.propTypes = {

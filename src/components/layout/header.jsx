@@ -38,7 +38,7 @@ const MenuItem = styled(BaseLink).attrs({
 
 const Header = ({ siteTitle, siteDescription, links }) => (
   <header>
-    <Container>
+    <Box mx={[null, null, 3]}>
       <Box bg="ocre" textAlign="center">
         <Titles fontSize={[9, 10]}>{siteTitle}</Titles>
         <Titles fontSize={[3, 4]}>{siteDescription}</Titles>
@@ -51,7 +51,7 @@ const Header = ({ siteTitle, siteDescription, links }) => (
             </MenuItem>
           ))}
       </Flex>
-    </Container>
+    </Box>
   </header>
 )
 

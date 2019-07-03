@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 import uniqid from 'uniqid'
 
-import { Card, Flex, Container, Heading } from '../../utils/rebass'
+import { Card, Flex, Box, Heading } from '../../utils/rebass'
 import { ImageFuildProps } from '../../utils/propTypes'
 import SlickHelper from '../../utils/slick-helper'
 
@@ -18,7 +18,7 @@ const HeaderSlider = ({ slides }) => {
   }
 
   return (
-    <Container as="section">
+    <Box as="section" mx={[null, null, 3]}>
       <SlickHelper />
       <Card boxShadow={2}>
         <Slider {...settings}>
@@ -49,7 +49,7 @@ const HeaderSlider = ({ slides }) => {
           })}
         </Slider>
       </Card>
-    </Container>
+    </Box>
   )
 }
 

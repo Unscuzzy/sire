@@ -9,15 +9,15 @@ import { colors } from '../../config/theme'
 
 const Titles = styled(Heading).attrs({
   color: 'white',
-  fontWeight: 4,
+  fontWeight: [2, 3, 4],
   fontFamily: 'lato'
 })`
   line-height: 1;
 `
 
 const MenuItem = styled(BaseLink).attrs({
-  py: 3,
-  px: 2
+  py: [3, 3, 4],
+  px: [1, 2, 3]
 })`
   color: ${colors.grey};
   font-weight: 300;
@@ -32,12 +32,12 @@ const MenuItem = styled(BaseLink).attrs({
 
 const Header = ({ siteTitle, siteDescription, links }) => (
   <header>
-    <Box mx={[null, null, 3]}>
+    <Box mx={[null, null, 3]} mt={[null, null, 3]}>
       <Box bg="ocre" textAlign="center">
         <Titles fontSize={[9, 10]}>{siteTitle}</Titles>
         <Titles fontSize={[3, 4]}>{siteDescription}</Titles>
       </Box>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" flexWrap="wrap">
         {links &&
           links.map(({ label, link }) => (
             <MenuItem as={Link} to={link} key={uniqid(link)}>

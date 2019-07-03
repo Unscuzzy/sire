@@ -4,13 +4,7 @@ import styled from 'styled-components'
 import uniqid from 'uniqid'
 
 import Link from '../link'
-import {
-  Container,
-  Heading,
-  Box,
-  Link as BaseLink,
-  Flex
-} from '../../utils/rebass'
+import { Heading, Box, Link as BaseLink, Flex } from '../../utils/rebass'
 import { colors } from '../../config/theme'
 
 const Titles = styled(Heading).attrs({

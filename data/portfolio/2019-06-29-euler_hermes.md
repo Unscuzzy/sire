@@ -3,6 +3,7 @@ templateKey: projects
 title: Euler hermes
 excerpt: Découvrez euler hermes
 business: Tomasz Mazurczak
+date: 2019-07-15T22:24:06.757Z
 thumbnail: /uploads/img_20190603_102227_1_.png
 images:
   - /uploads/image.png

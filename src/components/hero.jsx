@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import VisibilitySensor from 'react-visibility-sensor'
 import { Tween } from 'react-gsap'
 
-import { Container, Card, Heading, Flex } from '../utils/rebass'
+import { Container, Card, Heading } from '../utils/rebass'
 import { fadeFromBottom } from '../utils/animations'
 
 const Hero = ({ title, src }) => (

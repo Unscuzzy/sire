@@ -1,15 +1,20 @@
 ---
 templateKey: portfolio-page
-title: Portfolio
-excerpt: Découvrez le portfolio de SIRE
+title: Portfolio de la société SIRE
+excerpt: >-
+  Découvrez le portfolio de SIRE, le Luxe éco-responsable. Les dernières
+  réalisations, les projets internes, nous vous présentons tout dans des
+  articles.
 cover: /uploads/spacex-71873-unsplash.png
 subTitle: Ils nous font confiance
 presentation: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-  gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem
-  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore ma.
+  Toutes ces créations sont réalisées à partir d’aluminium, récupéré sur le
+  lanceur AR-4 de la fusée Ariane qui se trouve sur le site du centre spatial
+  Guyanais, ou parmi les chutes d’usinage des Mureaux. Également, SIRE utilise
+  des rebuts de carbone et de kevlar, également récupérés sur le site des
+  Mureaux d’ArianeGroup. Ces derniers peuvent provenir des chutes d’antennes
+  satellites ou encore de la coiffe Sylda. Découvrez dès maintenant des projets
+  internes ainsi que des réalisations sûr-mesure pour nos clients.
 portfolioProjects:
   - Euler hermes
   - Channel

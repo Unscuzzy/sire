@@ -23,33 +23,41 @@ presentationBody: >-
   CNES.
 presentationSlider:
   - image: /uploads/lanceur_1.png
-    title: NO WAY? <br>FREE UI DOWNLOAD
-  - image: /uploads/lanceur_1.png
-    title: NO WAY? <br>FREE UI DOWNLOAD
+    title: Bas du lanceur AR-4 à Kourou
+  - image: /uploads/lanceur.png
+    title: Haut du lanceur AR-4 à Kourou
 processTitle: Un processus créatif
 process:
-  - step: Découverte des besoins
-  - step: Conception 3D du produit
-  - step: Production en Guyane française
-  - step: Livraison en main propre
+  - step: >-
+      Découverte des besoins : Nous vous accompagnons à définir une solution
+      pour répondre à vos objectifs
+  - step: >-
+      Conception 3D du produit : Nos équipes de créatifs réalisent des
+      prototypes de produit totalement uniques
+  - step: >-
+      Production en Guyane française : SIRE soutient le développement économique
+      local en collaborant avec des artisans de Guyanne
+  - step: >-
+      Livraison de votre projet : Nous importons les produits en France
+      métropolitaine afin de vous livrer dans les meilleurs délais
 materialTitle: Des matériaux issus de l’industrie aérospatiale
 materials:
   - content: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-      ultrices gravida. Risus commodo viverra maecena.
-    image: /uploads/aluminium.png
+      Matériaux issu du lanceur spatial Ariane AR- 4 de la base de Kourou au
+      Centre Spatial Guyanais. Nous découpons le lanceur et l'usinons à Kourou
+      et à Cayenne, en Guyane française.
+    image: /uploads/aluminium.jpg
     title: Aluminium
   - content: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-      ultrices gravida. Risus commodo viverra maecena.
+      Carbone et Kevlar issus de chutes d’antennes satellites ou des protections
+      de la coiffe d’Ariane : Ils proviennent de l’ArianeGroup basé aux Mureaux
+      dans le département des Yvelines.
     image: /uploads/tech-carbone-1-768x512.jpg
     title: Carbone
   - content: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-      ultrices gravida. Risus commodo viverra maecena.
+      Essence d’Angélique, de Wacapou, de Saint Martin rouge et jaune, ou de
+      Gonfolo : Le socle est composé de bois de Guyane et est conçu par des
+      artisans guyanais, tel que la société CEMKO.
     image: /uploads/teak.3c6e6d_2x.jpg
     title: Bois
 portfolioTitle: Ils nous font confiance

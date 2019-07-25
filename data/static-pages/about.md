@@ -5,12 +5,14 @@ excerpt: À propos
 cover: /uploads/spacex-71873-unsplash.png
 ecoTitle: Le Luxe éco-responsable
 ecoBody: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-  gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem
-  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-  gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+  En mêlant le luxe à l'éco-responsabilité, SIRE transforme les matières de
+  récupération des industries spatiales européennes en objets haut de gamme.
+  Trophées, pièces de décoration et goodies sont créés en séries
+  limitées, réalisés à base de carbone et d'aluminium récupérés sur les
+  engins spatiaux, notamment du lanceur AR4 d'ArianEspace. Des matériaux
+  luxueux tel que l'or, l'argent et des diamants y sont ensuite intégrés et
+  une puce NFC permet à ses acquéreurs de connaître l'historique de
+  fabrication.
 ecoItems:
   - content: |-
       Front-end developer, UI/Web
@@ -30,12 +32,14 @@ ecoItems:
     name: One item
 partnerTitle: Nos partenaires
 partners:
-  - logo: /uploads/6-layers.png
-    url: 'http://thomsoon.com/'
-  - logo: /uploads/6-layers.png
-    url: 'http://thomsoon.com/'
-  - logo: /uploads/6-layers.png
-    url: 'http://thomsoon.com/'
+  - logo: /uploads/arianegroup-1.png
+    url: 'https://www.ariane.group/fr/'
+  - logo: /uploads/initiative-1.png
+    url: 'http://www.initiative-ceguyane.fr/'
+  - logo: /uploads/gdi-1.png
+    url: 'https://www.ardi-gdi.fr/'
+  - logo: /uploads/cnes-1.png
+    url: 'https://cnes.fr/fr'
 teamTitle: L'équipe
 team:
   - content: |-

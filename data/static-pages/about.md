@@ -43,22 +43,14 @@ partners:
 teamTitle: L'équipe
 team:
   - content: |-
-      Front-end developer, UI/Web
-      designer and video
-      producer
-    name: Hugo tout seul
-    photo: /uploads/hugo.jpg
+      CEO fondateur,
+      Joaillier créateur
+    name: Didier Guillemain
+    photo: /uploads/23755527_10155860908437346_6752361970739087179_n.jpg
   - content: |-
-      Front-end developer, UI/Web
-      designer and video
-      producer
-    name: Hugo Boss
-    photo: /uploads/hugo.jpg
-  - content: |-
-      Front-end developer, UI/Web
-      designer and video
-      producer
-    name: Hugo TSR
+      Associé,
+      Responsable digital
+    name: Hugo Fontvieille
     photo: /uploads/hugo.jpg
 ---
 

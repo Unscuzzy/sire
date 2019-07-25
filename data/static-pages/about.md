@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
 title: À propos
-excerpt: À propos
+excerpt: 'Découvrez qui se cache derrière ce paris fou '
 cover: /uploads/spacex-71873-unsplash.png
 ecoTitle: Le Luxe éco-responsable
 ecoBody: >-

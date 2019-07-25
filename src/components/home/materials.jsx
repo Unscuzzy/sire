@@ -40,7 +40,7 @@ const Materials = ({ title, materials }) => (
           const { fluid } = image.childImageSharp
           const direction = i % 2 === 0 ? 'column' : 'column-reverse'
           return (
-            <Card key={uniqid(i)} width={[1, 1 / 3]} px={[null, 3, 4]} py={4}>
+            <Card key={uniqid(i)} width={[1, 1 / 3]} px={[null, 3, 4]} py={4}  mt={ i % 2 !== 0 ? 3 : null }>
               <VisibilitySensor partialVisibility>
                 {({ isVisible }) => (
                   <Tween to={fadeFromBottom(isVisible)}>

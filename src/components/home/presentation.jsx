@@ -18,6 +18,14 @@ const MySlider = styled(Slider)`
     background: ${colors.brown};
     height: 44px;
     width: 44px;
+    z-index: 999;
+  }
+  .slick-arrow:hover {
+    background: white;
+    color: ${colors.brown};
+  }
+  .slick-dots .slick-arrow:hover:before, .slick-arrow:hover:before{
+    color: ${colors.brown};
   }
 `
 

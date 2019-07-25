@@ -165,7 +165,6 @@ Button.propTypes = {
 Button.defaultProps = {
   as: 'button',
   fontSize: 'inherit',
-  fontWeight: 'bold',
   m: 0,
   px: 3,
   py: 2,

@@ -12,6 +12,7 @@ import Portfolio from '../components/home/portfolio'
 import { ImageFuildProps } from '../utils/propTypes'
 import Link from '../components/link'
 import { Button, Container } from '../utils/rebass'
+import { maxWidths } from '../config/theme'
 
 const IndexPage = ({ data }) => {
   const {
@@ -45,7 +46,7 @@ const IndexPage = ({ data }) => {
         html={portfolioBody}
         portfolio={portfolioProject}
       />
-      <Container position="relative">
+      <Container as="section" maxWidth={maxWidths.medium} pb={[4, 5]} textAlign="center">
         <Button
           as={Link}
           to="/portfolio"

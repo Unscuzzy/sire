@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 import uniqid from 'uniqid'
 
-import { Card, Flex, Box, Heading } from '../../utils/rebass'
+import { Card, Flex, Box, Heading, Container } from '../../utils/rebass'
 import { ImageFuildProps } from '../../utils/propTypes'
 import SlickHelper from '../../utils/slick-helper'
+import { maxWidths } from '../../config/theme'
 
 const HeaderSlider = ({ slides }) => {
   const settings = {
@@ -26,24 +27,23 @@ const HeaderSlider = ({ slides }) => {
             const { src } = image.childImageSharp.fluid
             return (
               <Card backgroundImage={`url(${src})`} key={uniqid(title)}>
-                <Flex
-                  pl={[5, 6]}
-                  pr={[5, 0]}
-                  width={[1, 3 / 4, 2 / 3]}
-                  flexDirection="column"
-                  justifyContent="center"
-                  height={['300px', '518px']}
-                  zIndex="2"
-                >
-                  <Heading
-                    fontFamily="lato"
-                    fontSize={[4, 5, 5, 6]}
-                    fontWeight={4}
-                    color="white"
-                  >
-                    {title}
-                  </Heading>
-                </Flex>
+                <Container as="section" maxWidth={maxWidths.medium} py={5}>
+                  <Flex flexWrap="wrap" mx={[-3, -4]} height={['300px', '350px']}>
+                    <Heading
+                      fontFamily="lato"
+                      fontSize={[4, 5, 5, 6]}
+                      fontWeight={4}
+                      color="white"
+                      px={[3, 4]}
+                      display="flex"
+                      flexDirection="column"
+                      textAlign="center"
+                      justifyContent="center"
+                    >
+                      {title}
+                    </Heading>
+                  </Flex>
+                </Container>
               </Card>
             )
           })}

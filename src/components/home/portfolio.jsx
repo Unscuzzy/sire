@@ -10,7 +10,7 @@ import { maxWidths } from '../../config/theme'
 
 const Portfolio = ({ title, html, portfolio }) => (
   <>
-    <Container as="section" maxWidth={maxWidths.medium} py={[4, 5]}>
+    <Container as="section" maxWidth={maxWidths.medium}>
       <VisibilitySensor partialVisibility>
         {({ isVisible }) => (
           <Tween to={fadeFromBottom(isVisible)}>

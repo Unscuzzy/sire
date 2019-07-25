@@ -36,6 +36,14 @@ const GlobalStyle = createGlobalStyle`
       opacity: 0.8;
     }
   }
+  .slick-dots {
+    position: absolute!important;
+    bottom: 0!important;
+    li button:before {
+      font-size: 18px!important;
+      color: white!important;
+    }
+  }
 `
 
 export default GlobalStyle

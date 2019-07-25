@@ -20,14 +20,15 @@ const ProjectItem = ({ title, fluid, index, total, slug }) => {
   const animation = isVisible =>
     total === 1 ? fadeFromBottom(isVisible) : animationDirection(isVisible)
   return (
-    <Link to={`/portfolio/${slug}`}>
-      <Container as="section" maxWidth={maxWidths.medium} py={[4, 5]}>
-        <VisibilitySensor partialVisibility>
-          {({ isVisible }) => (
-            <Tween to={animation(isVisible)}>
+    <Container as="section" maxWidth={maxWidths.medium} py={[4, 5]}>
+      <VisibilitySensor partialVisibility>
+        {({ isVisible }) => (
+          <Tween to={animation(isVisible)}>
+            <Link to={`/portfolio/${slug}`}>
               <Flex flexDirection={reverse} flexWrap="wrap">
                 <Box width={[1, 1 / 3]} pt={4}>
-                  <Box bg="fadeOcre" pt={5} pb={4} px={[3, 3, 4]}>
+                  <Box bg="fadeOcre" py={[5, 6]} px={[3, 3, 4]} mr={[0,-3,-5]} zIndex="999" position="relative">
+                    <Box bg="white" width={1 / 2} height={1} mb={[3, 3, 4]}></Box>
                     <Heading
                       fontSize={[2, 3, 4]}
                       color="white"
@@ -41,11 +42,11 @@ const ProjectItem = ({ title, fluid, index, total, slug }) => {
                   <Img fluid={fluid} />
                 </Box>
               </Flex>
-            </Tween>
-          )}
-        </VisibilitySensor>
-      </Container>
-    </Link>
+            </Link>
+          </Tween>
+        )}
+      </VisibilitySensor>
+    </Container>
   )
 }
 

@@ -16,7 +16,7 @@ const CreatingProcess = ({ title, process }) => (
           <Flex flexWrap="wrap">
             {process &&
               process.map(({ step }, i) => (
-                <Flex key={uniqid(i)} width={[1, 1 / 2, 1 / 4]} ph={[3, 3, 5]}>
+                <Flex mt={ i % 2 !== 0 ? 5 : 3 } key={uniqid(i)} width={[1, 1 / 2, 1 / 4]} ph={[3, 3, 5]}>
                   <Heading>{i + 1}.</Heading>
                   <Text fontStyle="italic">{step}</Text>
                 </Flex>

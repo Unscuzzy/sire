@@ -16,6 +16,12 @@ import { ImageFuildProps } from '../utils/propTypes'
 import SlickHelper from '../utils/slick-helper'
 import { fadeFromBottom } from '../utils/animations'
 import { maxWidths } from '../config/theme'
+import {
+  TwitterShareButton,
+  TwitterIcon,
+  FacebookShareButton,
+  FacebookIcon,
+} from 'react-share';
 
 const Title = styled(Heading).attrs({
   color: 'black'
@@ -68,6 +74,14 @@ const ProjectTemplate = ({ data }) => {
               <Flex flexWrap="wrap" justifyContent="space-between">
                 <Meta h1={`L'entreprise`} h2={business} />
                 <Meta h1="Date" h2={`Le ${date}`} />
+                <Box>
+                  <TwitterShareButton url={String(window.location)} quote="Découvrez ce projet" >
+                    <TwitterIcon/>
+                  </TwitterShareButton>
+                  <FacebookShareButton url={String(window.location)} quote="Découvrez ce projet" >
+                    <FacebookIcon/>
+                  </FacebookShareButton>
+                </Box>
                 <Meta h1="Share" h2="TODO" />
               </Flex>
             </Tween>

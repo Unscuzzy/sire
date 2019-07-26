@@ -34,7 +34,7 @@ const Header = ({ siteTitle, siteDescription, links }) => (
   <header>
     <Box mx={[null, null, 3]} mt={[null, null, 3]}>
       <Box bg="ocre" textAlign="center">
-        <Titles fontSize={[9, 10]}>{siteTitle}</Titles>
+        <Titles fontSize={[9, 10]} style={{ lineHeight: "0.68" }}>{siteTitle}</Titles>
         <Titles fontSize={[3, 4]} py={3}>{siteDescription}</Titles>
       </Box>
       <Flex justifyContent="center" flexWrap="wrap">

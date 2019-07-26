@@ -1,12 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import VisibilitySensor from 'react-visibility-sensor'
+import { Tween } from 'react-gsap'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Hero from '../components/hero'
+import { maxWidths } from '../config/theme'
 import { ImageFuildProps } from '../utils/propTypes'
-import { Heading, Text, Container } from '../utils/rebass'
+import { Heading, Flex, Text, Container, Box } from '../utils/rebass'
+import { fadeFromLeft } from '../utils/animations'
 
 const AboutPage = ({ data }) => {
   const {
@@ -28,11 +32,19 @@ const AboutPage = ({ data }) => {
     <Layout>
       <SEO title={title} description={excerpt} />
       <Hero title={title} src={src} />
-      <Container>
-        <Heading pt={5} textAlign="center">
-          {`Cette page c'est cadeau :)`}
-        </Heading>
-        <Text textAlign="center">(Regarde dans la console)</Text>
+      <Container as="section" maxWidth={maxWidths.medium} py={5}>
+        <Flex flexWrap="wrap" mx={[-3, -4]}>
+          <VisibilitySensor partialVisibility>
+            {({ isVisible }) => (
+              <Tween to={fadeFromLeft(isVisible)}>
+                <Box px={[3, 4]} textAlign="center">
+                  <Heading>{title}</Heading>
+                  <Text fontStyle="italic">{ecoBody}</Text>
+                </Box>
+              </Tween>
+            )}
+          </VisibilitySensor>
+        </Flex>
       </Container>
 
       {// eslint-disable-next-line no-console

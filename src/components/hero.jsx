@@ -11,7 +11,7 @@ const Hero = ({ title, src }) => (
     <VisibilitySensor partialVisibility>
       {({ isVisible }) => (
         <Tween to={fadeFromBottom(isVisible)}>
-          <Card py={5} backgroundImage={`url(${src})`}>
+          <Card py={5} backgroundImage={`url(${src})`} boxShadow={2}>
             <Heading
               textAlign="center"
               fontFamily="lato"

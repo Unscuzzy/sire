@@ -16,23 +16,16 @@ import { ImageFuildProps } from '../utils/propTypes'
 import SlickHelper from '../utils/slick-helper'
 import { fadeFromBottom } from '../utils/animations'
 import { maxWidths } from '../config/theme'
-import {
-  TwitterShareButton,
-  TwitterIcon,
-  FacebookShareButton,
-  FacebookIcon,
-  EmailShareButton,
-  EmailIcon
-} from 'react-share';
 
 const Title = styled(Heading).attrs({
   color: 'black'
 })`
   :after {
-    content: ' ';
+    content: '';
     display: block;
-    width: 87px;
+    width: 50px;
     height: 2px;
+    background: #879999;
   }
 `
 
@@ -74,18 +67,9 @@ const ProjectTemplate = ({ data }) => {
           {({ isVisible }) => (
             <Tween to={fadeFromBottom(isVisible)}>
               <Flex flexWrap="wrap" justifyContent="space-between">
-                <Meta h1={`L'entreprise`} h2={business} />
-                <Meta h1="Date" h2={`Le ${date}`} />
-                <TwitterShareButton url={String(window.location)} quote="Découvrez ce projet" >
-                  <TwitterIcon/>
-                </TwitterShareButton>
-                <FacebookShareButton url={String(window.location)} quote="Découvrez ce projet" >
-                  <FacebookIcon/>
-                </FacebookShareButton>
-                <EmailShareButton url={String(window.location)} quote="Découvrez ce projet" >
-                  <EmailIcon/>
-                </EmailShareButton>
-                <Meta h1="Share" h2="TODO" />
+                <Meta h1={`L'entreprise`} h3={business} />
+                <Meta h1="Date" h3={`Le ${date}`} />
+                <Meta h1="Partager" h3="TODO" />
               </Flex>
             </Tween>
           )}

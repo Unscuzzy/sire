@@ -38,7 +38,7 @@ const AboutPage = ({ data }) => {
             {({ isVisible }) => (
               <Tween to={fadeFromLeft(isVisible)}>
                 <Box px={[3, 4]} textAlign="center">
-                  <Heading>{title}</Heading>
+                  <Heading>{ecoTitle}</Heading>
                   <Text fontStyle="italic">{ecoBody}</Text>
                 </Box>
               </Tween>

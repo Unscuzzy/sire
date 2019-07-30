@@ -12096,6 +12096,11 @@ react-onclickoutside@^6.5.0:
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.8.0.tgz#9f91b5b3ed59f4d9e43fd71620dc200773a4d569"
   integrity sha512-5Q4Rn7QLEoh7WIe66KFvYIpWJ49GeHoygP1/EtJyZjXKgrWH19Tf0Ty3lWyQzrEEDyLOwUvvmBFSE3dcDdvagA==
 
+react-parallax@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-2.2.0.tgz#676ef4d94d0e2e56520f175c1c213eafa8aa6c15"
+  integrity sha512-nBOfrfuxjeAUjnovJfDygEh4c7YsiuSylzxI81kqovedI/zvwoHM6CwFiqkRWkTOEqt0TamKtd5N8j7KR6jEHA==
+
 react-polyglot@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/react-polyglot/-/react-polyglot-0.4.0.tgz#87712ecf73858755e2705419adf1294f1c0eae91"

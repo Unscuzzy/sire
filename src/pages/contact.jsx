@@ -46,7 +46,7 @@ const ContactPage = ({ data }) => {
             </Tween>
           )}
         </VisibilitySensor>
-        <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+        <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" data-netlify-recaptcha="true">
           <p>
             <label>Name <input type="text" name="name" /></label>
           </p>

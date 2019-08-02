@@ -15,36 +15,12 @@ import GlobalStyle from '../../utils/GlobalStyle'
 import Header from './header'
 import Footer from './footer'
 import SEO from '../seo'
-import { Flex, Box } from '../../utils/rebass'
+import { Flex } from '../../utils/rebass'
 import Pattern from '../pattern'
 
 
 
 const Layout = ({ children }) => {
-
-
-  const body = document.body
-  const html = document.documentElement
-
-  const getHeight = () => Math.max( body.scrollHeight, body.offsetHeight, 
-    html.clientHeight, html.scrollHeight, html.offsetHeight )
-
-
-
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-  const [documentHeight, setDocumentHeight] = useState(getHeight());
-
-  useEffect(() => { 
-    function handleResize() {
-      setDocumentHeight(getHeight())
-      setWindowHeight(window.innerHeight)
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []); 
-
-  console.log({windowHeight, documentHeight})
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

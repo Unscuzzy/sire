@@ -36,30 +36,24 @@ const ContactPage = ({ data }) => {
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
             <Tween to={fadeFromBottom(isVisible)}>
-              <Heading
-                style={{ border: `2px dashed #666` }}
-                py={6}
-                textAlign="center"
-              >
-                Form
-              </Heading>
+              <form action="/message-envoye" name="contact" method="post">
+                <input type="hidden" name="form-name" value="contact" />
+                <p>
+                  <label>Your Name: <input type="text" name="name"/></label>
+                </p>
+                <p>
+                  <label>Your Email: <input type="email" name="email"/></label>
+                </p>
+                <p>
+                  <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
             </Tween>
           )}
         </VisibilitySensor>
-        <form action="message-envoye" name="contact" method="POST" data-netlify="true">
-          <p>
-            <label>Your Name: <input type="text" name="name" /></label>   
-          </p>
-          <p>
-            <label>Your Email: <input type="email" name="email" /></label>
-          </p>
-          <p>
-            <label>Message: <textarea name="message"></textarea></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
       </Container>
     </Layout>
   )

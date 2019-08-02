@@ -331,7 +331,7 @@ collections:
       # Page: Message envoyé
       - file: data/static-pages/message-envoye.md
         name: message-envoye
-        label: "Mentions légales"
+        label: "Message envoyé"
         fields:
           - {
             name: templateKey,

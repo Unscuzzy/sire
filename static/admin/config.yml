@@ -328,6 +328,39 @@ collections:
               label: "Contenu",
               widget: markdown
           }
+      # Page: Mentions legals
+      - file: data/static-pages/message-envoye.md
+        name: message-envoye
+        label: "Mentions légales"
+        fields:
+          - {
+            name: templateKey,
+            label: Template Key,
+            widget: hidden,
+            default: message-envoye-page
+          }
+          - {
+            name: title,
+            label: Titre,
+            widget: string,
+            hint: 'Utilisé pour le SEO'
+          }
+          - {
+            name: excerpt,
+            label: Extrait,
+            widget: text,
+            hint: 'Utilisé pour le SEO'
+          }
+          - {
+            name: cover,
+            label: Cover,
+            widget: image
+          }
+          - {
+              name: body,
+              label: "Contenu",
+              widget: markdown
+          }
   # Portfolio projects collection
   - name: projects
     label: Projets

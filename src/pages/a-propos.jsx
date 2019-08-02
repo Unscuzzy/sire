@@ -72,7 +72,7 @@ const AboutPage = ({ data }) => {
             const { fluid } = photo.childImageSharp
               return (
                 <Box width={[1, 1 / 3]} px={[3, 4]} textAlign="center" key={uniqid(i)}>
-                  <h3 style={{ textTransform: 'uppercase' }} textTransform="uppercase">{name}</h3>
+                  <h3 style={{ textTransform: 'uppercase' }}>{name}</h3>
                   <p>{content}</p>
                   <Img fluid={fluid} />
                 </Box>
@@ -81,19 +81,6 @@ const AboutPage = ({ data }) => {
           </Flex>
         </Box>
       </Container>
-
-      {// eslint-disable-next-line no-console
-      console.log({
-        title,
-        excerpt,
-        ecoTitle,
-        ecoBody,
-        ecoItems,
-        partnerTitle,
-        teamTitle,
-        partners,
-        team
-      })}
     </Layout>
   )
 }

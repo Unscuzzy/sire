@@ -43,7 +43,7 @@ export default MessageEnvoye
 export const pageQuery = graphql`
   query {
     markdownRemark(
-      frontmatter: { templateKey: { eq: "message-nvoye" } }
+      frontmatter: { templateKey: { eq: "message-envoye-page" } }
     ) {
       frontmatter {
         title

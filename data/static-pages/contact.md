@@ -4,10 +4,22 @@ title: Contact
 excerpt: Contactez SIRE
 cover: /uploads/spacex-71873-unsplash.png
 content: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-  gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem
-  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore ma.
+  Vous avez des questions concernant SIRE ? Vous souhaitez collaborer ou
+  simplement échanger avec nos équipes ?
+
+
+  Nous sommes à votre disposition pour répondre à vos interrogations en nous
+  tenant à votre disposition. Notre équipe est à votre écoute, du lundi au
+  samedi pour vous apportez des réponses.
+
+
+  Vous pouvez également nous contacter par mail à l’adresse
+  dg@guillemain-paris.com et vous recevrez une réponse dans les plus brefs
+  délais.
+
+
+  A très bientôt,
+
+  L’équipe SIRE.
 ---
 

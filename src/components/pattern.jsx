@@ -54,12 +54,12 @@ const Pattern = ({ children }) => {
   const { fluid } = data.pattern.childImageSharp
   return (
     <Box position="absolute" top="0" left='0' width={1} height="100%" zIndex='-1'>
-        <Box position="relative" width="100%" height="100vh" style={{ border: "1px solid yellow"}}>
+        <Box position="relative" width="100%" height="100vh">
             <Box position="absolute" width="100px" zIndex="-1" top="50%" style={{ transform: 'translateY(-50%)'}}>
               <Img fluid={fluid} />
             </Box>
         </Box>
-        <Box position="relative" width="100%" height="100vh" style={{ border: "1px solid yellow"}}>
+        <Box position="relative" width="100%" height="100vh">
             <Box position="absolute" width="100px" zIndex="-1" top="50%" right="0"  style={{ transform: 'translateY(-50%) rotate(180deg)'}}>
               <Img fluid={fluid} />
             </Box>

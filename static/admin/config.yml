@@ -328,7 +328,7 @@ collections:
               label: "Contenu",
               widget: markdown
           }
-      # Page: Mentions legals
+      # Page: Message envoyé
       - file: data/static-pages/message-envoye.md
         name: message-envoye
         label: "Mentions légales"

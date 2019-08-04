@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 import uniqid from 'uniqid'
+import { Parallax } from 'react-parallax'
 
 import { Card, Flex, Box, Heading, Container } from '../../utils/rebass'
 import { ImageFuildProps } from '../../utils/propTypes'
@@ -26,7 +27,7 @@ const HeaderSlider = ({ slides }) => {
           {slides.map(({ image, title }) => {
             const { src } = image.childImageSharp.fluid
             return (
-              <Card backgroundImage={`url(${src})`} key={uniqid(title)}>
+              <Parallax bgImage={src} strength={-150} boxShadow={2} key={uniqid(title)}>
                 <Container as="section" maxWidth={maxWidths.medium} py={5}>
                   <Flex flexWrap="wrap" mx={[-3, -4]} height={['300px', '350px']}>
                     <Heading
@@ -39,12 +40,13 @@ const HeaderSlider = ({ slides }) => {
                       flexDirection="column"
                       textAlign="center"
                       justifyContent="center"
+                      style={{textShadow:"1px 1px 10px rgba(0,0,0,0.25)"}}
                     >
                       {title}
                     </Heading>
                   </Flex>
                 </Container>
-              </Card>
+              </Parallax>
             )
           })}
         </Slider>

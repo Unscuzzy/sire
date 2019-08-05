@@ -5,7 +5,7 @@ excerpt: >-
   Découvrez SIRE, Société Innovante en Recyclage Eco-Responsable : Les origines,
   la philosophie ou encore ses derniers projets.
 headerSlider:
-  - image: /uploads/spacex-71873-unsplash.png
+  - image: /uploads/fusee-ariane-lancement.jpg
     title: Société Innovante en Recyclage Éco-responsable
   - image: /uploads/ariane-fusee.jpg
     title: Nous recyclons des matériaux issus de l'industrie spatiales

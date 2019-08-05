@@ -4,11 +4,10 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled, { ThemeProvider } from 'styled-components'
-import Img from "gatsby-image"
 
 import theme from '../../config/theme'
 import GlobalStyle from '../../utils/GlobalStyle'

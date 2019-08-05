@@ -10,7 +10,7 @@ import { colors } from '../../config/theme'
 const FooterText = styled(Text).attrs({
   color: 'white',
   fontWeight: 400,
-  fontSize: [1, 2],
+  fontSize: 1,
   fontStyle: 'italic',
   my: 0,
   py: 1

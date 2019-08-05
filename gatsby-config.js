@@ -55,7 +55,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-sharp`,
-      options: { defaultQuality: 75 }
+      options: { defaultQuality: 85 }
     },
     {
       resolve: `gatsby-plugin-manifest`,

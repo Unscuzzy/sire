@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 import uniqid from 'uniqid'
-import { Parallax } from 'react-parallax'
+import styled from 'styled-components'
+import { Parallax, Background } from 'react-parallax'
 
 import { Card, Flex, Box, Heading, Container } from '../../utils/rebass'
 import { ImageFuildProps } from '../../utils/propTypes'
@@ -18,17 +19,20 @@ const HeaderSlider = ({ slides }) => {
     slidesToShow: 1,
     slidesToScroll: 1
   }
-
+  const HomeSlider = styled(Slider)`
+  .slick-dots {
+    margin-bottom: 20px;
+  }
+`
   return (
     <Box as="section" mx={[null, null, 3]}>
       <SlickHelper />
-      <Card boxShadow={2}>
-        <Slider {...settings}>
+        <HomeSlider {...settings} style={{marginBottom:"-50px"}}>
           {slides.map(({ image, title }) => {
             const { src } = image.childImageSharp.fluid
             return (
-              <Parallax bgImage={src} strength={-150} boxShadow={2} key={uniqid(title)}>
-                <Container as="section" maxWidth={maxWidths.medium} py={5}>
+              <Card backgroundImage={`url(${src})`} key={uniqid(title)}>
+                <Container as="section" maxWidth={maxWidths.medium} py={5} boxShadow={2} >
                   <Flex flexWrap="wrap" mx={[-3, -4]} height={['300px', '350px']}>
                     <Heading
                       fontFamily="lato"
@@ -40,17 +44,16 @@ const HeaderSlider = ({ slides }) => {
                       flexDirection="column"
                       textAlign="center"
                       justifyContent="center"
-                      style={{textShadow:"1px 1px 10px rgba(0,0,0,0.25)"}}
+                      style={{ textShadow: "1px 1px 10px rgba(0,0,0,0.25)" }}
                     >
                       {title}
                     </Heading>
                   </Flex>
                 </Container>
-              </Parallax>
+              </Card>
             )
           })}
-        </Slider>
-      </Card>
+        </HomeSlider>
     </Box>
   )
 }

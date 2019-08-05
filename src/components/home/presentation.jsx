@@ -24,7 +24,8 @@ const MySlider = styled(Slider)`
     background: white;
     color: ${colors.brown};
   }
-  .slick-dots .slick-arrow:hover:before, .slick-arrow:hover:before{
+  .slick-dots .slick-arrow:hover:before, 
+  .slick-arrow:hover:before{
     color: ${colors.brown};
   }
 `

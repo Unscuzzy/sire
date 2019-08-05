@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import VisibilitySensor from 'react-visibility-sensor'
 import { Tween } from 'react-gsap'
-import { Parallax } from 'react-parallax'
+import { Parallax, Background } from 'react-parallax'
 
-import { Box, Card, Heading } from '../utils/rebass'
+import { Box, Heading, Card } from '../utils/rebass'
 import { fadeFromBottom } from '../utils/animations'
 
 const Hero = ({ title, src }) => (
@@ -12,19 +12,24 @@ const Hero = ({ title, src }) => (
     <VisibilitySensor partialVisibility>
       {({ isVisible }) => (
         <Tween to={fadeFromBottom(isVisible)}>
-            <Parallax bgImage={src} strength={-350} boxShadow={2}>
+          <Card boxShadow={2}>
+            <Parallax strength={-500}>
               <Heading
-                py={5} 
+                py={5}
                 textAlign="center"
                 fontFamily="lato"
                 fontSize={[4, 5, 5, 6]}
                 fontWeight={4}
                 color="white"
-                style={{textShadow:"1px 1px 10px rgba(0,0,0,0.25)"}}
+                style={{ textShadow: "1px 1px 10px rgba(0,0,0,0.25)" }}
               >
                 {title}
               </Heading>
+              <Background>
+                <img src={src} />
+              </Background>
             </Parallax>
+          </Card>
         </Tween>
       )}
     </VisibilitySensor>

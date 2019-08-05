@@ -51,6 +51,7 @@ export const Box = styled('div')(
   order,
   alignSelf,
   position,
+  boxShadow,
   themed('Box')
 )
 

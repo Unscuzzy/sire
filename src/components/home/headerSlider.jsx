@@ -25,14 +25,14 @@ const HeaderSlider = ({ slides }) => {
   }
 `
   return (
-    <Box as="section" mx={[null, null, 3]}>
+    <Box as="section" mx={[null, null, 3]} boxShadow={2}>
       <SlickHelper />
         <HomeSlider {...settings} style={{marginBottom:"-50px"}}>
           {slides.map(({ image, title }) => {
             const { src } = image.childImageSharp.fluid
             return (
               <Card backgroundImage={`url(${src})`} key={uniqid(title)}>
-                <Container as="section" maxWidth={maxWidths.medium} py={5} boxShadow={2} >
+                <Container as="section" maxWidth={maxWidths.medium} py={5} >
                   <Flex flexWrap="wrap" mx={[-3, -4]} height={['300px', '350px']}>
                     <Heading
                       fontFamily="lato"

@@ -8,21 +8,21 @@ headerSlider:
   - image: /uploads/spacex-71873-unsplash.png
     title: Société Innovante en Recyclage Éco-responsable
   - image: /uploads/ariane-fusee.jpg
-    title: Qui n’a jamais rêvé d’un peu d’espace chez soi ?
+    title: Nous recyclons des matériaux issus de l'industrie spatiales
 presentationTitle: Le Luxe éco-responsable
 presentationBody: >-
-  Didier Guillemain joaillier créateur, et Hugo Fontvieille expert web et
-  graphiste s'associent pour donner naissance à la S.A.S. SIRE, en
-  collaboration avec les artisans guyanais. La société recycle des matériaux
-  issues de l'industrie spatiales de la base de lancement de Kourou. En effet,
-  en collaborant avec des artisans, SIRE conçoit des objets luxueux tels que des
-  bijoux, des montres et des trophées. 
+  Didier Guillemain joaillier créateur et Hugo Fontvieille entrepreneur du web
+  s'associent pour donner naissance à la S.A.S. SIRE, en collaboration avec les
+  artisans guyanais. La société recycle des matériaux issues de l'industrie
+  spatiales de la base de lancement de Kourou. En effet, en collaborant avec des
+  artisans, SIRE conçoit des objets de luxe tels que des bijoux, des trophées ou
+  bien des montres. 
 
-  Une société qui voit le jour notamment grâce au parrainage d'ArianeGroup et
-  une mise à disposition de la partie centrale du lanceur Ariane AR-4 par le
-  CNES.
+  Une société qui voit le jour notamment par le biais du parrainage
+  d'ArianeGroup et une mise à disposition de la partie centrale du lanceur
+  Ariane AR-4 par le CNES.
 presentationSlider:
-  - image: /uploads/lanceur_1.png
+  - image: /uploads/lanceur-1.png
     title: Bas du lanceur AR-4 à Kourou
   - image: /uploads/lanceur.png
     title: Haut du lanceur AR-4 à Kourou
@@ -62,11 +62,13 @@ materials:
     title: Bois
 portfolioTitle: Ils nous font confiance
 portfolioBody: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-  gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem
-  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore ma.
+  La satisfaction et relation client sont au centre de nos préoccupations.
+  Également, SIRE fait partie des sociétés éco-responsable les plus innovantes
+  mais surtout de l'une des rares entreprise à avoir joué la carte du Luxe en
+  répondant à un enjeu écologique. Ces entreprises l'ont compris et nous leurs
+  sommes particulièrement reconnaissants. Un grand merci à eux pour leur
+  confiance : Nous espérons vous accompagner de nouveau prochainement et
+  travailler au mieux ensemble !
 portfolioProject: Euler hermes
 ---
 

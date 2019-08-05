@@ -2,11 +2,14 @@
 module.exports = {
   siteMetadata: {
     title: `SIRE`,
-    description: `Le luxe éco-responsable`,
-    author: `@junscuzzy`
+    description: `Le Luxe Éco-responsable`,
+    author: `@unscuzzy`,
+    siteUrl: `https://www.example.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-robots-txt',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -55,7 +58,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-sharp`,
-      options: { defaultQuality: 85 }
+      options: { defaultQuality: 100 }
     },
     {
       resolve: `gatsby-plugin-manifest`,

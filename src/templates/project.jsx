@@ -91,7 +91,9 @@ const ProjectTemplate = ({ data }) => {
       </Container>
       <Container py={[4, 5]}>
         <Title>Description</Title>
-        {html && <Wysiwyg __html={html} />}
+        <Text  textAlign="justify">
+          {html && <Wysiwyg __html={html} />}
+        </Text>
       </Container>
     </Layout>
   )

@@ -21,18 +21,18 @@ const ContactPage = ({ data }) => {
     <Layout>
       <SEO title={title} description={excerpt} />
       <Hero title={title} src={src} />
-      <Container py={[4, 5]}>
+      <Container as="section" maxWidth={maxWidths.medium} py={[4, 5]}>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
             <Tween to={fadeFromBottom(isVisible)}>
-              <Text fontStyle="italic" textAlign="center">
+              <Text fontStyle="italic" textAlign="justify">
                 {content}
               </Text>
             </Tween>
           )}
         </VisibilitySensor>
       </Container>
-      <Container maxWidth={maxWidths.medium} pb={[4, 5]}>
+      <Container as="section" maxWidth={maxWidths.small} pb={[4, 5]}>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
             <Tween to={fadeFromBottom(isVisible)}>

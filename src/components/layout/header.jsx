@@ -65,8 +65,7 @@ Header.defaultProps = {
     { label: 'Accueil', link: '/' },
     { label: 'à propos', link: '/a-propos/' },
     { label: 'Portfolio', link: '/portfolio/' },
-    { label: 'Contact', link: '/contact/' },
-    { label: 'Demo', link: '/demo/' }
+    { label: 'Contact', link: '/contact/' }
   ]
 }
 

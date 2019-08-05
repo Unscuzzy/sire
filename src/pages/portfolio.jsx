@@ -33,7 +33,7 @@ const PortfolioPage = ({ data }) => {
           {({ isVisible }) => (
             <Tween to={fadeFromBottom(isVisible)}>
               <Heading textAlign="center">{subTitle}</Heading>
-              <Text fontStyle="italic" textAlign="center">
+              <Text fontStyle="italic"  textAlign="justify">
                 {presentation}
               </Text>
             </Tween>

@@ -24,8 +24,7 @@ const MySlider = styled(Slider)`
     background: white;
     color: ${colors.brown};
   }
-  .slick-dots .slick-arrow:hover:before, 
-  .slick-arrow:hover:before{
+  .slick-dots .slick-arrow:hover:before, .slick-arrow:hover:before{
     color: ${colors.brown};
   }
 `
@@ -46,7 +45,7 @@ const Presentation = ({ title, html, slides }) => {
             <Tween to={fadeFromLeft(isVisible)}>
               <Box px={[3, 4]} width={[1, 1 / 2]}>
                 <Heading>{title}</Heading>
-                <Text fontStyle="italic">{html}</Text>
+                <Text fontStyle="italic" textAlign="justify">{html}</Text>
               </Box>
             </Tween>
           )}

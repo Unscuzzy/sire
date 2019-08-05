@@ -39,13 +39,13 @@ const AboutPage = ({ data }) => {
         <Flex flexWrap="wrap" mx={[null, -3, -4]}>
           <Box px={[3, 4]} textAlign="center">
             <Heading>{ecoTitle}</Heading>
-            <Text fontStyle="italic">{ecoBody}</Text>
+            <Text textAlign="justify" fontStyle="italic">{ecoBody}</Text>
           </Box>
         </Flex>
         <Flex flexWrap="wrap" mx={[null, -3, -4]}>
           {ecoItems.map(({ name, content }, i) =>
             <Card key={uniqid(i)} width={[1, 1 / 2]} px={[null, 3, 4]} py={4}>
-              <h3 fontStyle="italic">{name}</h3>
+              <h3 style={{ textTransform: 'uppercase', fontWeight: '600' }}>{name}</h3>
               <Text>{content}</Text>
             </Card>
           )}
@@ -72,8 +72,10 @@ const AboutPage = ({ data }) => {
             const { fluid } = photo.childImageSharp
               return (
                 <Box width={[1, 1 / 3]} px={[3, 4]} textAlign="center" key={uniqid(i)}>
-                  <h3 style={{ textTransform: 'uppercase' }}>{name}</h3>
-                  <p>{content}</p>
+                  <h3 style={{ textTransform: 'uppercase', fontWeight: '600' }}>{name}</h3>
+                  <Text color="grey" fontSize={1} py={3}>
+                    {content}
+                  </Text>
                   <Img fluid={fluid} />
                 </Box>
               )

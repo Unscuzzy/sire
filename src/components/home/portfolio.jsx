@@ -15,7 +15,7 @@ const Portfolio = ({ title, html, portfolio }) => (
         {({ isVisible }) => (
           <Tween to={fadeFromBottom(isVisible)}>
             <Heading textAlign="center">{title}</Heading>
-            <Text fontStyle="italic" textAlign="center">
+            <Text fontStyle="italic" textAlign="justify">
               {html}
             </Text>
           </Tween>

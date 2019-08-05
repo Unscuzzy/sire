@@ -1,8 +1,10 @@
 ---
 templateKey: about-page
 title: À propos
-excerpt: 'Découvrez qui se cache derrière ce paris fou '
-cover: /uploads/spacex-71873-unsplash.png
+excerpt: >-
+  Toutes les informations que vous cherchez à propos de SIRE et de ses
+  fondateurs.
+cover: /uploads/lune-nasa.jpg
 ecoTitle: Le Luxe éco-responsable
 ecoBody: >-
   En mêlant le luxe à l'éco-responsabilité, SIRE transforme les matières de

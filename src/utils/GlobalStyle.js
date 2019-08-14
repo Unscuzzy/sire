@@ -44,6 +44,9 @@ const GlobalStyle = createGlobalStyle`
       color: white!important;
     }
   }
+  .hidden {
+    display: none;
+  }
 `
 
 export default GlobalStyle

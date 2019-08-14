@@ -8,13 +8,13 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Hero from '../components/hero'
 import { ImageFuildProps } from '../utils/propTypes'
-import { Container, Heading, Text } from '../utils/rebass'
+import { Container, Box, Text, Button } from '../utils/rebass'
 import { fadeFromBottom } from '../utils/animations'
+import { Form, Input, Textarea, Label } from '../utils/form'
 import { maxWidths } from '../config/theme'
 
 const ContactPage = ({ data }) => {
   const { title, excerpt, cover, content } = data.markdownRemark.frontmatter
-
   const { src } = cover.childImageSharp.fluid
 
   return (
@@ -32,25 +32,31 @@ const ContactPage = ({ data }) => {
           )}
         </VisibilitySensor>
       </Container>
-      <Container as="section" maxWidth={maxWidths.small} pb={[4, 5]}>
+      <Container as="section" maxWidth={maxWidths.medium} pb={[4, 5]}>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
             <Tween to={fadeFromBottom(isVisible)}>
-              <form action="/message-envoye" name="contact" method="post">
-                <input type="hidden" name="form-name" value="contact" />
-                <p>
-                  <label>Your Name: <input type="text" name="name"/></label>
-                </p>
-                <p>
-                  <label>Your Email: <input type="email" name="email"/></label>
-                </p>
-                <p>
-                  <label>Message: <textarea name="message"></textarea></label>
-                </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-              </form>
+              <Form action="/message-envoye" name="contact" method="post">
+                <Box className="hidden">
+                  <Label>Don’t fill this out if you are human: </Label>
+                  <input name="bot-field" />
+                </Box>
+                <Box display="flex" flexDirection="column" py="3">
+                  <Label htmlFor="firstName">Votre nom :</Label>
+                  <Input id="firstName" type="text" name="name" required />
+                </Box>
+                <Box display="flex" flexDirection="column" py="3">
+                  <Label htmlFor="eMail">Votre email :</Label>
+                  <Input id="eMail" type="email" name="email" required />
+                </Box>
+                <Box display="flex" flexDirection="column" py="3">
+                  <Label htmlFor="message">Message :</Label>
+                  <Textarea id="message" name="message" required />
+                </Box>
+                <Box>
+                  <Button type="submit">Envoyer</Button>
+                </Box>
+              </Form>
             </Tween>
           )}
         </VisibilitySensor>

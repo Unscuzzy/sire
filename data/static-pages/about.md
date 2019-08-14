@@ -54,6 +54,6 @@ team:
       Associé,
       Responsable digital
     name: Hugo Fontvieille
-    photo: /uploads/hugo.jpg
+    photo: /uploads/hug-fontvieille.jpg
 ---
 

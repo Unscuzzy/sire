@@ -5,7 +5,7 @@ excerpt: >-
   Découvrez le portfolio de SIRE, le Luxe éco-responsable. Les dernières
   réalisations, les projets internes, nous vous présentons tout dans des
   articles.
-cover: /uploads/spacex-71873-unsplash.png
+cover: /uploads/station-spatiale-nasa.jpg
 subTitle: Ils nous font confiance
 presentation: >-
   Toutes ces créations sont réalisées à partir d’aluminium, récupéré sur le

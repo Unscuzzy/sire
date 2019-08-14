@@ -2,7 +2,7 @@
 templateKey: message-envoye-page
 title: Message Envoyé
 excerpt: Message Envoyé
-cover: /uploads/spacex-71873-unsplash.png
+cover: /uploads/planete-terre.jpg
 ---
 ## Votre message a bien été envoyé
 

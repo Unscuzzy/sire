@@ -1,7 +1,9 @@
 ---
 templateKey: message-envoye-page
 title: Message Envoyé
-excerpt: Message Envoyé
+excerpt: >-
+  Votre message a bien été envoyé ! Merci pour votre demande, nous la traiterons
+  dans la plus brefs délais.
 cover: /uploads/planete-terre.jpg
 ---
 ## Votre message a bien été envoyé

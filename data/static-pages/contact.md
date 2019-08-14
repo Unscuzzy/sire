@@ -2,7 +2,7 @@
 templateKey: contact-page
 title: Contact
 excerpt: Contactez SIRE
-cover: /uploads/spacex-71873-unsplash.png
+cover: /uploads/planete-terre.jpg
 content: >-
   Vous avez des questions concernant SIRE ? Vous souhaitez collaborer ou
   simplement échanger avec nos équipes ?

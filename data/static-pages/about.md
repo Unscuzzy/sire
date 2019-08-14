@@ -16,22 +16,23 @@ ecoBody: >-
   une puce NFC permet à ses acquéreurs de connaître l'historique de
   fabrication.
 ecoItems:
-  - content: |-
-      Front-end developer, UI/Web
-      designer and video producer 
-    name: One item
-  - content: |-
-      Front-end developer, UI/Web
-      designer and video producer 
-    name: One item
-  - content: |-
-      Front-end developer, UI/Web
-      designer and video producer 
-    name: One item
-  - content: |-
-      Front-end developer, UI/Web
-      designer and video producer 
-    name: One item
+  - content: >-
+      Nous recyclons et valorisons des matériaux issus de l'industrie spatiale
+      afin de concevoir des pièces uniques et oniriques.
+    name: Impact Écologique
+  - content: >-
+      En assurant sa production en Guyane avec des artisans locaux, SIRE a pour
+      vocation de participer au dynamisme économique du DROM.
+    name: Impact Économique
+  - content: >-
+      SIRE est né d'un savant mélange entre le Luxe et l'Éco-Responsabilité. Un
+      paris un peu fou aux yeux de certains mais une identité affirmée par la
+      société.
+    name: Force Créative
+  - content: >-
+      Intégrant des puces NFC mettant en avant la traçabilité de nos produits,
+      nos créations disposent des informations liées à leurs provenances.
+    name: Fiabilité Garantie
 partnerTitle: Nos partenaires
 partners:
   - logo: /uploads/arianegroup-1.png

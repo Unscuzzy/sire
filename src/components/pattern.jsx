@@ -8,17 +8,12 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
-import { Box } from '../utils/rebass'
-
-
-
-const Pattern = ({ pattern }) => {
-
+const Pattern = () => {
   const data = useStaticQuery(graphql`
     query patternImg {
-      pattern: file(relativePath: {eq: "pattern.png"}) {
+      pattern: file(relativePath: { eq: "pattern.png" }) {
         childImageSharp {
-          fluid(maxWidth:1920, quality:90) {
+          fluid(maxWidth: 1920, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -26,26 +21,23 @@ const Pattern = ({ pattern }) => {
     }
   `)
 
-  const { fluid } = data.pattern.childImageSharp
-  var divStyle = {
-    backgroundImage: `url(${fluid})`,
+  const { imageData } = data.pattern.childImageSharp
+  const divStyle = {
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     backgroundRepeat: 'repeat',
     zIndex: '-1'
-  };
+  }
   return (
     <BackgroundImage
-      fluid={fluid}
-      position="absolute"
-      top="0"
-      left='0'
-      width={1}
-      height="100%"
-      style={{divStyle}}
-    />
+      Tag="section"
+      fluid={imageData}
+      backgroundColor="#040e18"
+      style={divStyle}
+    >
+      <h1>Hello gatsby-background-image</h1>
+    </BackgroundImage>
   )
 }
-
 
 export default Pattern

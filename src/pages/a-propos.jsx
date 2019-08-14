@@ -13,7 +13,7 @@ import Link from '../components/link'
 import { maxWidths } from '../config/theme'
 import { ImageFuildProps } from '../utils/propTypes'
 import { Heading, Flex, Text, Container, Box, Card } from '../utils/rebass'
-import { fadeFromLeft } from '../utils/animations'
+import { fade } from '../utils/animations'
 
 const AboutPage = ({ data }) => {
   const {
@@ -36,51 +36,105 @@ const AboutPage = ({ data }) => {
       <SEO title={title} description={excerpt} />
       <Hero title={title} src={src} />
       <Container as="section" maxWidth={maxWidths.medium} py={5}>
-        <Flex flexWrap="wrap" mx={[null, -3, -4]}>
-          <Box px={[3, 4]} textAlign="center">
-            <Heading>{ecoTitle}</Heading>
-            <Text textAlign="justify" fontStyle="italic">{ecoBody}</Text>
-          </Box>
-        </Flex>
-        <Flex flexWrap="wrap" mx={[null, -3, -4]}>
-          {ecoItems.map(({ name, content }, i) =>
-            <Card key={uniqid(i)} width={[1, 1 / 2]} px={[null, 3, 4]} py={4}>
-              <h3 style={{ textTransform: 'uppercase', fontWeight: '600' }}>{name}</h3>
-              <Text>{content}</Text>
-            </Card>
+        <VisibilitySensor partialVisibility>
+          {({ isVisible }) => (
+            <Tween to={fade(isVisible)}>
+              <Flex flexWrap="wrap" mx={[null, -3, -4]}>
+                <Box px={[3, 4]} textAlign="center">
+                  <Heading>{ecoTitle}</Heading>
+                  <Text textAlign="justify" fontStyle="italic">
+                    {ecoBody}
+                  </Text>
+                </Box>
+              </Flex>
+            </Tween>
           )}
+        </VisibilitySensor>
+        <Flex flexWrap="wrap" mx={[null, -3, -4]}>
+          {ecoItems.map(({ name, content }, i) => (
+            <VisibilitySensor partialVisibility>
+              {({ isVisible }) => (
+                <Tween to={fade(isVisible)}>
+                  <Card
+                    key={uniqid(i)}
+                    width={[1, 1 / 2]}
+                    px={[null, 3, 4]}
+                    py={4}
+                  >
+                    <h3
+                      style={{ textTransform: 'uppercase', fontWeight: '600' }}
+                    >
+                      {name}
+                    </h3>
+                    <Text>{content}</Text>
+                  </Card>
+                </Tween>
+              )}
+            </VisibilitySensor>
+          ))}
         </Flex>
         <Box mx={[-3, -4]}>
           <Heading px={[null, 3, 4]}>{partnerTitle}</Heading>
-          <Flex px={[null, 3, 4]} flexWrap="wrap" mx={[-3, -4]}>
-            {partners.map(({ url, logo }, i) => {
-            const { fluid } = logo.childImageSharp
-              return (
-                <Box width={[1, 1 / 4]} px={[3, 4]} textAlign="center" key={uniqid(i)}>
-                  <Link to={`${url}`}>
-                    <Img fluid={fluid} />
-                  </Link>
-                </Box>
-              )
-            })}
-          </Flex>
+
+          <VisibilitySensor partialVisibility>
+            {({ isVisible }) => (
+              <Tween to={fade(isVisible)}>
+                <Flex px={[null, 3, 4]} flexWrap="wrap" mx={[-3, -4]}>
+                  {partners.map(({ url, logo }, i) => {
+                    const { fluid } = logo.childImageSharp
+                    return (
+                      <Box
+                        width={[1, 1 / 4]}
+                        px={[3, 4]}
+                        textAlign="center"
+                        key={uniqid(i)}
+                      >
+                        <Link to={`${url}`}>
+                          <Img fluid={fluid} />
+                        </Link>
+                      </Box>
+                    )
+                  })}
+                </Flex>
+              </Tween>
+            )}
+          </VisibilitySensor>
         </Box>
+
         <Box mx={[-3, -4]}>
           <Heading px={[null, 3, 4]}>{teamTitle}</Heading>
-          <Flex px={[null, 3, 4]} flexWrap="wrap" mx={[-3, -4]}>
-            {team.map(({ name, content, photo }, i) => {
-            const { fluid } = photo.childImageSharp
-              return (
-                <Box width={[1, 1 / 3]} px={[3, 4]} textAlign="center" key={uniqid(i)}>
-                  <h3 style={{ textTransform: 'uppercase', fontWeight: '600' }}>{name}</h3>
-                  <Text color="grey" fontSize={1} py={3}>
-                    {content}
-                  </Text>
-                  <Img fluid={fluid} />
-                </Box>
-              )
-            })}
-          </Flex>
+          <VisibilitySensor partialVisibility>
+            {({ isVisible }) => (
+              <Tween to={fade(isVisible)}>
+                <Flex px={[null, 3, 4]} flexWrap="wrap" mx={[-3, -4]}>
+                  {team.map(({ name, content, photo }, i) => {
+                    const { fluid } = photo.childImageSharp
+                    return (
+                      <Box
+                        width={[1, 1 / 3]}
+                        px={[3, 4]}
+                        textAlign="center"
+                        key={uniqid(i)}
+                      >
+                        <h3
+                          style={{
+                            textTransform: 'uppercase',
+                            fontWeight: '600'
+                          }}
+                        >
+                          {name}
+                        </h3>
+                        <Text color="grey" fontSize={1} py={3}>
+                          {content}
+                        </Text>
+                        <Img fluid={fluid} />
+                      </Box>
+                    )
+                  })}
+                </Flex>
+              </Tween>
+            )}
+          </VisibilitySensor>
         </Box>
       </Container>
     </Layout>

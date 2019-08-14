@@ -5,13 +5,13 @@ import { Tween } from 'react-gsap'
 import { Parallax } from 'react-parallax'
 
 import { Box, Heading, Card } from '../utils/rebass'
-import { fadeFromBottom } from '../utils/animations'
+import { fromBottom } from '../utils/animations'
 
 const Hero = ({ title, src }) => (
-  <Box mx={[null, null, 3]} boxShadow={2}>
-    <VisibilitySensor partialVisibility>
-      {({ isVisible }) => (
-        <Tween to={fadeFromBottom(isVisible)}>
+  <VisibilitySensor partialVisibility>
+    {({ isVisible }) => (
+      <Tween to={fromBottom(isVisible)}>
+        <Box mx={[null, null, 3]} boxShadow={2}>
           <Card boxShadow={2}>
             <Parallax strength={-150} bgImage={src}>
               <Heading
@@ -21,16 +21,16 @@ const Hero = ({ title, src }) => (
                 fontSize={[4, 5, 5, 6]}
                 fontWeight={4}
                 color="white"
-                style={{ textShadow: "1px 1px 10px rgba(0,0,0,0.25)" }}
+                style={{ textShadow: '1px 1px 10px rgba(0,0,0,0.25)' }}
               >
                 {title}
               </Heading>
             </Parallax>
           </Card>
-        </Tween>
-      )}
-    </VisibilitySensor>
-  </Box>
+        </Box>
+      </Tween>
+    )}
+  </VisibilitySensor>
 )
 
 Hero.propTypes = {

@@ -5,7 +5,7 @@ import VisibilitySensor from 'react-visibility-sensor'
 
 import { Container, Heading, Text } from '../../utils/rebass'
 import ProjectsList from '../projects-list'
-import { fadeFromBottom } from '../../utils/animations'
+import { fade } from '../../utils/animations'
 import { maxWidths } from '../../config/theme'
 
 const Portfolio = ({ title, html, portfolio }) => (
@@ -13,7 +13,7 @@ const Portfolio = ({ title, html, portfolio }) => (
     <Container as="section" maxWidth={maxWidths.medium}>
       <VisibilitySensor partialVisibility>
         {({ isVisible }) => (
-          <Tween to={fadeFromBottom(isVisible)}>
+          <Tween to={fade(isVisible)}>
             <Heading textAlign="center">{title}</Heading>
             <Text fontStyle="italic" textAlign="justify">
               {html}

@@ -14,7 +14,7 @@ import Wysiwyg from '../components/wysiwyg'
 import { Container, Heading, Box, Text, Flex } from '../utils/rebass'
 import { ImageFuildProps } from '../utils/propTypes'
 import SlickHelper from '../utils/slick-helper'
-import { fadeFromBottom } from '../utils/animations'
+import { fade } from '../utils/animations'
 import { maxWidths } from '../config/theme'
 
 const Title = styled(Heading).attrs({
@@ -65,7 +65,7 @@ const ProjectTemplate = ({ data }) => {
       <Container maxWidth={maxWidths.medium} py={[4, 5]}>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
-            <Tween to={fadeFromBottom(isVisible)}>
+            <Tween to={fade(isVisible)}>
               <Flex flexWrap="wrap" justifyContent="space-between">
                 <Meta h1={`L'entreprise`} h3={business} />
                 <Meta h1="Date" h3={`Le ${date}`} />
@@ -91,9 +91,7 @@ const ProjectTemplate = ({ data }) => {
       </Container>
       <Container py={[4, 5]}>
         <Title>Description</Title>
-        <Text  textAlign="justify">
-          {html && <Wysiwyg __html={html} />}
-        </Text>
+        <Text textAlign="justify">{html && <Wysiwyg __html={html} />}</Text>
       </Container>
     </Layout>
   )

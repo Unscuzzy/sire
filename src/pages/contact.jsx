@@ -9,7 +9,7 @@ import SEO from '../components/seo'
 import Hero from '../components/hero'
 import { ImageFuildProps } from '../utils/propTypes'
 import { Container, Box, Text, Button } from '../utils/rebass'
-import { fadeFromBottom } from '../utils/animations'
+import { fade } from '../utils/animations'
 import { Form, Input, Textarea, Label } from '../utils/form'
 import { maxWidths } from '../config/theme'
 
@@ -24,7 +24,7 @@ const ContactPage = ({ data }) => {
       <Container as="section" maxWidth={maxWidths.medium} py={[4, 5]}>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
-            <Tween to={fadeFromBottom(isVisible)}>
+            <Tween to={fade(isVisible)}>
               <Text fontStyle="italic" textAlign="justify">
                 {content}
               </Text>
@@ -35,7 +35,7 @@ const ContactPage = ({ data }) => {
       <Container as="section" maxWidth={maxWidths.medium} pb={[4, 5]}>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
-            <Tween to={fadeFromBottom(isVisible)}>
+            <Tween to={fade(isVisible)}>
               <Form action="/message-envoye" name="contact" method="post">
                 <Box className="hidden">
                   <Label>Don’t fill this out if you are human: </Label>

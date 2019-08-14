@@ -17,10 +17,7 @@ import SEO from '../seo'
 import { Flex } from '../../utils/rebass'
 import Pattern from '../pattern'
 
-
-
 const Layout = ({ children }) => {
-
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

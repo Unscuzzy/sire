@@ -8,7 +8,7 @@ import { Tween } from 'react-gsap'
 
 import { Flex, Container, Heading, Text, Card, Box } from '../../utils/rebass'
 import { ImageFuildProps } from '../../utils/propTypes'
-import { fadeFromBottom } from '../../utils/animations'
+import { fade } from '../../utils/animations'
 
 const Square = styled(Box)`
   width: 100%;
@@ -29,7 +29,7 @@ const Materials = ({ title, materials }) => (
   <Container as="section" py={[4, 5]}>
     <VisibilitySensor partialVisibility>
       {({ isVisible }) => (
-        <Tween to={fadeFromBottom(isVisible)}>
+        <Tween to={fade(isVisible)}>
           <Heading textAlign="center">{title}</Heading>
         </Tween>
       )}
@@ -40,10 +40,16 @@ const Materials = ({ title, materials }) => (
           const { fluid } = image.childImageSharp
           const direction = i % 2 === 0 ? 'column' : 'column-reverse'
           return (
-            <Card key={uniqid(i)} width={[1, 1 / 3]} px={[null, 3, 4]} py={4}  mt={ i % 2 !== 0 ? 3 : null }>
+            <Card
+              key={uniqid(i)}
+              width={[1, 1 / 3]}
+              px={[null, 3, 4]}
+              py={4}
+              mt={i % 2 !== 0 ? 3 : null}
+            >
               <VisibilitySensor partialVisibility>
                 {({ isVisible }) => (
-                  <Tween to={fadeFromBottom(isVisible)}>
+                  <Tween to={fade(isVisible)}>
                     <Flex flexDirection={direction}>
                       <Square position="relative">
                         <Box

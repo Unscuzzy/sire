@@ -46,7 +46,12 @@ const IndexPage = ({ data }) => {
         html={portfolioBody}
         portfolio={portfolioProject}
       />
-      <Container as="section" maxWidth={maxWidths.medium} pb={[4, 5]} textAlign="center">
+      <Container
+        as="section"
+        maxWidth={maxWidths.medium}
+        pb={[4, 5]}
+        textAlign="center"
+      >
         <Button
           as={Link}
           to="/portfolio"
@@ -113,7 +118,7 @@ export const pageQuery = graphql`
           title
           image {
             childImageSharp {
-              fluid(maxWidth:1920, quality:90) {
+              fluid(maxWidth: 1920, quality: 90) {
                 ...GatsbyImageSharpFluid
               }
             }

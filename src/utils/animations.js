@@ -15,7 +15,7 @@ export const fromBottom = isVisible => ({ y: isVisible ? 0 : 100 })
 
 // Effect on/off
 export const fade = isVisible => ({ opacity: isVisible ? 1 : 0 })
-export const grow = isVisible => ({ scale: isVisible ? 1 : 0.2 })
+export const grow = isVisible => ({ scale: isVisible ? 1 : 0.75 })
 
 /*
  * 2. Compositions

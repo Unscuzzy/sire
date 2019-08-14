@@ -10,7 +10,7 @@ import Hero from '../components/hero'
 import ProjectsList from '../components/projects-list'
 import { ImageFuildProps } from '../utils/propTypes'
 import { Container, Heading, Text } from '../utils/rebass'
-import { fadeFromBottom } from '../utils/animations'
+import { fade } from '../utils/animations'
 
 const PortfolioPage = ({ data }) => {
   const {
@@ -31,9 +31,9 @@ const PortfolioPage = ({ data }) => {
       <Container py={[4, 5]}>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
-            <Tween to={fadeFromBottom(isVisible)}>
+            <Tween to={fade(isVisible)}>
               <Heading textAlign="center">{subTitle}</Heading>
-              <Text fontStyle="italic"  textAlign="justify">
+              <Text fontStyle="italic" textAlign="justify">
                 {presentation}
               </Text>
             </Tween>

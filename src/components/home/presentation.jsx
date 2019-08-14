@@ -11,7 +11,7 @@ import MediaQ from '../responsive'
 import { Flex, Box, Heading, Text, Container, Card } from '../../utils/rebass'
 import { colors, maxWidths } from '../../config/theme'
 import { ImageFuildProps } from '../../utils/propTypes'
-import { fadeFromLeft, fadeFromRight } from '../../utils/animations'
+import { fade } from '../../utils/animations'
 
 const MySlider = styled(Slider)`
   .slick-arrow {
@@ -24,7 +24,8 @@ const MySlider = styled(Slider)`
     background: white;
     color: ${colors.brown};
   }
-  .slick-dots .slick-arrow:hover:before, .slick-arrow:hover:before{
+  .slick-arrow:hover:before,
+  .slick-dots .slick-arrow:hover:before {
     color: ${colors.brown};
   }
 `
@@ -42,10 +43,12 @@ const Presentation = ({ title, html, slides }) => {
       <Flex flexWrap="wrap" mx={[-3, -4]}>
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
-            <Tween to={fadeFromLeft(isVisible)}>
+            <Tween to={fade(isVisible)}>
               <Box px={[3, 4]} width={[1, 1 / 2]}>
                 <Heading>{title}</Heading>
-                <Text fontStyle="italic" textAlign="justify">{html}</Text>
+                <Text fontStyle="italic" textAlign="justify">
+                  {html}
+                </Text>
               </Box>
             </Tween>
           )}
@@ -53,7 +56,7 @@ const Presentation = ({ title, html, slides }) => {
         <MediaQ type="notSmall">
           <VisibilitySensor partialVisibility>
             {({ isVisible }) => (
-              <Tween to={fadeFromRight(isVisible)}>
+              <Tween to={fade(isVisible)}>
                 <Box px={[3, 4]} width={[1, 1 / 2]}>
                   <MySlider {...settings}>
                     {slides.map(({ title: name, image }) => {

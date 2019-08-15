@@ -17,7 +17,6 @@ presentation: >-
   internes ainsi que des réalisations sûr-mesure pour nos clients.
 portfolioProjects:
   - Euler hermes
-  - Channel
-  - Dior
+  - Bout de Fusée
 ---
 

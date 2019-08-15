@@ -66,7 +66,6 @@ const ProjectTemplate = ({ data }) => {
   }
   const windowGlobal = typeof window !== 'undefined' && window
   const shareUrl = windowGlobal.localStorage
-  console.log(shareUrl)
   return (
     <Layout>
       <SEO title={title} description={excerpt} />

@@ -6,6 +6,12 @@ import Img from 'gatsby-image'
 import Slider from 'react-slick'
 import { Tween } from 'react-gsap'
 import VisibilitySensor from 'react-visibility-sensor'
+import {
+  TwitterShareButton,
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterIcon
+} from 'react-share'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -58,7 +64,7 @@ const ProjectTemplate = ({ data }) => {
     slidesToScroll: 1,
     adaptiveHeight: true
   }
-
+  const shareUrl = window.location.href
   return (
     <Layout>
       <SEO title={title} description={excerpt} />
@@ -68,9 +74,25 @@ const ProjectTemplate = ({ data }) => {
           {({ isVisible }) => (
             <Tween to={fade(isVisible)}>
               <Flex flexWrap="wrap" justifyContent="space-between">
-                <Meta h1={`L'entreprise`} h3={business} />
-                <Meta h1="Date" h3={`Le ${date}`} />
-                <Meta h1="Partager" h3="TODO" />
+                <Meta h1={`L'entreprise`} h2={business} />
+                <Meta h1="Date" h2={`Le ${date}`} />
+                <Box width={[1, 1, 1 / 3]} mx={-2}>
+                  <Box px={2}>
+                    <Title>Partager</Title>
+                    <Flex py="3">
+                      <Box mr="3" style={{ cursor: 'pointer' }}>
+                        <TwitterShareButton url={shareUrl}>
+                          <TwitterIcon size={32} round />
+                        </TwitterShareButton>
+                      </Box>
+                      <Box mr="3" style={{ cursor: 'pointer' }}>
+                        <FacebookShareButton url={shareUrl}>
+                          <FacebookIcon size={32} round />
+                        </FacebookShareButton>
+                      </Box>
+                    </Flex>
+                  </Box>
+                </Box>
               </Flex>
             </Tween>
           )}

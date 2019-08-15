@@ -55,7 +55,8 @@ const ProjectTemplate = ({ data }) => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    adaptiveHeight: true
   }
 
   return (
@@ -75,7 +76,7 @@ const ProjectTemplate = ({ data }) => {
           )}
         </VisibilitySensor>
       </Container>
-      <Container pb={[4, 5]}>
+      <Container maxWidth={maxWidths.large} pb={[4, 5]}>
         {images && images.length !== 0 ? (
           <>
             <SlickHelper />
@@ -89,7 +90,7 @@ const ProjectTemplate = ({ data }) => {
           <Img fluid={thumbnail.childImageSharp.fluid} />
         )}
       </Container>
-      <Container py={[4, 5]}>
+      <Container maxWidth={maxWidths.medium} py={[4, 5]}>
         <Title>Description</Title>
         <Text textAlign="justify">{html && <Wysiwyg __html={html} />}</Text>
       </Container>

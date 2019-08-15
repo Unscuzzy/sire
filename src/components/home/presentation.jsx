@@ -14,7 +14,11 @@ import { ImageFuildProps } from '../../utils/propTypes'
 import { fade } from '../../utils/animations'
 
 const MySlider = styled(Slider)`
-  .slick-arrow {
+  .slick-arrow,
+  .slick-next:focus,
+  .slick-next:hover,
+  .slick-prev:focus,
+  .slick-prev:hover {
     background: ${colors.brown};
     height: 44px;
     width: 44px;
@@ -36,7 +40,8 @@ const Presentation = ({ title, html, slides }) => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    adaptiveHeight: true
   }
   return (
     <Container as="section" maxWidth={maxWidths.medium} py={5}>

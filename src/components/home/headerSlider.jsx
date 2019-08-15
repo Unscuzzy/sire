@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 import uniqid from 'uniqid'
-import styled from 'styled-components'
 
 import { Card, Flex, Box, Heading, Container } from '../../utils/rebass'
 import { ImageFuildProps } from '../../utils/propTypes'
@@ -16,17 +15,13 @@ const HeaderSlider = ({ slides }) => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    adaptiveHeight: true
   }
-  const HomeSlider = styled(Slider)`
-    .slick-dots {
-      margin-bottom: 20px;
-    }
-  `
   return (
     <Box as="section" mx={[null, null, 3]} boxShadow={2}>
       <SlickHelper />
-      <HomeSlider {...settings} style={{ marginBottom: '-50px' }}>
+      <Slider {...settings} style={{ marginBottom: '-50px' }}>
         {slides.map(({ image, title }) => {
           const { src } = image.childImageSharp.fluid
           return (
@@ -52,7 +47,7 @@ const HeaderSlider = ({ slides }) => {
             </Card>
           )
         })}
-      </HomeSlider>
+      </Slider>
     </Box>
   )
 }

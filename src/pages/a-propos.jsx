@@ -73,40 +73,72 @@ const AboutPage = ({ data }) => {
             </VisibilitySensor>
           ))}
         </Flex>
-        <Box mx={[-3, -4]}>
-          <Heading px={[null, 3, 4]}>{partnerTitle}</Heading>
-
-          <VisibilitySensor partialVisibility>
-            {({ isVisible }) => (
-              <Tween to={fade(isVisible)}>
-                <Flex px={[null, 3, 4]} flexWrap="wrap" mx={[-3, -4]}>
-                  {partners.map(({ url, logo }, i) => {
-                    const { fluid } = logo.childImageSharp
-                    return (
-                      <Box
-                        width={[1, 1 / 4]}
-                        px={[3, 4]}
-                        textAlign="center"
-                        key={uniqid(i)}
-                      >
-                        <Link to={`${url}`}>
-                          <Img fluid={fluid} />
-                        </Link>
-                      </Box>
-                    )
-                  })}
-                </Flex>
-              </Tween>
-            )}
-          </VisibilitySensor>
-        </Box>
-
+      </Container>
+      <Box
+        backgroundColor="ocreLight"
+        style={{
+          transform: 'rotate(2deg)',
+          width: 'calc(100% + 50px)',
+          marginLeft: '-25px'
+        }}
+      >
+        <Container as="section" maxWidth={maxWidths.medium}>
+          <Box mx={[-3, -4]} py={5}>
+            <Heading
+              textAlign="center"
+              color="white"
+              px={[null, 3, 4]}
+              style={{
+                transform: 'rotate(-2deg)'
+              }}
+            >
+              {partnerTitle}
+            </Heading>
+            <VisibilitySensor partialVisibility>
+              {({ isVisible }) => (
+                <Tween to={fade(isVisible)}>
+                  <Flex px={[null, 3, 4]} flexWrap="wrap" mx={[-3, -4]}>
+                    {partners.map(({ url, logo }, i) => {
+                      const { fluid } = logo.childImageSharp
+                      return (
+                        <Box
+                          width={[1, 1 / 4]}
+                          px={[3, 4]}
+                          textAlign="center"
+                          key={uniqid(i)}
+                        >
+                          <Link to={`${url}`}>
+                            <Img
+                              fluid={fluid}
+                              style={{
+                                transform: 'rotate(-2deg)'
+                              }}
+                            />
+                          </Link>
+                        </Box>
+                      )
+                    })}
+                  </Flex>
+                </Tween>
+              )}
+            </VisibilitySensor>
+          </Box>
+        </Container>
+      </Box>
+      <Container as="section" maxWidth={maxWidths.medium} py={5}>
         <Box mx={[-3, -4]}>
           <Heading px={[null, 3, 4]}>{teamTitle}</Heading>
           <VisibilitySensor partialVisibility>
             {({ isVisible }) => (
               <Tween to={fade(isVisible)}>
-                <Flex px={[null, 3, 4]} flexWrap="wrap" mx={[-3, -4]}>
+                <Flex
+                  px={[null, 3, 4]}
+                  flexWrap="wrap"
+                  mx={[-3, -4]}
+                  style={{
+                    justifyContent: 'space-around'
+                  }}
+                >
                   {team.map(({ name, content, photo }, i) => {
                     const { fluid } = photo.childImageSharp
                     return (
@@ -116,6 +148,16 @@ const AboutPage = ({ data }) => {
                         textAlign="center"
                         key={uniqid(i)}
                       >
+                        <Box
+                          style={{
+                            borderRadius: '50%',
+                            overflow: 'hidden',
+                            filter: 'drop-shadow(0 0 0.5rem rgba(0,0,0,0.5))'
+                          }}
+                          m={3}
+                        >
+                          <Img fluid={fluid} />
+                        </Box>
                         <h3
                           style={{
                             textTransform: 'uppercase',
@@ -124,10 +166,9 @@ const AboutPage = ({ data }) => {
                         >
                           {name}
                         </h3>
-                        <Text color="grey" fontSize={1} py={3}>
+                        <Text color="grey" fontSize={1} pb={1}>
                           {content}
                         </Text>
-                        <Img fluid={fluid} />
                       </Box>
                     )
                   })}

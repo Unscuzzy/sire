@@ -39,13 +39,18 @@ const GlobalStyle = createGlobalStyle`
   .slick-dots {
     position: absolute!important;
     bottom: 0!important;
+    margin-bottom: 20px!important;
     li button:before {
       font-size: 18px!important;
       color: white!important;
     }
   }
+
   .hidden {
     display: none;
+  }
+  .drop-shadow {
+    filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.5));
   }
 `
 

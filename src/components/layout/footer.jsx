@@ -33,7 +33,7 @@ const Footer = ({ title, links }) => (
         {links &&
           links.map(({ label, link }) => (
             <FooterText key={uniqid(link)}>
-              <Link to={link}>{label}</Link >
+              <Link to={link}>{label}</Link>
             </FooterText>
           ))}
       </Flex>

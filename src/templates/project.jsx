@@ -64,7 +64,9 @@ const ProjectTemplate = ({ data }) => {
     slidesToScroll: 1,
     adaptiveHeight: true
   }
-  const shareUrl = window.location.href
+  const windowGlobal = typeof window !== 'undefined' && window
+  const shareUrl = windowGlobal.localStorage
+  console.log(shareUrl)
   return (
     <Layout>
       <SEO title={title} description={excerpt} />
@@ -80,12 +82,12 @@ const ProjectTemplate = ({ data }) => {
                   <Box px={2}>
                     <Title>Partager</Title>
                     <Flex py="3">
-                      <Box mr="3" style={{ cursor: 'pointer' }}>
+                      <Box mr="3" my="2" style={{ cursor: 'pointer' }}>
                         <TwitterShareButton url={shareUrl}>
                           <TwitterIcon size={32} round />
                         </TwitterShareButton>
                       </Box>
-                      <Box mr="3" style={{ cursor: 'pointer' }}>
+                      <Box mr="3" my="2" style={{ cursor: 'pointer' }}>
                         <FacebookShareButton url={shareUrl}>
                           <FacebookIcon size={32} round />
                         </FacebookShareButton>
@@ -114,7 +116,7 @@ const ProjectTemplate = ({ data }) => {
       </Container>
       <Container maxWidth={maxWidths.medium} py={[4, 5]}>
         <Title>Description</Title>
-        <Text textAlign="justify">{html && <Wysiwyg __html={html} />}</Text>
+        <Box textAlign="justify">{html && <Wysiwyg __html={html} />}</Box>
       </Container>
     </Layout>
   )

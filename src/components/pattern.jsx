@@ -6,7 +6,8 @@
  */
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+
+import { Box } from '../utils/rebass'
 
 const Pattern = () => {
   const data = useStaticQuery(graphql`
@@ -21,23 +22,16 @@ const Pattern = () => {
     }
   `)
 
-  const { imageData } = data.pattern.childImageSharp
+  const { fluid } = data.pattern.childImageSharp
   const divStyle = {
+    backgroundImage: `url(${fluid})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     backgroundRepeat: 'repeat',
     zIndex: '-1'
   }
-  return (
-    <BackgroundImage
-      Tag="section"
-      fluid={imageData}
-      backgroundColor="#040e18"
-      style={divStyle}
-    >
-      <h1>Hello gatsby-background-image</h1>
-    </BackgroundImage>
-  )
+  console.log(fluid)
+  return <Box style={divStyle} className="test" />
 }
 
 export default Pattern

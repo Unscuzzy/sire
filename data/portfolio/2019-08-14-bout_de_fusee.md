@@ -2,9 +2,7 @@
 templateKey: projects
 title: Bout de Fusée
 excerpt: >-
-  Découvrez notre projet interne, Bout de Fusée. Ce site internet commerçant
-  vise à permettre à n'importe qui de commander un bout du lanceur AR-4 afin de
-  l'entreposer chez soi.
+  Découvrez notre projet interne, Bout de Fusée. Ce site internet commerçant vise à permettre à n'importe qui de commander un bout du lanceur AR-4 afin de l'entreposer chez soi.
 business: Bout de Fusée
 date: 2019-07-31T22:00:00.000Z
 thumbnail: /uploads/capture_d_e_cran_2019-08-14_a_18.07.46.png

@@ -15,7 +15,7 @@ import Header from './header'
 import Footer from './footer'
 import SEO from '../seo'
 import { Flex } from '../../utils/rebass'
-import Pattern from '../pattern'
+// import Pattern from '../pattern'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,19 +26,32 @@ const Layout = ({ children }) => {
           description
         }
       }
+      pattern: file(relativePath: { eq: "pattern.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 90) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
-
+  const { fluid } = data.pattern.childImageSharp
+  const pattern = {
+    backgroundImage: `url(${fluid.src})`,
+    backgroundSize: '100% auto',
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'repeat',
+    zIndex: '-1'
+  }
   const { title, description } = data.site.siteMetadata
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
         <SEO title={title} />
-        <Wrapper flexDirection="column">
+        <Wrapper flexDirection="column" style={pattern}>
           <Header siteTitle={title} siteDescription={description} />
           <main>{children}</main>
-          <Pattern />
           <Footer title={title} />
         </Wrapper>
       </>

@@ -18,5 +18,8 @@ presentation: >-
 portfolioProjects:
   - Euler hermes
   - Bout de Fusée
+  - ArianeGroup
+  - Fondation Bettencourt
+  - CSG centre spatial Guyanais
 ---
 

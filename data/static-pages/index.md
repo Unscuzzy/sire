@@ -43,17 +43,23 @@ process:
 materialTitle: Des matériaux issus de l’industrie aérospatiale
 materials:
   - content: >-
-      Matériaux issu du lanceur spatial Ariane AR- 4 de la base de Kourou au Centre Spatial Guyanais, ou d'ArianeGroup aux Mureaux pour l'aluminium brut d'usinage. Nous découpons le lanceur et l'usinons à Kourou et à Cayenne, en Guyane
-      française.
+      Matériaux issu du lanceur spatial Ariane AR- 4 de la base de Kourou au
+      Centre Spatial Guyanais, ou d'ArianeGroup aux Mureaux pour l'aluminium
+      brut d'usinage. Nous découpons le lanceur et l'usinons à Kourou et à
+      Cayenne, en Guyane française.
     image: /uploads/aluminium.jpg
     title: Aluminium
   - content: >-
-      Carbone et Kevlar issus de chutes d’antennes satellites ou des
-      protections dans la coiffe d’Ariane : Ils proviennent de d’ArianeGroup basé aux Mureaux dans le département des Yvelines.
+      Carbone et Kevlar issus de chutes d’antennes satellites ou des protections
+      dans la coiffe d’Ariane : Ils proviennent de d’ArianeGroup basé aux
+      Mureaux dans le département des Yvelines.
     image: /uploads/tech-carbone-1-768x512.jpg
     title: Carbone
   - content: >-
-      Essence d’Angélique, de Wacapou, de Saint Martin rouge et jaune, ou de Gonfolo : Le socle est composé de bois de Guyane et est conçu par des artisans guyanais, tel que la société CEMKO.ou l'association Libi Na Wan à kourou
+      Essence d’Angélique, de Wacapou, de Saint Martin rouge et jaune, ou de
+      Gonfolo : Le socle est composé de bois de Guyane et est conçu par des
+      artisans guyanais, tel que la société CEMKO.ou l'association Libi Na Wan à
+      kourou
     image: /uploads/teak.3c6e6d_2x.jpg
     title: Bois
 portfolioTitle: Ils nous font confiance
@@ -65,6 +71,6 @@ portfolioBody: >-
   sommes particulièrement reconnaissants. Un grand merci à eux pour leur
   confiance : Nous espérons vous accompagner de nouveau prochainement et
   travailler au mieux ensemble !
-portfolioProject: Euler hermes
+portfolioProject: Bout de Fusée
 ---
 

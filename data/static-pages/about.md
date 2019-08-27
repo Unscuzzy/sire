@@ -41,7 +41,7 @@ partners:
     url: 'http://www.initiative-ceguyane.fr/'
   - logo: /uploads/gdi-1.png
     url: 'https://www.ardi-gdi.fr/'
-  - logo: /uploads/cnes-1.png
+  - logo: /uploads/sans-titre.png
     url: 'https://cnes.fr/fr'
 teamTitle: L'équipe
 team:

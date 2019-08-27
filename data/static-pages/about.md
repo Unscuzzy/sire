@@ -42,7 +42,7 @@ partners:
   - logo: /uploads/gdi-1.png
     url: 'https://www.ardi-gdi.fr/'
   - logo: /uploads/sans-titre.png
-    url: 'https://cnes.fr/fr'
+    url: 'http://boosters-cospace.fr/les-7-boosters/booster-morpho/'
 teamTitle: L'équipe
 team:
   - content: |-

@@ -4,7 +4,7 @@ title: ArianeGroup
 excerpt: >-
   Trophée réalisé en 10 exemplaires pour le directeur d'ArianeGroup des Mureaux
   Hugues Emont suite à la convention de parrainage.
-business: ArianeGroup
+business: ArianeGroupz
 date: 2019-04-17T12:01:38.788Z
 thumbnail: /uploads/51952920_10156975462677346_6371057510819823616_n.jpg
 images:

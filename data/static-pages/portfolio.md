@@ -21,5 +21,6 @@ portfolioProjects:
   - ArianeGroup
   - Fondation Bettencourt
   - CSG centre spatial Guyanais
+  - 'Trophée de départ destiné à Didier Faivre, directeur du CSG'
 ---
 

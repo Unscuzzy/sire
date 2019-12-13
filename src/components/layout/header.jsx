@@ -33,11 +33,15 @@ const MenuItem = styled(BaseLink).attrs({
 const Header = ({ siteTitle, siteDescription, links }) => (
   <header>
     <Box mx={[null, null, 3]} mt={[null, null, 3]}>
-      <Box bg="ocre" textAlign="center">
-        <Titles fontSize={[9, 10]} style={{ lineHeight: '0.68' }}>
+      <Box bg="ocre" textAlign="center" m="auto">
+        <Titles
+          textAlign="center"
+          fontSize={[9, 10]}
+          style={{ lineHeight: '0.68' }}
+        >
           {siteTitle}
         </Titles>
-        <Titles fontSize={[3, 4]} py={3}>
+        <Titles fontSize={[3, 4]} py={3} textAlign="center">
           {siteDescription}
         </Titles>
       </Box>

@@ -52,6 +52,9 @@ const Header = ({ siteTitle, siteDescription, links }) => (
               {label}
             </MenuItem>
           ))}
+        <MenuItem as={Link} to="https://bout-de-fusee.com">
+          La boutique
+        </MenuItem>
       </Flex>
     </Box>
   </header>
